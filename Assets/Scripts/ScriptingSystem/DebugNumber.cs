@@ -7,6 +7,11 @@ public class DebugNumber : FunctionBlock
     [SerializeField] NumberContainer numberIn = null;
 
     readonly ConnectTypes inConnection = ConnectTypes.Number;
+    
+    private void Awake()
+    {
+        gameObject.AddComponent<Slot>().Set(SetNumberContainer, inConnection, new Vector3(1.0f, 0, 0));
+    }
 
     private void Update()
     {
@@ -24,7 +29,6 @@ public class DebugNumber : FunctionBlock
     public void SetNumberContainer(NumberContainer numberContainer)
     {
         numberIn = numberContainer;
-
     }
 }
 

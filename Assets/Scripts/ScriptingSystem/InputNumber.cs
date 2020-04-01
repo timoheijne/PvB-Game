@@ -8,8 +8,6 @@ public class InputNumber : NumberContainer
 {
     [SerializeField]InputField input = null;
 
-    [SerializeField] bool debugging = false;
-
     private void Start()
     {
         input.onValueChanged.AddListener(delegate { UpdateValue(); });
@@ -18,7 +16,6 @@ public class InputNumber : NumberContainer
     private void UpdateValue()
     {
         float.TryParse(input.text, NumberStyles.Float, CultureInfo.InvariantCulture, out Value);
-        if (debugging) { Debug.Log(GetValue()); }
     }
 
 }

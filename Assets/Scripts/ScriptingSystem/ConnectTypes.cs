@@ -1,4 +1,4 @@
-﻿enum ConnectTypes
+﻿public enum ConnectTypes
 {
     Text,
     Number,

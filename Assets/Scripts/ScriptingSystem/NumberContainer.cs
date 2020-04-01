@@ -6,7 +6,7 @@ public class NumberContainer : MonoBehaviour
 {
     private protected float Value = 0;
 
-    public float GetValue()
+    public virtual float GetValue()
     {
         return Value;
     }
