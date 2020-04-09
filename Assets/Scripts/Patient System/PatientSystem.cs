@@ -42,6 +42,7 @@ public class PatientSystem : MonoBehaviour
         if (patient.Active)
         {
             _activePatient = patient;
+            OnPatientChange?.Invoke(patient);
             return true;
         }
         else
