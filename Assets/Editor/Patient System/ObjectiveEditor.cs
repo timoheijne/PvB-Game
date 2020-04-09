@@ -10,7 +10,7 @@ public class ObjectiveEditor : Editor
     
     public override void OnInspectorGUI()
     {
-        loadObjectives();
+        LoadObjectives();
         Objective objective = (Objective) target;
         
         Objective internalName = _objectives.Find(o => o.InternalName == objective.InternalName && o != objective);
@@ -25,7 +25,7 @@ public class ObjectiveEditor : Editor
         objective.Active = EditorGUILayout.Toggle("Active", objective.Active);
     }
     
-    private void loadObjectives()
+    private void LoadObjectives()
     {
         _objectives = Resources.LoadAll<Objective>("Objectives").ToList();
     }

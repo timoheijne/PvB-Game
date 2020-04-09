@@ -50,8 +50,8 @@ public class PatientFileEditor : UnityEditor.Editor
             EditorGUILayout.EndHorizontal();
         }
         
-        loadObjectives();
-        parseOptions(patientFile);
+        LoadObjectives();
+        ParseOptions(patientFile);
         EditorGUILayout.Space(10);
         EditorGUILayout.LabelField("Add Objective");
         EditorGUILayout.BeginHorizontal();
@@ -65,7 +65,7 @@ public class PatientFileEditor : UnityEditor.Editor
             }
             else
             {
-                addToObjectives(patientFile, _popupOptions[_selectedObject]);
+                AddToObjectives(patientFile, _popupOptions[_selectedObject]);
                 _selectedObject = 0;
             }
         }
@@ -73,7 +73,7 @@ public class PatientFileEditor : UnityEditor.Editor
         EditorGUILayout.EndHorizontal();
     }
 
-    private void addToObjectives(PatientFile _target, string _objectiveName)
+    private void AddToObjectives(PatientFile _target, string _objectiveName)
     {
         Objective objective = _objectives.Find(o => o.InternalName == _objectiveName);
         if (objective == null)
@@ -88,12 +88,12 @@ public class PatientFileEditor : UnityEditor.Editor
         }
     }
 
-    private void loadObjectives()
+    private void LoadObjectives()
     {
         _objectives = Resources.LoadAll<Objective>("Objectives").ToList();
     }
 
-    private void parseOptions(PatientFile _target)
+    private void ParseOptions(PatientFile _target)
     {
         _popupOptions.Clear();
         _popupOptions.Add("-- SELECT ITEM --");
