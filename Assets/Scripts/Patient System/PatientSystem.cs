@@ -31,6 +31,11 @@ public class PatientSystem : MonoBehaviour
     {
         _patientFiles = Resources.LoadAll<PatientFile>("Patient Files").ToList();
     }
+
+    public PatientFile[] GetLoadedPatients()
+    {
+        return _patientFiles.ToArray();
+    }
     
     public bool SetActivePatient(PatientFile patient)
     {
