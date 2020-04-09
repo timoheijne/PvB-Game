@@ -8,7 +8,7 @@ public class PatientFileEditor : UnityEditor.Editor
 {
     private List<Objective> _objectives = new List<Objective>();
     private readonly List<string> _popupOptions = new List<string>();
-    private int _selectedObject = 0;
+    private int _selectedObject;
     
     public override void OnInspectorGUI()
     {
@@ -79,7 +79,6 @@ public class PatientFileEditor : UnityEditor.Editor
         if (objective == null)
         {
             Debug.LogError("Tried to add invalid objective to patient file");
-            return;
         }
         else
         {
