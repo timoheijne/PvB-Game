@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PatientSystem : MonoBehaviour
 {
-    public static  PatientSystem Instance;
+    public static PatientSystem Instance;
     
     public event Action<PatientFile> OnPatientDone;
     public event Action<PatientFile> OnPatientChange;
@@ -53,7 +53,10 @@ public class PatientSystem : MonoBehaviour
 
     public void MarkObjectiveDone(string objectiveName)
     {
-        if (this.ActivePatient == null) return;
+        if (this.ActivePatient == null)
+        {
+            return;
+        }
         
         this.ActivePatient.MarkObjectiveDone(objectiveName);
         
