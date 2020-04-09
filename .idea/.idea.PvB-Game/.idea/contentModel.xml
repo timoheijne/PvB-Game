@@ -11,6 +11,7 @@
           <e p="Patient System" t="Include">
             <e p="ObjectiveEditor.cs" t="Include" />
             <e p="PatientFileEditor.cs" t="Include" />
+            <e p="PatientSystemEditor.cs" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">
