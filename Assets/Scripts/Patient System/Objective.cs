@@ -7,5 +7,5 @@ public class Objective : ScriptableObject
     public string InternalName;
     public bool Active = true;
 
-
+    public bool IsDone = false;
 }
