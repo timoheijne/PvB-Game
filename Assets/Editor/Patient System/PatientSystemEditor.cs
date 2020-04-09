@@ -8,7 +8,7 @@ public class PatientSystemEditor : Editor
 {
     
     private readonly List<string> _popupOptions = new List<string>();
-    private int _selectedObject = 0;
+    private int _selectedObject;
     
     public override void OnInspectorGUI()
     {
