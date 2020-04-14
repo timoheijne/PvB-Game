@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ButtonHandler : MonoBehaviour
 {
-    public void ToggleMenu(GameObject _menu) 
+    public static void ToggleMenu(GameObject _menu) 
     {
         if (!_menu.activeInHierarchy) {
             _menu.SetActive(true);
@@ -16,7 +16,7 @@ public class ButtonHandler : MonoBehaviour
         }
     }
 
-    public void ExitGame() 
+    public static void ExitGame() 
     {
         Application.Quit();
     }
