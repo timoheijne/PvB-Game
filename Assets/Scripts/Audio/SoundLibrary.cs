@@ -7,21 +7,21 @@ public class SoundLibrary : MonoBehaviour
 
     public SoundGroup[] soundGroups;
 
-    Dictionary<string, AudioClip[]> groupDictionary = new Dictionary<string, AudioClip[]>();
+    private readonly Dictionary<string,AudioClip[]> _groupDictionary = new Dictionary<string, AudioClip[]>();
 
     void Awake() 
     {
         foreach (SoundGroup soundGroup in soundGroups) 
         {
-            groupDictionary.Add(soundGroup.groupID, soundGroup.group);
+            _groupDictionary.Add(soundGroup.groupID, soundGroup.group);
         }
     }
 
     public AudioClip GetClipFromName(string name) 
     {
-        if (groupDictionary.ContainsKey(name)) 
+        if (_groupDictionary.ContainsKey(name)) 
         {
-            AudioClip[] _sounds = groupDictionary[name];
+            AudioClip[] _sounds = _groupDictionary[name];
             return _sounds[Random.Range(0, _sounds.Length)];
         }
         return null;
