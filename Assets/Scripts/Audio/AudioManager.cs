@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -81,7 +82,7 @@ public class AudioManager : MonoBehaviour {
                 break;
 
             default:
-                break;
+                throw new NotSupportedException();
         }
 
         _musicSources[0].volume = MusicVolumePercent * MasterVolumePercent;
