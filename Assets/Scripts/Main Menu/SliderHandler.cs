@@ -14,17 +14,17 @@ public class SliderHandler : MonoBehaviour
         volumeSliders[2].value = AudioManager.instance.SfxVolumePercent;
     }
 
-    public void SetMasterVolume(float value) 
+    public static void SetMasterVolume(float value) 
     {
         AudioManager.instance.SetVolume(value, AudioManager.AudioChannel.Master);
     }
 
-    public void SetMusicVolume(float value) 
+    public static void SetMusicVolume(float value) 
     {
         AudioManager.instance.SetVolume(value, AudioManager.AudioChannel.Music);
     }
 
-    public void SetSfxVolume(float value) 
+    public static void SetSfxVolume(float value) 
     {
         AudioManager.instance.SetVolume(value, AudioManager.AudioChannel.Sfx);
     }
