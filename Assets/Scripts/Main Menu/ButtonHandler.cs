@@ -15,4 +15,9 @@ public class ButtonHandler : MonoBehaviour
             _menu.SetActive(false);
         }
     }
+
+    public void ExitGame() 
+    {
+        Application.Quit();
+    }
 }
