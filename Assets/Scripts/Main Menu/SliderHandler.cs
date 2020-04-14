@@ -9,9 +9,9 @@ public class SliderHandler : MonoBehaviour
 
     private void Start() 
     {
-        volumeSliders[0].value = AudioManager.instance.masterVolumePercent;
-        volumeSliders[1].value = AudioManager.instance.musicVolumePercent;
-        volumeSliders[2].value = AudioManager.instance.sfxVolumePercent;
+        volumeSliders[0].value = AudioManager.instance.MasterVolumePercent;
+        volumeSliders[1].value = AudioManager.instance.MusicVolumePercent;
+        volumeSliders[2].value = AudioManager.instance.SfxVolumePercent;
     }
 
     public void SetMasterVolume(float value) 
