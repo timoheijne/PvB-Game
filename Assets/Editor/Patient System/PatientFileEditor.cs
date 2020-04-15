@@ -12,30 +12,30 @@ public class PatientFileEditor : UnityEditor.Editor
     
     public override void OnInspectorGUI()
     {
-        PatientFile patientFile = (PatientFile) target;
+        PatientFile _patientFile = (PatientFile) target;
 
-        patientFile.PatientName = EditorGUILayout.TextField("Patient Name", patientFile.PatientName);
-        patientFile.Age = EditorGUILayout.IntField("Age", patientFile.Age);
-        patientFile.Difficulty = (Shared.Difficulty)EditorGUILayout.EnumPopup("Difficulty", patientFile.Difficulty);
-        patientFile.Active = EditorGUILayout.Toggle("Active", patientFile.Active);
+        _patientFile.PatientName = EditorGUILayout.TextField("Patient Name", _patientFile.PatientName);
+        _patientFile.Age = EditorGUILayout.IntField("Age", _patientFile.Age);
+        _patientFile.Difficulty = (Shared.Difficulty)EditorGUILayout.EnumPopup("Difficulty", _patientFile.Difficulty);
+        _patientFile.Active = EditorGUILayout.Toggle("Active", _patientFile.Active);
             
         EditorGUILayout.Space(5);
         EditorGUILayout.LabelField("Prefab");
-        patientFile.Prefab =
-            (GameObject) EditorGUILayout.ObjectField(patientFile.Prefab, typeof(GameObject), false);
+        _patientFile.Prefab =
+            (GameObject) EditorGUILayout.ObjectField(_patientFile.Prefab, typeof(GameObject), false);
         EditorGUILayout.Space(5);
             
         EditorGUILayout.LabelField("Objectives:");
         EditorGUILayout.Space(1);
 
-        int inactiveObjectives = patientFile.Objectives.ToList().FindAll(o => !o.Active).Count;
+        int inactiveObjectives = _patientFile.Objectives.ToList().FindAll(o => !o.Active).Count;
 
         if (inactiveObjectives > 0)
         {
             EditorGUILayout.HelpBox("This patient file contains inactive objectives. These will be ignored in game!", MessageType.Warning);
         }
         
-        foreach (Objective objective in patientFile.Objectives)
+        foreach (Objective objective in _patientFile.Objectives)
         {
             EditorGUILayout.BeginHorizontal();
 
@@ -43,15 +43,15 @@ public class PatientFileEditor : UnityEditor.Editor
             EditorGUILayout.LabelField(label);
             if (GUILayout.Button("Remove"))
             {
-                List<Objective> _targetObjectives = patientFile.Objectives.ToList();
+                List<Objective> _targetObjectives = _patientFile.Objectives.ToList();
                 _targetObjectives.Remove(objective);
-                patientFile.Objectives = _targetObjectives.ToArray();
+                _patientFile.Objectives = _targetObjectives.ToArray();
             }
             EditorGUILayout.EndHorizontal();
         }
         
         LoadObjectives();
-        ParseOptions(patientFile);
+        ParseOptions(_patientFile);
         EditorGUILayout.Space(10);
         EditorGUILayout.LabelField("Add Objective");
         EditorGUILayout.BeginHorizontal();
@@ -65,7 +65,7 @@ public class PatientFileEditor : UnityEditor.Editor
             }
             else
             {
-                AddToObjectives(patientFile, _popupOptions[_selectedObject]);
+                AddToObjectives(_patientFile, _popupOptions[_selectedObject]);
                 _selectedObject = 0;
             }
         }
