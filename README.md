@@ -1,2 +1,3 @@
 # PvB-Game
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4b377d7510ca49c08c178e83a3fc2eea)](https://app.codacy.com/manual/me_185/PvB-Game?utm_source=github.com&utm_medium=referral&utm_content=timoheijne/PvB-Game&utm_campaign=Badge_Grade_Dashboard)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/763efce12b9b420a8a575a227d19be8e)](https://app.codacy.com/manual/me_185/PvB-Game?utm_source=github.com&utm_medium=referral&utm_content=timoheijne/PvB-Game&utm_campaign=Badge_Grade_Dashboard)
