@@ -11,18 +11,18 @@ public class ObjectiveEditor : Editor
     public override void OnInspectorGUI()
     {
         LoadObjectives();
-        Objective objective = (Objective) target;
+        Objective _objective = (Objective) target;
         
-        Objective internalName = _objectives.Find(o => o.InternalName == objective.InternalName && o != objective);
+        Objective internalName = _objectives.Find(o => o.InternalName == _objective.InternalName && o != _objective);
         if (internalName != null)
         {
             EditorGUILayout.HelpBox("Duplicate internal name!", MessageType.Error);
-            objective.Active = false;
+            _objective.Active = false;
         } 
 
-        objective.FriendlyName = EditorGUILayout.TextField("Friendly Name", objective.FriendlyName);
-        objective.InternalName = EditorGUILayout.TextField("Internal Name", objective.InternalName);
-        objective.Active = EditorGUILayout.Toggle("Active", objective.Active);
+        _objective.FriendlyName = EditorGUILayout.TextField("Friendly Name", _objective.FriendlyName);
+        _objective.InternalName = EditorGUILayout.TextField("Internal Name", _objective.InternalName);
+        _objective.Active = EditorGUILayout.Toggle("Active", _objective.Active);
     }
     
     private void LoadObjectives()

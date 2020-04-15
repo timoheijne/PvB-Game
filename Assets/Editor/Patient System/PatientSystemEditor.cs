@@ -12,14 +12,14 @@ public class PatientSystemEditor : Editor
     
     public override void OnInspectorGUI()
     {
-        PatientSystem patientSystem = (PatientSystem) target;
+        PatientSystem _patientSystem = (PatientSystem) target;
         
-        EditorGUILayout.LabelField($"Loaded patients: {patientSystem.GetLoadedPatients().Length}");
+        EditorGUILayout.LabelField($"Loaded patients: {_patientSystem.GetLoadedPatients().Length}");
 
         string patientName = "No Active Patient";
-        if (patientSystem.ActivePatient != null)
+        if (_patientSystem.ActivePatient != null)
         {
-            patientName = patientSystem.ActivePatient.PatientName;
+            patientName = _patientSystem.ActivePatient.PatientName;
         }
         EditorGUILayout.LabelField($"Active Patient: {patientName}");
         
@@ -28,7 +28,7 @@ public class PatientSystemEditor : Editor
 
         _popupOptions.Clear();
         _popupOptions.Add("-- SELECT ITEM --");
-        foreach (PatientFile patientFile in patientSystem.GetLoadedPatients())
+        foreach (PatientFile patientFile in _patientSystem.GetLoadedPatients())
         {
             _popupOptions.Add(patientFile.PatientName);
         }
@@ -43,7 +43,7 @@ public class PatientSystemEditor : Editor
             }
             else
             {
-                patientSystem.SetActivePatient(patientSystem.GetLoadedPatients()[_selectedObject - 1]); 
+                _patientSystem.SetActivePatient(_patientSystem.GetLoadedPatients()[_selectedObject - 1]); 
                 _selectedObject = 0;
             }
         }
