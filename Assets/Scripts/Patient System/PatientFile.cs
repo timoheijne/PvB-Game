@@ -34,13 +34,16 @@ public class PatientFile : UnityEngine.ScriptableObject
         return true;
     }
 
-    public void MarkObjectiveDone(string ObjectiveName)
+    public bool MarkObjectiveDone(string ObjectiveName)
     {
         Objective objective = Objectives.First(o => o.InternalName == ObjectiveName);
         if (objective != null)
         {
             objective.IsDone = true;
+            return true;
         }
+
+        return false;
     }
     
 }
