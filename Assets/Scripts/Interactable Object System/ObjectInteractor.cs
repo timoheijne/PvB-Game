@@ -8,12 +8,20 @@ public class ObjectInteractor : MonoBehaviour
 
         public bool InteractWithObject()
         {
-                if(PatientSystem.Instance == null) throw new Exception("Patient System Not Found");
+                if(PatientSystem.Instance == null)
+                {
+                        throw new ArgumentNullException("PatientSystem");
+                }
+                
                 GameObject _gameObject = FindObject();
                 
-                if (_gameObject == null) return false;
+                if (_gameObject == null)
+                {
+                        return false;
+                }
+                
                 InteractableObject _interactableObject = _gameObject.GetComponent<InteractableObject>();
-                return _interactableObject != null && PatientSystem.Instance.MarkObjectiveDone(_interactableObject.ObjectiveName);;
+                return _interactableObject != null && PatientSystem.Instance.MarkObjectiveDone(_interactableObject.ObjectiveName);
         }
 
         private GameObject FindObject()

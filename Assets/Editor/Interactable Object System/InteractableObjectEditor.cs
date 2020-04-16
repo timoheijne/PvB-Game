@@ -27,7 +27,10 @@ public class InteractableObjectEditor : Editor
         EditorGUILayout.LabelField("Selected Objective");
         _selectedObject = EditorGUILayout.Popup(_selectedObject, _popupOptions.ToArray());
 
-        if (_selectedObject == 0) return;
+        if (_selectedObject == 0)
+        {
+            return;
+        }
         _objectiveName.stringValue = _popupOptions[_selectedObject];
         serializedObject.ApplyModifiedProperties();
     }
