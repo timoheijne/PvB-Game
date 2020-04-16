@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e97891e261b4789903aa3ddabf6974b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objectiveName: TestObject
+  _objectiveName: wash
 --- !u!65 &61423097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -435,6 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23bd6e9bbc84cf79515a3b4ff9c3cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxDistance: 0.5
 --- !u!65 &1635193467
 BoxCollider:
   m_ObjectHideFlags: 0
