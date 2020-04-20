@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class DragUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    //private Vector2 lastMousePosition;
+    private Vector2 lastMousePosition;
 
     /// <summary>
     /// This method will be called on the start of the mouse drag
@@ -15,7 +15,8 @@ public class DragUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Begin Drag");
-        //lastMousePosition = eventData.position;
+        lastMousePosition = eventData.position;
+        GetComponent<Node>().RemoveNode();
     }
 
     /// <summary>
@@ -25,17 +26,17 @@ public class DragUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     public void OnDrag(PointerEventData eventData)
     {
         Vector2 currentMousePosition = eventData.position;
-        //Vector2 diff = currentMousePosition - lastMousePosition;
+        Vector2 diff = currentMousePosition - lastMousePosition;
         RectTransform rect = GetComponent<RectTransform>();
 
-        //Vector3 newPosition = rect.position + new Vector3(diff.x, diff.y, transform.position.z);
+        Vector3 newPosition = rect.position + new Vector3(diff.x, diff.y, transform.position.z);
         Vector3 oldPos = rect.position;
-        //rect.position = newPosition;
+        rect.position = newPosition;
         if (!IsRectTransformInsideSreen(rect))
         {
             rect.position = oldPos;
         }
-        //lastMousePosition = currentMousePosition;
+        lastMousePosition = currentMousePosition;
     }
 
     /// <summary>
@@ -45,6 +46,16 @@ public class DragUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("End Drag");
+
+        Node[] nodes = FindObjectsOfType<Node>();
+        foreach (Node node in nodes)
+        {
+            if(node.gameObject != gameObject && node.IsColliding(GetComponent<RectTransform>().position))
+            {
+                node.InsertNode(GetComponent<Node>(), 100);
+                return;
+            }
+        }
         //Implement your funtionlity here
     }
 

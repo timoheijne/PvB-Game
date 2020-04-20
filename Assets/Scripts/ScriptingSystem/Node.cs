@@ -40,26 +40,41 @@ public class Node : MonoBehaviour
         return 1;
     }
 
-    public void InsertNode(Node node)
+    public void InsertNode(Node node ,float nodeHeight)
     {
+        Snap(node);
+
+        if (next != null)
+        {
+            next.MoveVertical(nodeHeight);
+            next.previous = node;
+        }
+
         node.next = next;
-        next.previous = node;
         node.previous = this;
         next = node;
+
 
     }
 
     public void RemoveNode()
     {
-        next.previous = previous;
-        previous.next = next;
+        if (next != null)
+        {
+            next.previous = previous;
+            next.MoveVertical(-100);
+        }
+        if (previous != null)
+        {
+            previous.next = next;
+        }
         next = null;
         previous = null;
     }
 
     public bool HasHead()
     {
-        if (previous != null)
+        if (previous == null)
         {
             return GetComponent<Head>() != null;
         }
@@ -69,19 +84,40 @@ public class Node : MonoBehaviour
         }
     }
 
-    private float start = -1;
-    public void Go()
+    private void MoveVertical(float amount)
     {
-        start = Time.time;
-        functionBlock.Act();
-    }
+        RectTransform temp = GetComponent<RectTransform>();
+        temp.position = (Vector2)temp.position + Vector2.down * amount;
 
-    private void Update()
-    {
-        if (Mathf.Min(Time.time - start, 1) == 1 && start != -1 && next != null)
+        if (next != null)
         {
-            start = -1;
-            next.Go();
+            next.MoveVertical(amount);
         }
     }
+
+    public bool IsColliding(Vector2 colliderPosition)
+    {
+        return ((Vector2)GetComponent<RectTransform>().position - colliderPosition).magnitude < 50;
+    }
+
+    private void Snap(Node node)
+    {
+        node.GetComponent<RectTransform>().position = (Vector2)GetComponent<RectTransform>().position + Vector2.down * 100;
+    }
+
+    //private float start = -1;
+    //public void Go()
+    //{
+    //    start = Time.time;
+    //    functionBlock.Act();
+    //}
+
+    //private void Update()
+    //{
+    //    if (Mathf.Min(Time.time - start, 1) == 1 && start != -1 && next != null)
+    //    {
+    //        start = -1;
+    //        next.Go();
+    //    }
+    //}
 }
