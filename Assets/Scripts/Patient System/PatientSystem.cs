@@ -51,21 +51,21 @@ public class PatientSystem : MonoBehaviour
         }
     }
 
-    public bool MarkObjectiveDone(string objectiveName)
+    public bool MarkObjectiveDone(string _objectiveName)
     {
         if (this.ActivePatient == null)
         {
             return false;
         }
         
-        bool success = this.ActivePatient.MarkObjectiveDone(objectiveName);
+        bool _success = this.ActivePatient.MarkObjectiveDone(_objectiveName);
         
         if (this.ActivePatient.IsDone())
         {
             OnPatientDone?.Invoke(this.ActivePatient);
         }
 
-        return success;
+        return _success;
     }
     
     
