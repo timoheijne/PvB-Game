@@ -17,8 +17,10 @@ public class PatientSystemHook : MonoBehaviour
             throw new ArgumentNullException("LevelSystem");
         }
         
+        Debug.Log("Patient System Loaded");
         
         PatientSystem.Instance.OnPatientDone += OnPatientDone;
+        PatientSystem.Instance.SetLevelFiles(_levelSystem.ActiveLevel.PatientFiles);
     }
 
     private void OnPatientDone(PatientFile obj)
