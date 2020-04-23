@@ -47,7 +47,7 @@ public class PatientSystem : MonoBehaviour
     {
         if (patient.Active)
         {
-            int index = _patientFiles.FindIndex(p => p = patient);
+            int index = _patientFiles.FindIndex(p => p == patient);
 
             if (index > -1)
             {
