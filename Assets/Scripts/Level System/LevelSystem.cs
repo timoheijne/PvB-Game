@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelSystem : MonoBehaviour
 {
-    public static LevelSystem Instance = null;
+    public static LevelSystem Instance;
     public string MainMenuScene => _mainMenuScene;
 
     public event Action<LevelObject> OnLevelLoad; 

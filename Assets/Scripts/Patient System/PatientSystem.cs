@@ -11,7 +11,7 @@ public class PatientSystem : MonoBehaviour
     public event Action<PatientFile> OnPatientChange;
     public PatientFile ActivePatient => (_activePatientIndex < _patientFiles.Count) ? _patientFiles[_activePatientIndex] : null;
     
-    private int _activePatientIndex = 0;
+    private int _activePatientIndex;
     private List<PatientFile> _patientFiles = new List<PatientFile>();
 
     private void Awake()
