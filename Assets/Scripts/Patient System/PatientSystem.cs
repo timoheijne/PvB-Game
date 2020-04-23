@@ -35,7 +35,11 @@ public class PatientSystem : MonoBehaviour
     public void SetLevelFiles(PatientFile[] patientFiles)
     {
         _patientFiles = patientFiles.ToList();
-        _activePatientIndex = 0;
+
+        if (_patientFiles.Count > 0)
+        {
+            SetActivePatient(_patientFiles[0]);
+        }
     }
     
     
