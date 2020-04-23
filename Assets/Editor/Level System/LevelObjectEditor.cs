@@ -59,6 +59,7 @@ public class LevelObjectEditor : Editor
         EditorGUILayout.LabelField("Add Patient");
         LoadPatients(_levelObject);
         
+        
         EditorGUILayout.BeginHorizontal();
         _selectedPatient = EditorGUILayout.Popup(_selectedPatient, _patientOptions.ToArray());
         if (GUILayout.Button("Add"))

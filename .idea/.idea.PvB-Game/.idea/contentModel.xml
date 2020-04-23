@@ -14,6 +14,7 @@
           </e>
           <e p="Level System" t="Include">
             <e p="LevelObjectEditor.cs" t="Include" />
+            <e p="LevelSystemEditor.cs" t="Include" />
           </e>
           <e p="Patient System" t="Include">
             <e p="ObjectiveEditor.cs" t="Include" />
