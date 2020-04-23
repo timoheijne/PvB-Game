@@ -9,9 +9,9 @@ public class PatientSystem : MonoBehaviour
     
     public event Action<PatientFile> OnPatientDone;
     public event Action<PatientFile> OnPatientChange;
-    public PatientFile ActivePatient => _activePatient;
+    public PatientFile ActivePatient => (_activePatientIndex < _patientFiles.Count) ? _patientFiles[_activePatientIndex] : null;
     
-    private PatientFile _activePatient;
+    private int _activePatientIndex = 0;
     private List<PatientFile> _patientFiles = new List<PatientFile>();
 
     private void Awake()
@@ -27,22 +27,35 @@ public class PatientSystem : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        _patientFiles = Resources.LoadAll<PatientFile>("Patient Files").ToList();
-    }
-
     public PatientFile[] GetLoadedPatients()
     {
         return _patientFiles.ToArray();
     }
+
+    public void SetLevelFiles(PatientFile[] patientFiles)
+    {
+        _patientFiles = patientFiles.ToList();
+        _activePatientIndex = 0;
+    }
+    
     
     public bool SetActivePatient(PatientFile patient)
     {
         if (patient.Active)
         {
-            _activePatient = patient;
-            OnPatientChange?.Invoke(patient);
+            int index = _patientFiles.FindIndex(p => p = patient);
+
+            if (index > -1)
+            {
+                _activePatientIndex = index;
+                OnPatientChange?.Invoke(patient);
+            }
+            else
+            {
+                _activePatientIndex = 0;
+                OnPatientChange?.Invoke(ActivePatient);
+            }
+            
             return true;
         }
         else

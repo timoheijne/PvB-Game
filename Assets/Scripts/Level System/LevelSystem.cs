@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class LevelSystem : MonoBehaviour
 {
-    public static LevelSystem instance = null;
-    
+    public static LevelSystem Instance = null;
     public string MainMenuScene => _mainMenuScene;
+
+    public event Action<LevelObject> OnLevelLoad; 
 
         [SerializeField, Tooltip("The name of the main menu scene")]
     private string _mainMenuScene;
@@ -18,11 +19,11 @@ public class LevelSystem : MonoBehaviour
     public LevelObject ActiveLevel => _activeLevel;
     private LevelObject _activeLevel;
 
-    private void Start()
+    private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
             
             SceneManager.sceneLoaded += OnSceneLoaded;
@@ -71,7 +72,6 @@ public class LevelSystem : MonoBehaviour
             return;
         }
         
-        _activeLevel = _level;
         SceneManager.LoadScene(_level.SceneName);
     }
     
@@ -88,6 +88,11 @@ public class LevelSystem : MonoBehaviour
             // TODO: Show level select.
         }
         
-        throw new NotImplementedException();
+        Debug.Log("Level Loaded");
+        _activeLevel = _levels.Find(l => l.SceneName == SceneManager.GetActiveScene().name);
+        if (_activeLevel != null)
+        {
+            OnLevelLoad?.Invoke(_activeLevel);
+        }
     }
 }
