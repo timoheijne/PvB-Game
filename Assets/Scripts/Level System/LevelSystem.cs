@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelSystem : MonoBehaviour
 {
+    public static LevelSystem instance = null;
+    
     public string MainMenuScene => _mainMenuScene;
 
         [SerializeField, Tooltip("The name of the main menu scene")]
@@ -18,12 +20,20 @@ public class LevelSystem : MonoBehaviour
 
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
-        
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        LoadAllLevels();
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            LoadAllLevels();
 
-        _activeLevel = _levels.Find(l => l.SceneName == SceneManager.GetActiveScene().name);
+            _activeLevel = _levels.Find(l => l.SceneName == SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public LevelObject GetLevel(string _levelName)
