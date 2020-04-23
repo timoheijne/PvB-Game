@@ -18,10 +18,22 @@
             <e p="PatientSystemEditor.cs" t="Include" />
           </e>
         </e>
+        <e p="Props" t="Include">
+          <e p="Tim map" t="Include">
+            <e p="Eyes" t="Include">
+              <e p="NewBehaviourScript.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
+          <e p="Camerarotate.cs" t="Include" />
           <e p="Interactable Object System" t="Include">
             <e p="InteractableObject.cs" t="Include" />
             <e p="ObjectInteractor.cs" t="Include" />
+          </e>
+          <e p="Level System" t="Include">
+            <e p="LevelObject.cs" t="Include" />
+            <e p="LevelSystem.cs" t="Include" />
           </e>
           <e p="Patient System" t="Include">
             <e p="Objective.cs" t="Include" />
@@ -30,6 +42,24 @@
           </e>
           <e p="Shared" t="Include">
             <e p="Difficulty.cs" t="Include" />
+          </e>
+          <e p="SimpleCameraController.cs" t="Include" />
+        </e>
+        <e p="shaders" t="Include">
+          <e p="Outline Shader" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="DepthNormalsFeature.cs" t="Include" />
+              <e p="OutlineFeature.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Timtext.txt" t="Include" />
+        <e p="TutorialInfo" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Editor" t="Include">
+              <e p="ReadmeEditor.cs" t="Include" />
+            </e>
+            <e p="Readme.cs" t="Include" />
           </e>
         </e>
       </e>
