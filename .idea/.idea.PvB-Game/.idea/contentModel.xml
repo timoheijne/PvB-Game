@@ -34,6 +34,7 @@
           <e p="Level System" t="Include">
             <e p="LevelObject.cs" t="Include" />
             <e p="LevelSystem.cs" t="Include" />
+            <e p="PatientSystemHook.cs" t="Include" />
           </e>
           <e p="Patient System" t="Include">
             <e p="Objective.cs" t="Include" />
