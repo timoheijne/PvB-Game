@@ -21,6 +21,9 @@ public class LevelSystem : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         
         SceneManager.sceneLoaded += OnSceneLoaded;
+        LoadAllLevels();
+
+        _activeLevel = _levels.Find(l => l.SceneName == SceneManager.GetActiveScene().name);
     }
 
     public LevelObject GetLevel(string _levelName)
