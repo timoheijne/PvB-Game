@@ -13,6 +13,9 @@ public class LevelSystem : MonoBehaviour
     private bool _returnToLevelSelect;
     private List<LevelObject> _levels;
 
+    public LevelObject ActiveLevel => _activeLevel;
+    private LevelObject _activeLevel;
+
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
@@ -20,9 +23,9 @@ public class LevelSystem : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    private void LoadAllLevels()
+    public LevelObject GetLevel(string _levelName)
     {
-        _levels = Resources.LoadAll<LevelObject>("Levels").ToList();
+        return _levels.Find(l => l.LevelName == _levelName);
     }
 
     public void ChangeToMainMenu(bool _showLevelSelect = false)
@@ -38,13 +41,30 @@ public class LevelSystem : MonoBehaviour
 
     public void ChangeLevel(string _levelName)
     {
-        LevelObject _level = _levels.Find(l => l.LevelName == _levelName);
+        LevelObject _level = GetLevel(_levelName);
         if (_level == null)
         {
             return;
         }
-       
+
+        _activeLevel = _level;
         SceneManager.LoadScene(_level.SceneName);
+    }
+    
+    public void ChangeLevel(LevelObject _level)
+    {
+        if (_level.IsEnabled == false)
+        {
+            return;
+        }
+        
+        _activeLevel = _level;
+        SceneManager.LoadScene(_level.SceneName);
+    }
+    
+    private void LoadAllLevels()
+    {
+        _levels = Resources.LoadAll<LevelObject>("Levels").ToList();
     }
     
     private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)

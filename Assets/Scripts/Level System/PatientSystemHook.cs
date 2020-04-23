@@ -23,6 +23,13 @@ public class PatientSystemHook : MonoBehaviour
 
     private void OnPatientDone(PatientFile obj)
     {
-        throw new NotImplementedException();
+        if (_levelSystem.ActiveLevel.NextLevel != string.Empty)
+        {
+            LevelObject _level = _levelSystem.GetLevel(_levelSystem.ActiveLevel.NextLevel);
+            _levelSystem.ChangeLevel(_level);
+        }
+        
+        // TODO: Open level success menu!
+        _levelSystem.ChangeToMainMenu(true);
     }
 }
