@@ -90,7 +90,6 @@ public class OutlineFeature : ScriptableRendererFeature
     {
         if (settings.outlineMaterial == null)
         {
-            Debug.LogWarningFormat("Missing Outline Material");
             return;
         }
         outlinePass.Setup(renderer.cameraColorTarget, RenderTargetHandle.CameraTarget);
