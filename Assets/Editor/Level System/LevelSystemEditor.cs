@@ -28,9 +28,9 @@ public class LevelSystemEditor : UnityEditor.Editor
         }
         
         EditorGUILayout.LabelField($"Active Level: {_activeLevel}");
-        
+        EditorGUILayout.Space(10);
         LoadLevels();
-        EditorGUILayout.LabelField("Next Level:");
+        EditorGUILayout.LabelField("Change Level Level:");
         
         EditorGUILayout.BeginHorizontal();
         _selectedLevel = EditorGUILayout.Popup(_selectedLevel, _levelOptions.ToArray());
@@ -43,6 +43,7 @@ public class LevelSystemEditor : UnityEditor.Editor
             }
             
             _levelSystem.ChangeLevel(_levels[_selectedLevel - 1]);
+            _selectedLevel = 0;
         }
         EditorGUILayout.EndHorizontal();
     }
