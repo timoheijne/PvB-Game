@@ -2040,6 +2040,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Option_SFX
       objectReference: {fileID: 0}
+    - target: {fileID: 4326266270138468127, guid: 1adbcac48d830424a84708a8d4bf3b23,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4326266270138468127, guid: 1adbcac48d830424a84708a8d4bf3b23,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4326266270138468127, guid: 1adbcac48d830424a84708a8d4bf3b23,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4553120093356774346, guid: 1adbcac48d830424a84708a8d4bf3b23,
         type: 3}
       propertyPath: m_Name
@@ -2060,6 +2075,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5248808033569707618, guid: 1adbcac48d830424a84708a8d4bf3b23,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 713ab20b1cfe2b54fade50e40d0e48b5,
+        type: 3}
     - target: {fileID: 5308698900325391451, guid: 1adbcac48d830424a84708a8d4bf3b23,
         type: 3}
       propertyPath: m_Name
@@ -2579,6 +2600,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Option_Music
       objectReference: {fileID: 0}
+    - target: {fileID: 4326266270138468127, guid: 1adbcac48d830424a84708a8d4bf3b23,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4326266270138468127, guid: 1adbcac48d830424a84708a8d4bf3b23,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4326266270138468127, guid: 1adbcac48d830424a84708a8d4bf3b23,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4553120093356774346, guid: 1adbcac48d830424a84708a8d4bf3b23,
         type: 3}
       propertyPath: m_Name
@@ -2599,6 +2635,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5248808033569707618, guid: 1adbcac48d830424a84708a8d4bf3b23,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 713ab20b1cfe2b54fade50e40d0e48b5,
+        type: 3}
     - target: {fileID: 5308698900325391451, guid: 1adbcac48d830424a84708a8d4bf3b23,
         type: 3}
       propertyPath: m_Name
@@ -2843,6 +2885,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Option_Audio
       objectReference: {fileID: 0}
+    - target: {fileID: 4326266270138468127, guid: 1adbcac48d830424a84708a8d4bf3b23,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4326266270138468127, guid: 1adbcac48d830424a84708a8d4bf3b23,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4326266270138468127, guid: 1adbcac48d830424a84708a8d4bf3b23,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5090769545887388170, guid: 1adbcac48d830424a84708a8d4bf3b23,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -2858,6 +2915,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5248808033569707618, guid: 1adbcac48d830424a84708a8d4bf3b23,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 713ab20b1cfe2b54fade50e40d0e48b5,
+        type: 3}
     - target: {fileID: 5486408767177060631, guid: 1adbcac48d830424a84708a8d4bf3b23,
         type: 3}
       propertyPath: m_LocalPosition.x
