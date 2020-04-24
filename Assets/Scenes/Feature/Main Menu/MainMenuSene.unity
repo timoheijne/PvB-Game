@@ -877,6 +877,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pop-Up_Quit
       objectReference: {fileID: 0}
+    - target: {fileID: 1655496206301181821, guid: 04df809acdf1018458814ae7a6059874,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4733128369215899963, guid: 04df809acdf1018458814ae7a6059874,
         type: 3}
       propertyPath: m_IsActive
