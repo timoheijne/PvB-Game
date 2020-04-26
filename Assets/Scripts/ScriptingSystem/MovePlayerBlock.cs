@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MovePlayerBlock : FunctionBlock
 {
-    [SerializeField] Transform player;
-    [SerializeField] Vector3 movement;
+    [SerializeField] Transform player = null;
+    [SerializeField] Vector3 movement = Vector3.zero;
     private Vector3 moveFrom;
     private Vector3 moveTo;
     private float start;

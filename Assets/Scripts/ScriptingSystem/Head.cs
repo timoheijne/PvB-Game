@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Head : MonoBehaviour
 {
+    private int currentNode;
+
+    private Node nextNode;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +18,13 @@ public class Head : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Next()
+    {
+        if (currentNode < 1)
+        {
+            currentNode++;
+        }
     }
 }

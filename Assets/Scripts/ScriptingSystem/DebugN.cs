@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DebugN : FunctionBlock
 {
-    [SerializeField] private int number;
+    [SerializeField] private int number = 0;
 
     private void Awake()
     {
