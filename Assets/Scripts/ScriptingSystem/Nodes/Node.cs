@@ -104,20 +104,4 @@ public class Node : MonoBehaviour
     {
         node.GetComponent<RectTransform>().position = (Vector2)GetComponent<RectTransform>().position + Vector2.down * 100;
     }
-
-    //private float start = -1;
-    //public void Go()
-    //{
-    //    start = Time.time;
-    //    functionBlock.Act();
-    //}
-
-    //private void Update()
-    //{
-    //    if (Mathf.Min(Time.time - start, 1) == 1 && start != -1 && next != null)
-    //    {
-    //        start = -1;
-    //        next.Go();
-    //    }
-    //}
 }
