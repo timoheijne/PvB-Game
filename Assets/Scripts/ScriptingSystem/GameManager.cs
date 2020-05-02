@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     private class nodeHolder
     {
         Head head;
-        Node currentNode;
+        public Node currentNode;
 
         public nodeHolder(Head head, Node node)
         {
@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    List<nodeHolder> heads = new List<nodeHolder>();
+    List<nodeHolder> nodeHolders = new List<nodeHolder>();
     private bool paused = true;
     private float time;
     private float TickTimeInSeconds = 1;
@@ -46,9 +46,9 @@ public class GameManager : MonoBehaviour
 
     private void Tick()
     {
-        for (int i = 0; i < heads.Count; i++)
+        for (int i = 0; i < nodeHolders.Count; i++)
         {
-            //heads[i].
+            nodeHolders[i].currentNode.Act();
         }
     }
 
