@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < nodeHolders.Count; i++)
         {
             nodeHolders[i].currentNode.Act();
+            nodeHolders[i].currentNode = nodeHolders[i].currentNode.NextNode();
         }
     }
 
@@ -56,7 +57,5 @@ public class GameManager : MonoBehaviour
     {
         paused = input;
     }
-
-
 }
 
