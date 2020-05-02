@@ -105,4 +105,11 @@ public class Node : MonoBehaviour
     {
         node.GetComponent<RectTransform>().position = (Vector2)GetComponent<RectTransform>().position + Vector2.down * 100;
     }
+
+    public void Act(){}
+
+    public Node NextNode()
+    {
+        return next;
+    }
 }
