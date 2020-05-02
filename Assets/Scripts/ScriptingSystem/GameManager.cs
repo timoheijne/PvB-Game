@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     }
 
     List<nodeHolder> heads = new List<nodeHolder>();
-    private bool paused;
+    private bool paused = true;
     private float time;
     private float TickTimeInSeconds = 1;
     private int tick = 0;

@@ -7,8 +7,6 @@ public class Node : MonoBehaviour
     public Node next = null;
     public Node previous = null;
 
-    public FunctionBlock functionBlock = null;
-
     public Node GetNode(int nodeNumber)
     {
         if(nodeNumber > 0)
@@ -53,8 +51,6 @@ public class Node : MonoBehaviour
         node.next = next;
         node.previous = this;
         next = node;
-
-
     }
 
     public void RemoveNode()
