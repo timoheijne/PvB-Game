@@ -4,7 +4,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    List<Head> heads = new List<Head>();
+    private class nodeHolder
+    {
+        Head head;
+        Node currentNode;
+
+        public nodeHolder(Head head, Node node)
+        {
+            this.head = head;
+            currentNode = node;
+        }
+    }
+
+    List<nodeHolder> heads = new List<nodeHolder>();
     private bool paused;
     private float time;
     private float TickTimeInSeconds = 1;
@@ -40,13 +52,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void AddHead(Head headToAdd)
-    {
-        heads.Add(headToAdd);
-    }
-
     public void Pause(bool input)
     {
         paused = input;
     }
+
+
 }
+

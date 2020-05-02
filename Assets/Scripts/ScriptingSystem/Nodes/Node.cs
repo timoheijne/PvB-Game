@@ -84,6 +84,11 @@ public class Node : MonoBehaviour
         }
     }
 
+    public bool IsHead()
+    {
+        return GetComponent<Head>() != null;
+    }
+
     private void MoveVertical(float amount)
     {
         RectTransform temp = GetComponent<RectTransform>();
