@@ -8,7 +8,7 @@ public class TutorialObject : ScriptableObject
 {
 
     public string TutorialName;
-    public string UniqueName;
+    public string TutorialID;
     public bool isEnabled = true;
 
     [Serializable]

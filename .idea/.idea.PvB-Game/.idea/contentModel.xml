@@ -43,6 +43,7 @@
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="Tutorial System" t="Include">
             <e p="TutorialObject.cs" t="Include" />
+            <e p="TutorialSystem.cs" t="Include" />
           </e>
         </e>
         <e p="shaders" t="Include">
