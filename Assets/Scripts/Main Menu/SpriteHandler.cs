@@ -5,15 +5,19 @@ using UnityEngine.UI;
 using UnityEditor;
 using UnityEngine.EventSystems;
 
-public class SpriteHandler : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler{
-    public Sprite CurrentSprite;
+public class SpriteHandler : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+{
+    private Sprite _currentSprite;
+
+    [SerializeField]
+    private Sprite[] _spriteState;
 
     private void Start()
     {
         if (gameObject.GetComponent<Image>() != null)
         {
-            CurrentSprite = gameObject.GetComponent<Image>().sprite;
-        }
+            _currentSprite = gameObject.GetComponent<Image>().sprite;;
+        } 
     }
 
     public void OnPointerClick(PointerEventData eventData) 
@@ -54,34 +58,20 @@ public class SpriteHandler : MonoBehaviour, IPointerClickHandler, IPointerEnterH
         }
     }
 
-    private string FindSprite()
-    {
-        return AssetDatabase.GetAssetPath(CurrentSprite);
-    }
-
     private void ChangeSprite(string _newState)
     {
-        Sprite _newSprite;
-        string _currentState;
-
         switch (_newState)
         {
             case "Idle":
-                _currentState = Resources.Load(FindSprite().Contains("Hover") ? "Hover" : "Click").ToString();
-                _newSprite = Resources.Load(FindSprite().Replace(_currentState, "Idle")) as Sprite;
-                CurrentSprite = _newSprite;
+                _currentSprite = _spriteState[0];
                 break;
 
             case "Hover":
-                _currentState = Resources.Load(FindSprite().Contains("Idle") ? "Idle" : "Click").ToString();
-                _newSprite = Resources.Load(FindSprite().Replace(_currentState, "Hover")) as Sprite;
-                CurrentSprite = _newSprite;
+                _currentSprite = _spriteState[1];
                 break;
 
             case "Click":
-                _currentState = Resources.Load(FindSprite().Contains("Hover") ? "Idle" : "Hover").ToString();
-                _newSprite = Resources.Load(FindSprite().Replace(_currentState, "Click")) as Sprite;
-                CurrentSprite = _newSprite;
+                _currentSprite = _spriteState[2];
                 break;
 
             default:
