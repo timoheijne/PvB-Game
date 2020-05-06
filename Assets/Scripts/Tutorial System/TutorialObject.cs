@@ -17,6 +17,7 @@ public class TutorialObject : ScriptableObject
         public string Name;
         public string ObjectReferenceID;
         public Shared.Position PanelPosition;
+        public bool DoctorOnLeft;
         public string Body;
     }
 

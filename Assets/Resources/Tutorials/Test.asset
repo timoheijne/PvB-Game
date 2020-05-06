@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   TutorialName: 
-  UniqueName: 
+  TutorialID: 
   isEnabled: 1
+  TutorialSections:
+  - Name: 
+    ObjectReferenceID: 
+    PanelPosition: 0
+    Body: 
