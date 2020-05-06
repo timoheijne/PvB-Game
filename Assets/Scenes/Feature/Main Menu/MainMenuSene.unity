@@ -843,7 +843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c7b2d21933d464caef89efc456e065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSliders:
+  VolumeSliders:
   - {fileID: 674764115}
   - {fileID: 992821218}
   - {fileID: 479258310}
@@ -3144,7 +3144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a28b5463470b5c4580533c1afabf2fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundGroups: []
+  SoundGroups: []
 --- !u!114 &9105497176283463332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3157,5 +3157,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef3026812ad17d47a8681356a0fb246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainTheme: {fileID: 0}
-  menuTheme: {fileID: 0}
+  MainTheme: {fileID: 0}
+  MenuTheme: {fileID: 0}

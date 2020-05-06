@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
+using UnityEngine.EventSystems;
 
-public class SpriteHandler : MonoBehaviour
-{
+public class SpriteHandler : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler{
     public Sprite CurrentSprite;
 
     private void Start()
@@ -16,39 +16,39 @@ public class SpriteHandler : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
+    public void OnPointerClick(PointerEventData eventData) 
     {
-        if (gameObject.GetComponent<Image>().sprite != null)
+        if (gameObject.GetComponent<Image>().sprite != null) 
         {
             ChangeSprite("Click");
-        }
-        else
+        } 
+        else 
         {
             print("Sprite not found");
         }
     }
 
-    private void OnMouseOver()
+    public void OnPointerEnter(PointerEventData eventData) 
     {
-        if (gameObject.GetComponent<Image>().sprite != null)
+        if (gameObject.GetComponent<Image>().sprite != null) 
         {
             print("ohai");
             ChangeSprite("Hover");
-        }
-        else
+        } 
+        else 
         {
             print("Sprite not found");
         }
     }
 
-    private void OnMouseExit()
+    public void OnPointerExit(PointerEventData eventData) 
     {
-        if (gameObject.GetComponent<Image>().sprite != null)
+        if (gameObject.GetComponent<Image>().sprite != null) 
         {
             print("obai");
             ChangeSprite("Idle");
-        }
-        else
+        } 
+        else 
         {
             print("Sprite not found");
         }
