@@ -2,21 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class CharacterCustomization : MonoBehaviour
 {
+    public static CharacterCustomization instance;
+
     [SerializeField]
     private GameObject[] _hairStyles;
 
     [Range(0, 1)]
-    public float ColorGradient = 0.25f;
-    
+    private float _colorGradient = 0.25f;
+
     private Material _material;
 
-    void OnRenderImage(RenderTexture source, RenderTexture destination) {
-        if (_material == null) {
+    private void Start() 
+    {
+        _material = gameObject.GetComponent<Material>();
+    }
+
+    void OnRenderImage(RenderTexture source, RenderTexture destination) 
+    {
+        if (_material == null) 
+        {
             return;
         }
-        _material.SetFloat("_SamplePos", ColorGradient);
+
+        _colorGradient = Mathf.Round(_colorGradient * 100f) / 100f;
+        _material.SetFloat("_SamplePos", _colorGradient);
 
 
         Graphics.Blit(source, destination, _material);
@@ -30,5 +42,4 @@ public class CharacterCustomization : MonoBehaviour
         }
         _hairStyles[(int)value].SetActive(true);
     }
-
 }

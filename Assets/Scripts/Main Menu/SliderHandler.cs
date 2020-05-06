@@ -7,6 +7,7 @@ using UnityEditor;
 public class SliderHandler : MonoBehaviour
 {
     public Slider[] volumeSliders;
+    public Slider[] characterColorSlider;
     private Sprite _currentSprite;
     private string _currentSpritePath;
 
