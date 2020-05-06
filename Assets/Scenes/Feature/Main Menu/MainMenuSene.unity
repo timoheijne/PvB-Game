@@ -440,7 +440,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: aebe763dab703452e861ba7fecfc6417,
+      objectReference: {fileID: 21300000, guid: 52575ffbf8c3d4440b49249e228a54be,
         type: 3}
     - target: {fileID: 1506810567013881386, guid: 995eb1599079d89448fca60b42bf4df8,
         type: 3}
@@ -562,6 +562,29 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.3624835
       objectReference: {fileID: 0}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 52575ffbf8c3d4440b49249e228a54be,
+        type: 3}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: f286ca0197b064544a9b34bda567ab36,
+        type: 3}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: aebe763dab703452e861ba7fecfc6417,
+        type: 3}
     - target: {fileID: 4656459550681174852, guid: 995eb1599079d89448fca60b42bf4df8,
         type: 3}
       propertyPath: m_Text
@@ -870,6 +893,9 @@ MonoBehaviour:
   - {fileID: 674764115}
   - {fileID: 992821218}
   - {fileID: 479258310}
+  _spriteState:
+  - {fileID: 21300000, guid: 27f6651ecfa60684aaecd3139d59e240, type: 3}
+  - {fileID: 21300000, guid: 4231d194275ed4d4dab814b60e70dc3a, type: 3}
 --- !u!1 &811722750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,6 +1335,29 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.3624835
       objectReference: {fileID: 0}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2968a492a1b33754aa4f1466dbf21bef,
+        type: 3}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9bf26089d98ef3c4082f5e8acd93a1fc,
+        type: 3}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: d795fc6c39e18fb45925e973da821f6d,
+        type: 3}
     - target: {fileID: 4656459550681174852, guid: 995eb1599079d89448fca60b42bf4df8,
         type: 3}
       propertyPath: m_Text
@@ -1521,6 +1570,29 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.362484
       objectReference: {fileID: 0}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 946168f52c08a9e4ab3d6bce9507a8cf,
+        type: 3}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: c99a329ae9361b14a8a0fe6e600aff87,
+        type: 3}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2ac0268e0dfa65541bf29074407bf569,
+        type: 3}
     - target: {fileID: 4656459550681174852, guid: 995eb1599079d89448fca60b42bf4df8,
         type: 3}
       propertyPath: m_Text
@@ -1738,6 +1810,29 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: bf19b9dc020c2cd43bf7f2e176a63ff8,
+        type: 3}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9bcb2832ba6cf4a4a80563fccc6ba0a1,
+        type: 3}
+    - target: {fileID: 3173461984813427531, guid: 995eb1599079d89448fca60b42bf4df8,
+        type: 3}
+      propertyPath: _spriteState.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: b624c4eb71b3cca4caad274beced8b51,
+        type: 3}
     - target: {fileID: 4656459550681174852, guid: 995eb1599079d89448fca60b42bf4df8,
         type: 3}
       propertyPath: m_Text
@@ -2400,7 +2495,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: aebe763dab703452e861ba7fecfc6417,
+      objectReference: {fileID: 21300000, guid: 2968a492a1b33754aa4f1466dbf21bef,
         type: 3}
     - target: {fileID: 1506810567013881386, guid: 995eb1599079d89448fca60b42bf4df8,
         type: 3}

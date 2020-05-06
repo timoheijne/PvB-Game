@@ -7,6 +7,9 @@ using UnityEditor;
 public class SliderHandler : MonoBehaviour
 {
     public Slider[] VolumeSliders;
+
+    [SerializeField]
+    private Sprite[] _spriteState;
     private Sprite _currentSprite;
     private string _currentSpritePath;
 
@@ -23,15 +26,13 @@ public class SliderHandler : MonoBehaviour
 
     public void SetMasterVolume(float value) 
     {
-        if (value >= 0f && _currentSpritePath == Resources.Load("Assets/Sprites/Buttons/Click/Button_Click_Geluid_Gedempt").ToString()) 
+        if (value >= 0f && _currentSprite != _spriteState[0]) 
         {
-            _currentSpritePath = Resources.Load("Assets/Sprites/Buttons/Click/Button_Click_Geluid").ToString();
-            GameObject.Find("Image_Audio").gameObject.GetComponent<Image>().sprite = Resources.Load(_currentSpritePath.ToString()) as Sprite;
+            GameObject.Find("Image_Audio").gameObject.GetComponent<Image>().sprite = _spriteState[0];
         } 
-        else if (value == 0 && _currentSpritePath != Resources.Load("Assets/Sprites/Buttons/Click/Button_Click_Geluid_Gedempt").ToString()) 
+        else if (value == 0 && _currentSprite != _spriteState[0]) 
         {
-            _currentSpritePath = Resources.Load("Assets/Sprites/Buttons/Click/Button_Click_Geluid").ToString();
-            GameObject.Find("Image_Audio").gameObject.GetComponent<Image>().sprite = Resources.Load(_currentSpritePath.ToString()) as Sprite;
+            GameObject.Find("Image_Audio").gameObject.GetComponent<Image>().sprite = _spriteState[1];
         }
 
         AudioManager.instance.SetVolume(value, AudioManager.AudioChannel.Master);
