@@ -13,7 +13,6 @@ public class MovePlayerBlock : FunctionBlock
 
     public override void Act()
     {
-        Debug.Log("Act");
         moveFrom = player.localPosition;
         moveTo = player.localPosition + movement;
         start = Time.time;

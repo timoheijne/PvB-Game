@@ -14,7 +14,6 @@ public class DragUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     /// <param name="eventData">mouse pointer event data</param>
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("Begin Drag");
         lastMousePosition = eventData.position;
         GetComponent<Node>().RemoveNode();
     }
@@ -45,8 +44,6 @@ public class DragUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     /// <param name="eventData"></param>
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("End Drag");
-
         Node[] nodes = FindObjectsOfType<Node>();
         foreach (Node node in nodes)
         {
