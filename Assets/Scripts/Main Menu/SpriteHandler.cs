@@ -6,13 +6,13 @@ using UnityEditor;
 
 public class SpriteHandler : MonoBehaviour
 {
-    public Sprite _currentSprite;
+    public Sprite CurrentSprite;
 
     private void Start()
     {
         if (gameObject.GetComponent<Image>() != null)
         {
-            _currentSprite = gameObject.GetComponent<Image>().sprite;
+            CurrentSprite = gameObject.GetComponent<Image>().sprite;
         }
     }
 
@@ -56,7 +56,7 @@ public class SpriteHandler : MonoBehaviour
 
     private string FindSprite()
     {
-        return AssetDatabase.GetAssetPath(_currentSprite);
+        return AssetDatabase.GetAssetPath(CurrentSprite);
     }
 
     private void ChangeSprite(string _newState)
@@ -69,19 +69,19 @@ public class SpriteHandler : MonoBehaviour
             case "Idle":
                 _currentState = Resources.Load(FindSprite().Contains("Hover") ? "Hover" : "Click").ToString();
                 _newSprite = Resources.Load(FindSprite().Replace(_currentState, "Idle")) as Sprite;
-                _currentSprite = _newSprite;
+                CurrentSprite = _newSprite;
                 break;
 
             case "Hover":
                 _currentState = Resources.Load(FindSprite().Contains("Idle") ? "Idle" : "Click").ToString();
                 _newSprite = Resources.Load(FindSprite().Replace(_currentState, "Hover")) as Sprite;
-                _currentSprite = _newSprite;
+                CurrentSprite = _newSprite;
                 break;
 
             case "Click":
                 _currentState = Resources.Load(FindSprite().Contains("Hover") ? "Idle" : "Hover").ToString();
                 _newSprite = Resources.Load(FindSprite().Replace(_currentState, "Click")) as Sprite;
-                _currentSprite = _newSprite;
+                CurrentSprite = _newSprite;
                 break;
 
             default:

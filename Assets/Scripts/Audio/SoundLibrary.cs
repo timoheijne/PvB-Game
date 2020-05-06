@@ -5,13 +5,13 @@ using UnityEngine;
 public class SoundLibrary : MonoBehaviour 
 {
 
-    public SoundGroup[] soundGroups;
+    public SoundGroup[] SoundGroups;
 
     private readonly Dictionary<string,AudioClip[]> _groupDictionary = new Dictionary<string, AudioClip[]>();
 
     void Awake() 
     {
-        foreach (SoundGroup soundGroup in soundGroups) 
+        foreach (SoundGroup soundGroup in SoundGroups) 
         {
             _groupDictionary.Add(soundGroup.groupID, soundGroup.group);
         }
