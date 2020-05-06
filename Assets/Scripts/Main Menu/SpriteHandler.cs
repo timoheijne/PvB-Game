@@ -3,85 +3,78 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
+using UnityEngine.EventSystems;
 
-public class SpriteHandler : MonoBehaviour
+public class SpriteHandler : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler
 {
-    public Sprite _currentSprite;
+    [SerializeField]
+    private Sprite[] _spriteState;
 
-    private void Start()
+    public void OnPointerDown(PointerEventData eventData) 
     {
-        if (gameObject.GetComponent<Image>() != null)
-        {
-            _currentSprite = gameObject.GetComponent<Image>().sprite;
-        }
-    }
-
-    private void OnMouseDown()
-    {
-        if (gameObject.GetComponent<Image>().sprite != null)
+        if (gameObject.GetComponent<Image>().sprite != null) 
         {
             ChangeSprite("Click");
-        }
+        } 
         else
         {
             print("Sprite not found");
         }
     }
 
-    private void OnMouseOver()
+    public void OnPointerEnter(PointerEventData eventData) 
     {
-        if (gameObject.GetComponent<Image>().sprite != null)
+        if (gameObject.GetComponent<Image>().sprite != null) 
         {
             print("ohai");
             ChangeSprite("Hover");
-        }
-        else
+        } 
+        else 
         {
             print("Sprite not found");
         }
     }
 
-    private void OnMouseExit()
+    public void OnPointerExit(PointerEventData eventData) 
     {
-        if (gameObject.GetComponent<Image>().sprite != null)
+        if (gameObject.GetComponent<Image>().sprite != null) 
         {
             print("obai");
             ChangeSprite("Idle");
-        }
-        else
+        } 
+        else 
         {
             print("Sprite not found");
         }
     }
 
-    private string FindSprite()
+    public void OnPointerUp(PointerEventData eventData) 
     {
-        return AssetDatabase.GetAssetPath(_currentSprite);
+        if (gameObject.GetComponent<Image>().sprite != null) 
+        {
+            print("obai");
+            ChangeSprite("Idle");
+        } 
+        else 
+        {
+            print("Sprite not found");
+        }
     }
 
     private void ChangeSprite(string _newState)
     {
-        Sprite _newSprite;
-        string _currentState;
-
         switch (_newState)
         {
             case "Idle":
-                _currentState = Resources.Load(FindSprite().Contains("Hover") ? "Hover" : "Click").ToString();
-                _newSprite = Resources.Load(FindSprite().Replace(_currentState, "Idle")) as Sprite;
-                _currentSprite = _newSprite;
+                gameObject.GetComponent<Image>().sprite = _spriteState[0];
                 break;
 
             case "Hover":
-                _currentState = Resources.Load(FindSprite().Contains("Idle") ? "Idle" : "Click").ToString();
-                _newSprite = Resources.Load(FindSprite().Replace(_currentState, "Hover")) as Sprite;
-                _currentSprite = _newSprite;
+                gameObject.GetComponent<Image>().sprite = _spriteState[1];
                 break;
 
             case "Click":
-                _currentState = Resources.Load(FindSprite().Contains("Hover") ? "Idle" : "Hover").ToString();
-                _newSprite = Resources.Load(FindSprite().Replace(_currentState, "Click")) as Sprite;
-                _currentSprite = _newSprite;
+                gameObject.GetComponent<Image>().sprite = _spriteState[2];
                 break;
 
             default:

@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour {
     private Transform _audioListener;
     private Transform _playerTransform;
 
-    SoundLibrary library;
+    private SoundLibrary _library;
 
     void Awake() 
     {
@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour {
             instance = this;
             DontDestroyOnLoad(gameObject);
 
-            library = GetComponent<SoundLibrary>();
+            _library = GetComponent<SoundLibrary>();
 
             _musicSources = new AudioSource[2];
             for (int i = 0; i < 2; i++) 
@@ -112,12 +112,12 @@ public class AudioManager : MonoBehaviour {
     }
 
     public void PlaySound(string soundName, Vector3 pos) {
-        PlaySound(library.GetClipFromName(soundName), pos);
+        PlaySound(_library.GetClipFromName(soundName), pos);
     }
 
 
         public void PlaySound2D(string soundName) {
-            _sfx2DSource.PlayOneShot(library.GetClipFromName(soundName), SfxVolumePercent * MasterVolumePercent);
+            _sfx2DSource.PlayOneShot(_library.GetClipFromName(soundName), SfxVolumePercent * MasterVolumePercent);
         }
 
 
