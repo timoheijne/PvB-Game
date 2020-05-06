@@ -11,7 +11,7 @@ public class CharacterCustomization : MonoBehaviour
     private GameObject[] _hairStyles;
 
     [Range(0, 1)]
-    private float _colorGradient = 0.25f;
+    private float _colorGradient = 0.2f;
 
     private Material _material;
 
