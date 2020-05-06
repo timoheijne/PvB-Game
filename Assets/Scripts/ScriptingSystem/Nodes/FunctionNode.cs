@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FunctionNode : Node
 {
-    FunctionBlock functionBlock;
+    [SerializeField] private FunctionBlock functionBlock;
 
     new public void Act()
     {

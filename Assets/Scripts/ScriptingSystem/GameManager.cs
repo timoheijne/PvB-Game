@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
         Head head;
         public Node currentNode;
 
-        public nodeHolder(Head head, Node node)
+        public nodeHolder(Head head)
         {
             this.head = head;
-            currentNode = node;
+            currentNode = head;
         }
     }
 
@@ -49,13 +49,27 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < nodeHolders.Count; i++)
         {
             nodeHolders[i].currentNode.Act();
-            nodeHolders[i].currentNode = nodeHolders[i].currentNode.NextNode();
+            if (true)
+            {
+                nodeHolders[i].currentNode = nodeHolders[i].currentNode.NextNode();
+            }
         }
     }
 
     public void Pause(bool input)
     {
         paused = input;
+    }
+
+    //set nodeHolders to contain all heads
+    public void ResetNodeHolders()
+    {
+        nodeHolders = new List<nodeHolder>();
+        Head[] temp = FindObjectsOfType<Head>();
+        for (int i = 0; i < temp.Length; i++)
+        {
+            nodeHolders.Add(new nodeHolder(temp[i]));
+        }
     }
 }
 
