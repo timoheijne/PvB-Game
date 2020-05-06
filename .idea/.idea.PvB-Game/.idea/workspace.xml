@@ -12,7 +12,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial System/TutorialUIController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -95,7 +94,7 @@
       <workItem from="1587468020252" duration="1841000" />
       <workItem from="1587640545318" duration="13397000" />
       <workItem from="1588180957844" duration="2805000" />
-      <workItem from="1588689076755" duration="10331000" />
+      <workItem from="1588689076755" duration="10930000" />
     </task>
     <servers />
   </component>
