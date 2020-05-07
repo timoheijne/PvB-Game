@@ -21,6 +21,11 @@ public class CharacterCustomization : MonoBehaviour
     {
         _renderer = gameObject.GetComponent<Renderer>();
         _renderer.sharedMaterial.shader = Shader.Find("PVB/ColorGrading");
+
+        for (int i = 0; i < _hairStyles.Length; i++)
+        {
+            _hairStyles[i].SetActive(false);
+        }
     }
 
     private void Update()
