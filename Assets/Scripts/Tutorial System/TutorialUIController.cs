@@ -66,7 +66,6 @@ public class TutorialUIController : MonoBehaviour
 
             _textObject.text = _section.Body;
             
-            Vector3 doctorPosition = _doctorObject.transform.position;
             Vector3 doctorScale = _doctorObject.transform.localScale;
             
             if (_section.DoctorOnLeft)
