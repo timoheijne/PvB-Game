@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ManagerStartTest : MonoBehaviour
 {
-    GameManager gameManager;
+    private GameManager gameManager;
 
     void Start()
     {

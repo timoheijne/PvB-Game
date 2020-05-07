@@ -18,9 +18,9 @@ public class GameManager : MonoBehaviour
 
     List<nodeHolder> nodeHolders = new List<nodeHolder>();
     private bool paused = true;
-    private float time = 0;
+    private float time;
     [SerializeField] private float TickTimeInSeconds = 1;
-    private int tick = 0;
+    private int tick;
 
 
     void Update()
