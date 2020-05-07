@@ -12,26 +12,28 @@ public class CharacterCustomization : MonoBehaviour
 
     [Range(0, 1)]
     private float _colorGradient = 0.2f;
+    private float _oldColorValue;
 
-    private Material _material;
+    private Renderer _renderer;
 
     private void Start() 
     {
-        _material = gameObject.GetComponent<Material>();
+        _renderer = gameObject.GetComponent<Renderer>();
+        _renderer.material.shader = Shader.Find("PVB/ColorGrading");
     }
 
-    void OnRenderImage(RenderTexture source, RenderTexture destination) 
+    public void SkinColorControl(float value)
     {
-        if (_material == null) 
+        Debug.Log("skin color value: " + value);
+        _colorGradient = value;
+        _oldColorValue = Mathf.Round(_colorGradient * 100f) / 100f;
+    }
+    private void Update()
+    {
+        if (_oldColorValue != Mathf.Round(_colorGradient * 100f) / 100f)
         {
-            return;
+            _renderer.material.SetFloat("_SamplePos", _colorGradient);
         }
-
-        _colorGradient = Mathf.Round(_colorGradient * 100f) / 100f;
-        _material.SetFloat("_SamplePos", _colorGradient);
-
-
-        Graphics.Blit(source, destination, _material);
     }
 
     public void SetHairStyle(float value) 
