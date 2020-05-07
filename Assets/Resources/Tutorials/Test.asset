@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97cb1497abbc473081dea15bead6bd72, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: 
-  TutorialName: 
+  TutorialName: Test
   TutorialID: 
   isEnabled: 1
   TutorialSections:
-  - Name: 
+  - Name: 'neen '
     ObjectReferenceID: 
     PanelPosition: 0
+    DoctorOnLeft: 0
+    Body: 
+  - Name: test
+    ObjectReferenceID: 
+    PanelPosition: 0
+    DoctorOnLeft: 0
     Body: 

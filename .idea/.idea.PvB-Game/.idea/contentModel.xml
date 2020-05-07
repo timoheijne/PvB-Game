@@ -17,6 +17,9 @@
             <e p="PatientFileEditor.cs" t="Include" />
             <e p="PatientSystemEditor.cs" t="Include" />
           </e>
+          <e p="Tutorial System" t="Include">
+            <e p="TutorialCreationWindow.cs" t="Include" />
+          </e>
         </e>
         <e p="Props" t="Include">
           <e p="Tim map" t="Include">
