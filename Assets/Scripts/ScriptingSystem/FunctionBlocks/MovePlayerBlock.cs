@@ -13,14 +13,17 @@ public class MovePlayerBlock : FunctionBlock
 
     public override void Act()
     {
-        moveFrom = player.localPosition;
-        moveTo = player.localPosition + movement;
-        start = Time.time;
+        if (player != null)
+        {
+            moveFrom = player.localPosition;
+            moveTo = player.localPosition + movement;
+            start = Time.time;
+        }
     }
 
     private void Update()
     {
-        if (start != -1)
+        if (player != null && start != -1)
         {
             player.localPosition = Vector3.Lerp(moveFrom,moveTo,Mathf.Min(Time.time-start,1));
             if (Mathf.Min(Time.time - start, 1) == 1)
