@@ -10,8 +10,6 @@ public class TutorialUIController : MonoBehaviour
     {
         TutorialSystem.Instance.OnActive += OnActive;
         TutorialSystem.Instance.OnDeactivate += OnDeactivate;
-        
-        HighlightObject("DoctorRef");
     }
 
     private void OnDeactivate()
