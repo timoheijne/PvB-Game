@@ -23,16 +23,9 @@ public class GameManager : MonoBehaviour
     private int tick = 0;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        paused = false;
-        ResetNodeHolders();
-    }
-
-    // Update is called once per frame
     void Update()
     {
+        //if paused add deltaTime to var time, when time > treshold tick()
         if (!paused)
         {
             time += Time.deltaTime;
@@ -47,6 +40,7 @@ public class GameManager : MonoBehaviour
 
     private void Tick()
     {
+        //call Act() on all currentnodes
         for (int i = 0; i < nodeHolders.Count; i++)
         {
             if(nodeHolders[i].currentNode == null)
