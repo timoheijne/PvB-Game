@@ -29,6 +29,19 @@ public class TutorialObject : ScriptableObject
         {
             return obj is TutorialSection other && Equals(other);
         }
+        
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hashCode = (Name != null ? Name.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ (ObjectReferenceID != null ? ObjectReferenceID.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ (int) PanelPosition;
+                hashCode = (hashCode * 397) ^ DoctorOnLeft.GetHashCode();
+                hashCode = (hashCode * 397) ^ (Body != null ? Body.GetHashCode() : 0);
+                return hashCode;
+            }
+        }
     }
 
     public TutorialSection[] TutorialSections;
