@@ -33,8 +33,9 @@ public class CharacterCustomization : MonoBehaviour
             _hairStyles[i].SetActive(false);
         }
 
-        _currentHairStyle = _hairStyles[0];
-
+        SetHairStyle(Mathf.RoundToInt(Random.Range(0,_hairStyles.Length)));
+        _skinColorGradient = Random.value;
+        _hairColorGradient = Random.value;
     }
 
     private void Update()
