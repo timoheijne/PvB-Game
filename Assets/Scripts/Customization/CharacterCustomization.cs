@@ -9,6 +9,7 @@ public class CharacterCustomization : MonoBehaviour
 
     [SerializeField]
     private GameObject[] _hairStyles;
+    private int _hairstyle;
 
     [Range(0, 1)]
     private float _colorGradient = 0.2f;
@@ -19,29 +20,35 @@ public class CharacterCustomization : MonoBehaviour
     private void Start() 
     {
         _renderer = gameObject.GetComponent<Renderer>();
-        _renderer.material.shader = Shader.Find("PVB/ColorGrading");
+        _renderer.sharedMaterial.shader = Shader.Find("PVB/ColorGrading");
     }
 
-    public void SkinColorControl(float value)
-    {
-        Debug.Log("skin color value: " + value);
-        _colorGradient = value;
-        _oldColorValue = Mathf.Round(_colorGradient * 100f) / 100f;
-    }
     private void Update()
     {
         if (_oldColorValue != Mathf.Round(_colorGradient * 100f) / 100f)
         {
-            _renderer.material.SetFloat("_SamplePos", _colorGradient);
+            _renderer.sharedMaterial.SetFloat("_SamplePos", _colorGradient);
         }
     }
 
-    public void SetHairStyle(float value) 
+    public void SkinColorControl(float value)
     {
-        for (int i = 0; i < _hairStyles.Length; i++) 
+        _colorGradient = value;
+        _oldColorValue = Mathf.Round(_colorGradient * 100f) / 100f;
+    }
+
+    public void HairStyleControl(float value)
+    {
+        _hairstyle = Mathf.RoundToInt(value);
+        SetHairStyle(_hairstyle);
+    }
+
+    public void SetHairStyle(int value) 
+    {
+        for (int i = 0; i < _hairStyles.Length; i++)
         {
             _hairStyles[i].SetActive(false);
         }
-        _hairStyles[(int)value].SetActive(true);
+            _hairStyles[(int)value].SetActive(true);
     }
 }
