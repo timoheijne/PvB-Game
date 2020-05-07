@@ -4,8 +4,8 @@ using UnityEngine;
 
 abstract public class Node : MonoBehaviour
 {
-    public Node next = null;
-    public Node previous = null;
+    public Node next;
+    public Node previous;
 
     public Node GetNode(int nodeNumber)
     {
@@ -87,8 +87,8 @@ abstract public class Node : MonoBehaviour
 
     private void MoveVertical(float amount)
     {
-        RectTransform temp = GetComponent<RectTransform>();
-        temp.position = (Vector2)temp.position + Vector2.down * amount;
+        RectTransform transform = GetComponent<RectTransform>();
+        transform.position = (Vector2)transform.position + Vector2.down * amount;
 
         if (next != null)
         {

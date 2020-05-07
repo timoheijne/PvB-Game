@@ -8,7 +8,6 @@ public class FunctionNode : Node
 
     override public void Act()
     {
-        Debug.Log(4);
         functionBlock.Act();
     }
 }

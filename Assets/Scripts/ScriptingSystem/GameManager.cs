@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     List<nodeHolder> nodeHolders = new List<nodeHolder>();
     private bool paused = true;
     private float time = 0;
-    private float TickTimeInSeconds = 1;
+    [SerializeField] private float TickTimeInSeconds = 1;
     private int tick = 0;
 
 
@@ -49,18 +49,12 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < nodeHolders.Count; i++)
         {
-            Debug.Log("1");
             if(nodeHolders[i].currentNode == null)
             {
-                Debug.Log("2");
                 nodeHolders[i].currentNode = nodeHolders[i].head;
             }
-            else
-            {
-                Debug.Log("3");
-                nodeHolders[i].currentNode.Act();
-                nodeHolders[i].currentNode = nodeHolders[i].currentNode.NextNode();
-            }
+            nodeHolders[i].currentNode.Act();
+            nodeHolders[i].currentNode = nodeHolders[i].currentNode.NextNode();
         }
     }
 
@@ -73,10 +67,10 @@ public class GameManager : MonoBehaviour
     public void ResetNodeHolders()
     {
         nodeHolders = new List<nodeHolder>();
-        Head[] temp = FindObjectsOfType<Head>();
-        for (int i = 0; i < temp.Length; i++)
+        Head[] allHeads = FindObjectsOfType<Head>();
+        for (int i = 0; i < allHeads.Length; i++)
         {
-            nodeHolders.Add(new nodeHolder(temp[i]));
+            nodeHolders.Add(new nodeHolder(allHeads[i]));
         }
     }
 }

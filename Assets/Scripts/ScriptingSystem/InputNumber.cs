@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class InputNumber : NumberContainer
 {
-    [SerializeField]InputField input = null;
+    [SerializeField]InputField input;
 
     private void Start()
     {

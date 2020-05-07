@@ -8,7 +8,7 @@ public class Head : Node
 
     new public Node NextNode()
     {
-        return next != null && condition ? next : this;
+        return (next != null && condition) ? next : this;
     }
 
     public override void Act()
