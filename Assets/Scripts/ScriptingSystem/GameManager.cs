@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     private class nodeHolder
     {
-        Head head;
+        public Head head;
         public Node currentNode;
 
         public nodeHolder(Head head)
@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     List<nodeHolder> nodeHolders = new List<nodeHolder>();
     private bool paused = true;
-    private float time;
+    private float time = 0;
     private float TickTimeInSeconds = 1;
     private int tick = 0;
 
@@ -26,7 +26,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        paused = false;
+        ResetNodeHolders();
     }
 
     // Update is called once per frame
@@ -48,9 +49,16 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < nodeHolders.Count; i++)
         {
-            nodeHolders[i].currentNode.Act();
-            if (true)
+            Debug.Log("1");
+            if(nodeHolders[i].currentNode == null)
             {
+                Debug.Log("2");
+                nodeHolders[i].currentNode = nodeHolders[i].head;
+            }
+            else
+            {
+                Debug.Log("3");
+                nodeHolders[i].currentNode.Act();
                 nodeHolders[i].currentNode = nodeHolders[i].currentNode.NextNode();
             }
         }

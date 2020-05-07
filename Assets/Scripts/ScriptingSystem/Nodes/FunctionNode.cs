@@ -6,8 +6,9 @@ public class FunctionNode : Node
 {
     [SerializeField] private FunctionBlock functionBlock;
 
-    new public void Act()
+    override public void Act()
     {
+        Debug.Log(4);
         functionBlock.Act();
     }
 }

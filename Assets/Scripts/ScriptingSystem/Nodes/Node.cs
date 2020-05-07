@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Node : MonoBehaviour
+abstract public class Node : MonoBehaviour
 {
     public Node next = null;
     public Node previous = null;
@@ -106,7 +106,7 @@ public class Node : MonoBehaviour
         node.GetComponent<RectTransform>().position = (Vector2)GetComponent<RectTransform>().position + Vector2.down * 100;
     }
 
-    public void Act(){}
+    abstract public void Act();
 
     public Node NextNode()
     {

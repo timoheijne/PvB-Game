@@ -15,7 +15,7 @@ public class DragUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     public void OnBeginDrag(PointerEventData eventData)
     {
         lastMousePosition = eventData.position;
-        GetComponent<Node>().RemoveNode();
+        GetComponent<Node>()?.RemoveNode();
     }
 
     /// <summary>
