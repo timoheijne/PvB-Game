@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NumberContainer : MonoBehaviour
 {
-    private protected float Value = 0;
+    private protected float Value;
 
     public virtual float GetValue()
     {
