@@ -42,6 +42,7 @@
           </e>
           <e p="Shared" t="Include">
             <e p="Difficulty.cs" t="Include" />
+            <e p="ImageFade.cs" t="Include" />
             <e p="Position.cs" t="Include" />
           </e>
           <e p="SimpleCameraController.cs" t="Include" />
