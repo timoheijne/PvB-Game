@@ -16,7 +16,7 @@ public class TutorialSystem : MonoBehaviour
     private TutorialObject _activeTutorial;
     private List<TutorialObject> _tutorialObjects = new List<TutorialObject>();
 
-    private void Start()
+    private void Awake()
     {
         if (_instance == null)
         {
