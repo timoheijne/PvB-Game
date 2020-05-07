@@ -19,6 +19,7 @@
           </e>
           <e p="Tutorial System" t="Include">
             <e p="TutorialCreationWindow.cs" t="Include" />
+            <e p="TutorialSystemEditor.cs" t="Include" />
           </e>
         </e>
         <e p="Props" t="Include">

@@ -12,6 +12,7 @@ public class TutorialSystem : MonoBehaviour
     public event Action<TutorialObject> OnActive;
     public event Action OnDeactivate;
 
+    public TutorialObject ActiveTutorial => _activeTutorial;
     private TutorialObject _activeTutorial;
     private List<TutorialObject> _tutorialObjects = new List<TutorialObject>();
 
@@ -27,6 +28,7 @@ public class TutorialSystem : MonoBehaviour
             Destroy(this);
         }
     }
+    
 
     public void ActivateTutorial(string _tutorialID)
     {
@@ -38,7 +40,7 @@ public class TutorialSystem : MonoBehaviour
         }
         else
         {
-            throw new ArgumentNullException("TutorialObject");
+            throw new ArgumentNullException("Tutorial Not Found");
         }
     }
 
