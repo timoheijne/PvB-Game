@@ -7,15 +7,21 @@ public class CharacterCustomization : MonoBehaviour
 {
     public static CharacterCustomization instance;
 
+    private Renderer _renderer;
+
     [SerializeField]
     private GameObject[] _hairStyles;
+    private GameObject _currentHairStyle;
     private int _hairstyle;
 
     [Range(0, 1)]
-    private float _colorGradient = 0.2f;
-    private float _oldColorValue;
+    private float _skinColorGradient = 0.2f;
+    [Range(0, 1)]
+    private float _hairColorGradient = 0.2f;
 
-    private Renderer _renderer;
+    private int _oldHairColorValue;
+    private int _oldSkinColorValue;
+
 
     private void Start() 
     {
@@ -26,20 +32,28 @@ public class CharacterCustomization : MonoBehaviour
         {
             _hairStyles[i].SetActive(false);
         }
+
+        _currentHairStyle = _hairStyles[0];
+
     }
 
     private void Update()
     {
-        if (_oldColorValue != Mathf.Round(_colorGradient * 100f) / 100f)
+        if (_oldSkinColorValue != Mathf.Round(_skinColorGradient * 100f) / 100f)
         {
-            _renderer.sharedMaterial.SetFloat("_SamplePos", _colorGradient);
+            _renderer.sharedMaterial.SetFloat("_SamplePos", _skinColorGradient);
+        }
+
+        if (_oldHairColorValue != Mathf.Round(_hairColorGradient * 100f) / 100f)
+        {
+            SetHairColor(_currentHairStyle, _hairColorGradient);
         }
     }
 
     public void SkinColorControl(float value)
     {
-        _colorGradient = value;
-        _oldColorValue = Mathf.Round(_colorGradient * 100f) / 100f;
+        _skinColorGradient = value;
+        _oldSkinColorValue = (int)(Mathf.Round(_skinColorGradient * 100f) / 100f);
     }
 
     public void HairStyleControl(float value)
@@ -48,12 +62,31 @@ public class CharacterCustomization : MonoBehaviour
         SetHairStyle(_hairstyle);
     }
 
+    public void HairColorControl(float value)
+    {
+        _hairColorGradient = value;
+        _oldHairColorValue = (int)(Mathf.Round(_hairColorGradient * 100f) / 100f);
+    }
+
     public void SetHairStyle(int value) 
     {
         for (int i = 0; i < _hairStyles.Length; i++)
         {
             _hairStyles[i].SetActive(false);
         }
-            _hairStyles[(int)value].SetActive(true);
+        _hairStyles[(int)value].SetActive(true);
+        _currentHairStyle = _hairStyles[value];
+    }
+
+    public void SetHairColor(GameObject target, float value)
+    {
+        if (target == _hairStyles[0])
+        {
+            return;
+        }
+
+        Renderer _targetRenderer;
+        _targetRenderer = target.GetComponent<Renderer>();
+        _targetRenderer.sharedMaterial.SetFloat("_SamplePos", value);
     }
 }
