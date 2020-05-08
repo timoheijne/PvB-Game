@@ -212,7 +212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &44485219
 Transform:
   m_ObjectHideFlags: 0
@@ -1230,6 +1230,10 @@ MonoBehaviour:
   - {fileID: 1770403892}
   - {fileID: 1946048350}
   - {fileID: 44485218}
+  _customizationSliders:
+  - {fileID: 1006648040}
+  - {fileID: 1066855142}
+  - {fileID: 757156382}
 --- !u!1 &1066855140
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,7 +2203,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _SamplePos: 0.2
+    - _SamplePos: 0.28380695
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

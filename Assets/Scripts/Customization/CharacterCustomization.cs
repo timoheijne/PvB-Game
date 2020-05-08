@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [ExecuteInEditMode]
 public class CharacterCustomization : MonoBehaviour
@@ -13,6 +14,9 @@ public class CharacterCustomization : MonoBehaviour
     private GameObject[] _hairStyles;
     private GameObject _currentHairStyle;
     private int _hairstyle;
+
+    [SerializeField]
+    private Slider[] _customizationSliders;
 
     [Range(0, 1)]
     private float _skinColorGradient = 0.2f;
@@ -36,6 +40,10 @@ public class CharacterCustomization : MonoBehaviour
         SetHairStyle(Mathf.RoundToInt(Random.Range(0,_hairStyles.Length)));
         _skinColorGradient = Random.value;
         _hairColorGradient = Random.value;
+
+        _customizationSliders[0].value = System.Array.IndexOf(_hairStyles, _currentHairStyle);
+        _customizationSliders[1].value = _hairColorGradient;
+        _customizationSliders[2].value = _skinColorGradient;
     }
 
     private void Update()
