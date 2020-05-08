@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PvB-Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PvB-Game/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PvB-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PvB-Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/DragUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/DragUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +18,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Inventory/BlockInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Nodes/FunctionNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/Interactable Object System/InteractableObjectEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Nodes/Node.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/Interactable Object System/ObjectInteractorEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" root0="FORCE_HIGHLIGHTING" />
@@ -59,6 +59,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Inventory/InventoryItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Inventory/BlockInventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Inventory/InventoryBlockInstantiator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Inventory/BlockTrash.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/DragUI.cs" />
       </list>
     </option>
@@ -142,10 +143,11 @@
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="2472" y="183" key="#Notifications/0.0.1920.1050/1920.0.1920.1050/-1920.0.1920.1050@1920.0.1920.1050" timestamp="1588951130859" />
-    <state x="761" y="139" key="RiderGenerateDialog" timestamp="1588181237737">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="2681" y="139" key="RiderGenerateDialog" timestamp="1588955455665">
+      <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="761" y="139" key="RiderGenerateDialog/0.0.1920.1050/1920.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1588181237737" />
+    <state x="2681" y="139" key="RiderGenerateDialog/0.0.1920.1050/1920.0.1920.1050/-1920.0.1920.1050@1920.0.1920.1050" timestamp="1588955455665" />
     <state x="720" y="147" key="VCS.ChangeListViewerDialog" timestamp="1586436218659">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
