@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine;
@@ -26,7 +27,9 @@ public class DragUI : MonoBehaviour, IPointerDownHandler
         if (!isDragging)
         {
             return;
-        } else if (isDragging && Input.GetMouseButtonUp(0))
+        }  
+        
+        if (isDragging && Input.GetMouseButtonUp(0))
         {
             ReleaseDrag();
         }
@@ -48,10 +51,16 @@ public class DragUI : MonoBehaviour, IPointerDownHandler
     private void ReleaseDrag()
     {
         isDragging = false;
-        
+
         Node[] nodes = FindObjectsOfType<Node>();
         foreach (Node node in nodes)
         {
+            if (node.gameObject.tag.Equals("TrashCan") && node.IsColliding(GetComponent<RectTransform>().position))
+            {
+                Destroy(gameObject);
+                return;
+            }
+            
             if(node.gameObject != gameObject && node.IsColliding(GetComponent<RectTransform>().position))
             {
                 node.InsertNode(GetComponent<Node>(), 100);
