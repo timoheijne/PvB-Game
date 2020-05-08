@@ -1,30 +1,37 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine;
 
-public class DragUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DragUI : MonoBehaviour, IPointerDownHandler
 {
     private Vector2 lastMousePosition;
+    private bool isDragging;
 
     /// <summary>
     /// This method will be called on the start of the mouse drag
     /// </summary>
     /// <param name="eventData">mouse pointer event data</param>
-    public void OnBeginDrag(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData)
     {
         lastMousePosition = eventData.position;
         GetComponent<Node>()?.RemoveNode();
+        isDragging = true;
     }
 
-    /// <summary>
-    /// This method will be called during the mouse drag
-    /// </summary>
-    /// <param name="eventData">mouse pointer event data</param>
-    public void OnDrag(PointerEventData eventData)
+    private void Update()
     {
-        Vector2 currentMousePosition = eventData.position;
+        if (!isDragging)
+        {
+            return;
+        } else if (isDragging && Input.GetMouseButtonUp(0))
+        {
+            ReleaseDrag();
+        }
+        
+        Vector2 currentMousePosition = Input.mousePosition;
         Vector2 diff = currentMousePosition - lastMousePosition;
         RectTransform rect = GetComponent<RectTransform>();
 
@@ -37,13 +44,11 @@ public class DragUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
         }
         lastMousePosition = currentMousePosition;
     }
-
-    /// <summary>
-    /// This method will be called at the end of mouse drag
-    /// </summary>
-    /// <param name="eventData"></param>
-    public void OnEndDrag(PointerEventData eventData)
+    
+    private void ReleaseDrag()
     {
+        isDragging = false;
+        
         Node[] nodes = FindObjectsOfType<Node>();
         foreach (Node node in nodes)
         {
@@ -53,7 +58,6 @@ public class DragUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
                 return;
             }
         }
-        //Implement your funtionlity here
     }
 
     /// <summary>
