@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawRay(transform.position, transform.forward);
         Gizmos.color = Color.green;
-        //Draw a cube at the maximum distance
+        //Draw a cube in front of this gameobject
         Gizmos.DrawWireCube(transform.position + transform.forward, Vector3.one * 0.9f);
     }
 }
