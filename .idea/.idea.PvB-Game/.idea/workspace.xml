@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01c9949e-be48-46a0-96c8-24483aa3a697" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PvB-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PvB-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Props/Kim Props/Voorbeeldding 2.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Props/Lois props/Karakter/Animaties/Doctor Animation Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Props/Lois props/Karakter/Animaties/Doctor Animation Controller.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Props/Lois props/Karakter/Model/Dokter.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Props/Lois props/Karakter/Model/Dokter.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Props/Thomas props/Voorbeeldding 15.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Movement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,10 +57,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Nodes/Heads/Head.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Nodes/FunctionNode.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/FunctionBlocks/MoveBlock.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/ManagerStartTest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/FunctionBlocks/RotateBlock.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -121,7 +117,7 @@
       <workItem from="1587640545318" duration="13397000" />
       <workItem from="1588180957844" duration="2805000" />
       <workItem from="1588689076755" duration="10930000" />
-      <workItem from="1589111944700" duration="7588000" />
+      <workItem from="1589111944700" duration="7592000" />
     </task>
     <servers />
   </component>
@@ -171,10 +167,10 @@
           <line>24</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/GameManager.cs" initialLine="24">
             <startOffsets>
-              <option value="514" />
+              <option value="506" />
             </startOffsets>
             <endOffsets>
-              <option value="515" />
+              <option value="507" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

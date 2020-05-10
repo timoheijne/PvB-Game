@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     }
 
     List<nodeHolder> nodeHolders = new List<nodeHolder>();
-    private bool _isRunning = false;
+    private bool _isRunning;
 
     public void InitiateSequence()
     {
