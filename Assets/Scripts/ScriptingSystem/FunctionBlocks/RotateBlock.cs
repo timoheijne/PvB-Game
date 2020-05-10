@@ -11,11 +11,11 @@ public class RotateBlock : FunctionBlock
     {
         if (right)
         {
-            movement.Right();
+            yield return StartCoroutine(movement.Right());
         }
         else
         {
-            movement.Left();
+            yield return StartCoroutine(movement.Left());
         }
 
         yield return 0;
