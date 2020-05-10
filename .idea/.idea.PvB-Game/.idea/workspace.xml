@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="01c9949e-be48-46a0-96c8-24483aa3a697" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PvB-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PvB-Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Props/Kim Props/Voorbeeldding 2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Props/Lois props/Karakter/Animaties/Doctor Animation Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Props/Lois props/Karakter/Animaties/Doctor Animation Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Props/Lois props/Karakter/Model/Dokter.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Props/Lois props/Karakter/Model/Dokter.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Props/Thomas props/Voorbeeldding 15.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Movement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/FunctionBlocks/RotateBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/FunctionBlocks/RotateBlock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +121,7 @@
       <workItem from="1587640545318" duration="13397000" />
       <workItem from="1588180957844" duration="2805000" />
       <workItem from="1588689076755" duration="10930000" />
-      <workItem from="1589111944700" duration="5820000" />
+      <workItem from="1589111944700" duration="7588000" />
     </task>
     <servers />
   </component>

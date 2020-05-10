@@ -48,6 +48,13 @@ public class Movement : MonoBehaviour
         _animator.SetBool("TurnRight", false);
         
         _animator.SetTrigger("Turn");
+        
+        // Wait for the turn animation to start playing
+        while (!_animator.GetCurrentAnimatorStateInfo(0).IsName("Dokter_walk_turn"))
+        {
+            yield return null;
+        }
+        
         //Wait until Animator is done playing
         while (_animator.GetCurrentAnimatorStateInfo(0).IsName("Dokter_walk_turn") &&
                _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
@@ -55,6 +62,8 @@ public class Movement : MonoBehaviour
             //Wait every frame until animation has finished
             yield return null;
         }
+        
+        
         
         transform.Rotate(Vector3.up * -90);
         
@@ -66,8 +75,16 @@ public class Movement : MonoBehaviour
         _animator.SetBool("TurnRight", true);
         
         _animator.SetTrigger("Turn");
+        
+        // Wait for the turn animation to start playing
+        while (!_animator.GetCurrentAnimatorStateInfo(0).IsName("Dokter_walk_turn"))
+        {
+            yield return null;
+        }
+        
         //Wait until Animator is done playing
-        while (_animator.GetCurrentAnimatorStateInfo(0).IsName("Dokter_walk_turn"))
+        while (_animator.GetCurrentAnimatorStateInfo(0).IsName("Dokter_walk_turn") &&
+               _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
         {
             //Wait every frame until animation has finished
             yield return null;
