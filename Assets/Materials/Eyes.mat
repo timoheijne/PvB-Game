@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HairTest
+  m_Name: Eyes
   m_Shader: {fileID: 4800000, guid: c55cf0fd7a8bfc7448735ffb7c28213c, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -75,7 +75,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _SamplePos: 0.56208843
+    - _SamplePos: 0.9857813
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
