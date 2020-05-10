@@ -30,9 +30,9 @@ public class Movement : MonoBehaviour
 
         while (transform.position != _targetPosition)
         {
-            float distCovered = (Time.time - _startTime) * _walkSpeed;
-            float fractionOfJourney = distCovered / _journeyLength;
-            transform.position = Vector3.Lerp(_startPosition, _targetPosition, fractionOfJourney);
+            float _distCovered = (Time.time - _startTime) * _walkSpeed;
+            float _fractionOfJourney = _distCovered / _journeyLength;
+            transform.position = Vector3.Lerp(_startPosition, _targetPosition, _fractionOfJourney);
             
             yield return null;
         }
