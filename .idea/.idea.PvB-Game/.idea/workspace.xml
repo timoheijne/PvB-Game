@@ -56,11 +56,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial System/TutorialReferenceObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial System/TutorialObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial System/TutorialUIController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Inventory/InventoryItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Inventory/BlockInventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Inventory/InventoryBlockInstantiator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Inventory/BlockTrash.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/DragUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/FunctionBlocks/FunctionBlock.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Nodes/Node.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Nodes/Heads/Head.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Nodes/FunctionNode.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/FunctionBlocks/MoveBlock.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/ManagerStartTest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/FunctionBlocks/RotateBlock.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -117,6 +121,7 @@
       <workItem from="1587640545318" duration="13397000" />
       <workItem from="1588180957844" duration="2805000" />
       <workItem from="1588689076755" duration="10930000" />
+      <workItem from="1589111944700" duration="8287000" />
     </task>
     <servers />
   </component>
@@ -147,17 +152,18 @@
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="761" y="139" key="RiderGenerateDialog/0.0.1920.1050/1920.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1588181237737" />
-    <state x="2681" y="139" key="RiderGenerateDialog/0.0.1920.1050/1920.0.1920.1050/-1920.0.1920.1050@1920.0.1920.1050" timestamp="1588955455665" />
-    <state x="720" y="147" key="VCS.ChangeListViewerDialog" timestamp="1586436218659">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="2640" y="147" key="VCS.ChangeListViewerDialog" timestamp="1589121387875">
+      <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="720" y="147" key="VCS.ChangeListViewerDialog/0.0.1920.1050/1920.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1586436218659" />
-    <state x="616" y="243" key="run.anything.popup" timestamp="1586961930680">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="2640" y="147" key="VCS.ChangeListViewerDialog/0.0.1920.1050/1920.0.1920.1050/-1920.0.1920.1050@1920.0.1920.1050" timestamp="1589121387875" />
+    <state x="2536" y="243" key="run.anything.popup" timestamp="1589120975001">
+      <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1586961930680" />
-    <state x="2543" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1588952583003">
-      <screen x="1920" y="0" width="1920" height="1050" />
+    <state x="2536" y="243" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1050/-1920.0.1920.1050@1920.0.1920.1050" timestamp="1589120975001" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1588693887348">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1588693887348" />
     <state x="2543" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050/-1920.0.1920.1050@1920.0.1920.1050" timestamp="1588952583003" />

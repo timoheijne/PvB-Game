@@ -7,15 +7,17 @@ public class RotateBlock : FunctionBlock
     [SerializeField] private Movement movement;
     [SerializeField] private bool right;
 
-    public override void Act()
+    public override IEnumerator Act()
     {
         if (right)
         {
-            movement.Right();
+            yield return StartCoroutine(movement.Right());
         }
         else
         {
-            movement.Left();
+            yield return StartCoroutine(movement.Left());
         }
+
+        yield return 0;
     }
 }

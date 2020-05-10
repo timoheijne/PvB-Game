@@ -11,7 +11,8 @@ public class Head : Node
         return (next != null && condition) ? next : this;
     }
 
-    public override void Act()
+    public override IEnumerator Act()
     {
+        yield return 0;
     }
 }

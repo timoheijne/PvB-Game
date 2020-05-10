@@ -6,8 +6,10 @@ public class FunctionNode : Node
 {
     [SerializeField] private FunctionBlock functionBlock;
 
-    override public void Act()
+    override public IEnumerator Act()
     {
-        functionBlock.Act();
+        yield return StartCoroutine(functionBlock.Act());
+        
+        yield return 0;
     }
 }
