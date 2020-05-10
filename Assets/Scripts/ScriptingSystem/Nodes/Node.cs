@@ -106,7 +106,7 @@ abstract public class Node : MonoBehaviour
         node.GetComponent<RectTransform>().position = (Vector2)GetComponent<RectTransform>().position + Vector2.down * 100;
     }
 
-    abstract public void Act();
+    public abstract IEnumerator Act();
 
     public Node NextNode()
     {

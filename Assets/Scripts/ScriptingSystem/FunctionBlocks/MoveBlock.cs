@@ -6,11 +6,13 @@ public class MoveBlock : FunctionBlock
 {
     [SerializeField] private Movement movement;
     
-    public override void Act()
+    public override IEnumerator Act()
     {
         if (movement.CanMoveForward())
         {
-            movement.Forward();
+            yield return StartCoroutine(movement.Forward());
         }
+        
+        yield return 0;
     }
 }

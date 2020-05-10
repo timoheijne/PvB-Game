@@ -4,14 +4,24 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+
+    [SerializeField] private float _walkSpeed = 1;
+    
     public bool CanMoveForward()
     {
         return !Physics.BoxCast(transform.position - transform.forward*0.9f, Vector3.one * 0.45f, transform.forward, transform.rotation, 1.9f);
     }
 
-    public void Forward()
+    public IEnumerator Forward()
     {
+        // Start walk animation
+        // Start moving
         transform.localPosition += transform.forward;
+
+        yield return new WaitForSeconds(5);
+        // Stop walk animation
+        
+        yield return 0;
     }
 
     public void Left()

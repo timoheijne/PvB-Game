@@ -11,7 +11,6 @@ public class ManagerStartTest : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         if (gameManager != null)
         {
-            gameManager.Pause(false);
             gameManager.ResetNodeHolders();
         }
     }

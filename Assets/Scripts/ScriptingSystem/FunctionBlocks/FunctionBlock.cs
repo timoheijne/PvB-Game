@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class FunctionBlock : MonoBehaviour
 {
-    public abstract void Act();
+    public abstract IEnumerator Act();
 }

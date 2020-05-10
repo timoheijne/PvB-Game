@@ -17,44 +17,46 @@ public class GameManager : MonoBehaviour
     }
 
     List<nodeHolder> nodeHolders = new List<nodeHolder>();
-    private bool paused = true;
-    private float time;
-    [SerializeField] private float TickTimeInSeconds = 1;
-    private int tick;
+    private bool _isRunning = false;
 
-
-    void Update()
+    public void InitiateSequence()
     {
-        //if paused add deltaTime to var time, when time > treshold tick()
-        if (!paused)
+        if (_isRunning)
         {
-            time += Time.deltaTime;
+            Debug.LogError("Sequence already running, wait for finish before you can run again.");
+            return;
         }
-        if (time >= TickTimeInSeconds)
-        {
-            time -= TickTimeInSeconds;
-            Tick();
-            tick += 1;
-        }
+
+        _isRunning = true;
+        StartCoroutine(RunSequence());
+        
     }
 
-    private void Tick()
+    private IEnumerator RunSequence()
     {
-        //call Act() on all currentnodes
         for (int i = 0; i < nodeHolders.Count; i++)
         {
-            if(nodeHolders[i].currentNode == null)
+            if (nodeHolders[i].currentNode == null)
             {
                 nodeHolders[i].currentNode = nodeHolders[i].head;
             }
-            nodeHolders[i].currentNode.Act();
-            nodeHolders[i].currentNode = nodeHolders[i].currentNode.NextNode();
-        }
-    }
 
-    public void Pause(bool input)
-    {
-        paused = input;
+            bool run = true;
+            while (run)
+            {
+                yield return StartCoroutine(nodeHolders[i].currentNode.Act());
+                nodeHolders[i].currentNode = nodeHolders[i].currentNode.NextNode();
+
+                if (nodeHolders[i].currentNode == null)
+                {
+                    run = false;
+                }
+            }
+        }
+
+        _isRunning = false;
+
+        yield return 0;
     }
 
     //set nodeHolders to contain all heads
