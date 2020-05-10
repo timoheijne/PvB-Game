@@ -30,6 +30,11 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Audio" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+            <e p="MusicManager.cs" t="Include" />
+            <e p="SoundLibrary.cs" t="Include" />
+          </e>
           <e p="Camerarotate.cs" t="Include" />
           <e p="Interactable Object System" t="Include">
             <e p="InteractableObject.cs" t="Include" />
@@ -40,10 +45,37 @@
             <e p="LevelSystem.cs" t="Include" />
             <e p="PatientSystemHook.cs" t="Include" />
           </e>
+          <e p="Main Menu" t="Include">
+            <e p="ButtonHandler.cs" t="Include" />
+            <e p="SliderHandler.cs" t="Include" />
+            <e p="SpriteHandler.cs" t="Include" />
+          </e>
+          <e p="Movement" t="Include">
+            <e p="Movement.cs" t="Include" />
+          </e>
           <e p="Patient System" t="Include">
             <e p="Objective.cs" t="Include" />
             <e p="PatientFile.cs" t="Include" />
             <e p="PatientSystem.cs" t="Include" />
+          </e>
+          <e p="ScriptingSystem" t="Include">
+            <e p="DragUI.cs" t="Include" />
+            <e p="FunctionBlocks" t="Include">
+              <e p="FunctionBlock.cs" t="Include" />
+              <e p="MoveBlock.cs" t="Include" />
+              <e p="RotateBlock.cs" t="Include" />
+            </e>
+            <e p="GameManager.cs" t="Include" />
+            <e p="InputNumber.cs" t="Include" />
+            <e p="ManagerStartTest.cs" t="Include" />
+            <e p="Nodes" t="Include">
+              <e p="FunctionNode.cs" t="Include" />
+              <e p="Heads" t="Include">
+                <e p="Head.cs" t="Include" />
+              </e>
+              <e p="Node.cs" t="Include" />
+            </e>
+            <e p="NumberContainer.cs" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="Difficulty.cs" t="Include" />
