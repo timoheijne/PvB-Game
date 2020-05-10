@@ -41,15 +41,15 @@ public class GameManager : MonoBehaviour
                 nodeHolders[i].currentNode = nodeHolders[i].head;
             }
 
-            bool run = true;
-            while (run)
+            bool _run = true;
+            while (_run)
             {
                 yield return StartCoroutine(nodeHolders[i].currentNode.Act());
                 nodeHolders[i].currentNode = nodeHolders[i].currentNode.NextNode();
 
                 if (nodeHolders[i].currentNode == null)
                 {
-                    run = false;
+                    _run = false;
                 }
             }
         }
