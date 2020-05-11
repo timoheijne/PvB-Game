@@ -17,6 +17,11 @@ namespace Shared
  
         IEnumerator FadeImage(bool fadeAway, bool repeat)
         {
+            if (_image == null)
+            {
+                yield break;
+            }
+            
             do
             {
                 if (fadeAway)
