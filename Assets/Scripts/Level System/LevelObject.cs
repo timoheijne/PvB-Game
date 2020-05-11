@@ -6,6 +6,7 @@ public class LevelObject : UnityEngine.ScriptableObject
         public string SceneName;
         public bool IsEnabled = true;
         public string NextLevel;
+        public int Position;
         
         public PatientFile[] PatientFiles = new PatientFile[0];
 }

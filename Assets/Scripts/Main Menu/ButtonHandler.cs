@@ -7,12 +7,16 @@ public class ButtonHandler : MonoBehaviour
 {
     public void ToggleMenu(GameObject _menu) 
     {
-        if (!_menu.activeInHierarchy) {
-            _menu.SetActive(true);
-        } 
-        else 
+        if (_menu != null)
         {
-            _menu.SetActive(false);
+            if (!_menu.activeInHierarchy)
+            {
+                _menu.SetActive(true);
+            } 
+            else 
+            {
+                _menu.SetActive(false);
+            }
         }
     }
 
