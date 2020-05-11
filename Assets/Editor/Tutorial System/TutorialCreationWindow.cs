@@ -116,6 +116,11 @@ public class TutorialCreationWindow : EditorWindow
         GuiLine();
         
         EditorGUILayout.Space(5);
+
+        if (GUILayout.Button("Save Tutorial"))
+        {
+            AssetDatabase.SaveAssets ();
+        }
         
         if (GUILayout.Button("Back to list"))
         {
