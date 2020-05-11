@@ -703,7 +703,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.8283763
+  m_Value: 0.782117
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -733,7 +733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &575760183
 Transform:
   m_ObjectHideFlags: 0
@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.15389217
+  m_Value: 0.3829915
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1479,7 +1479,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 3
   m_WholeNumbers: 1
-  m_Value: 2
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1602,7 +1602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 302c66ec6d9ecd243898ae96a1312dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isCreatingPlayer: 0
+  _isCreatingPlayer: 1
   _hairStyles:
   - {fileID: 575760182}
   - {fileID: 1770403892}
@@ -1702,7 +1702,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.86217546
+  m_Value: 0.5117164
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2544,7 +2544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1946048351
 Transform:
   m_ObjectHideFlags: 0
@@ -2696,7 +2696,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _SamplePos: 0.15389217
+    - _SamplePos: 0.8832326
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
