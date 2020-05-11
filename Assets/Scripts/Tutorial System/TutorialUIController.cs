@@ -138,7 +138,10 @@ public class TutorialUIController : MonoBehaviour
                 _objectHighlight.gameObject.SetActive(true);
                 _objectHighlight.position = referenceObject.transform.position;
                 RectTransform rectTransform = _objectHighlight.GetComponent<RectTransform>();
-                rectTransform.sizeDelta = referenceObject.GetComponent<RectTransform>().sizeDelta;
+                Vector2 _sizeDelta = referenceObject.GetComponent<RectTransform>().sizeDelta;
+                _sizeDelta += new Vector2(50, 40);
+                
+                rectTransform.sizeDelta = _sizeDelta;
             }
         }
     }
