@@ -52,14 +52,6 @@ public class TutorialSystem : MonoBehaviour
 
     private void LoadTutorials()
     {
-        _tutorialObjects = Resources.LoadAll<TutorialObject>("Tutorials").ToList();
-
-        foreach (TutorialObject _object in _tutorialObjects)
-        {
-            if (_object.isEnabled == false)
-            {
-                _tutorialObjects.Remove(_object);
-            }
-        }
+        _tutorialObjects = Resources.LoadAll<TutorialObject>("Tutorials").ToList().FindAll(l => l.isEnabled == true);
     }
 }

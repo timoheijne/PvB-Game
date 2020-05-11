@@ -13,6 +13,9 @@
       <Path>$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/nuget.mono-cecil@0.1.5-preview</Path>
     </attachedFolders>
     <explicitIncludes>
+      <Path>$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.multiplayer-hlapi@1.0.4</Path>
+      <Path>$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.6</Path>
+      <Path>$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/nuget.mono-cecil@0.1.5-preview</Path>
       <Path>Library/PackageCache/com.unity.ads@2.0.8</Path>
       <Path>Library/PackageCache/com.unity.analytics@3.3.5</Path>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.2.16</Path>
