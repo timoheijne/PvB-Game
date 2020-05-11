@@ -4,14 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [ExecuteInEditMode]
-public class CharacterCustomization : MonoBehaviour
-{
+public class CharacterCustomization : MonoBehaviour {
     public static CharacterCustomization instance;
 
     private Renderer _renderer;
 
     [SerializeField]
-    private bool _isCreatingCharacter, _ownsCharacter;
+    private bool _isCreatingCharacter, _hasCharacter, _isNPC;
 
     [SerializeField]
     private GameObject[] _hairStyles;
@@ -28,36 +27,40 @@ public class CharacterCustomization : MonoBehaviour
     private Slider[] _customizationSliders;
 
     [Range(0, 1)]
-    private float _skinColorGradient, 
-                  _eyeColorGradient, 
+    private float _skinColorGradient,
+                  _eyeColorGradient,
                   _hairColorGradient = 0.2f;
 
     private int _hairstyle;
-    private int _oldHairColorValue;
-    private int _oldSkinColorValue;
-    private int _oldEyeColorValue;
+
+    private int _oldHairColorValue,
+                _oldSkinColorValue,
+                _oldEyeColorValue;
 
     private void Start() 
     {
         _renderer = gameObject.GetComponent<Renderer>();
         _renderer.sharedMaterial.shader = Shader.Find("PVB/ColorGrading");
 
-        _playerEyes = GameObject.Find("PlayerEyes");
+        _playerEyes = GameObject.Find("Eyes");
 
-        for (int i = 0; i < _hairStyles.Length; i++)
+        if (!_hasCharacter && _isCreatingCharacter || _isNPC) 
         {
-            _hairStyles[i].SetActive(false);
+            for (int i = 0; i < _hairStyles.Length; i++) 
+            {
+                _hairStyles[i].SetActive(false);
+            }
+
+            SetHairStyle(Mathf.RoundToInt(Random.Range(0, _hairStyles.Length)));
+            _skinColorGradient = Random.value;
+            _hairColorGradient = Random.value;
+            _eyeColorGradient = Random.value;
+
+            _customizationSliders[0].value = System.Array.IndexOf(_hairStyles, _currentHairStyle);
+            _customizationSliders[1].value = _hairColorGradient;
+            _customizationSliders[2].value = _skinColorGradient;
+            _customizationSliders[3].value = _eyeColorGradient;
         }
-
-        SetHairStyle(Mathf.RoundToInt(Random.Range(0,_hairStyles.Length)));
-        _skinColorGradient = Random.value;
-        _hairColorGradient = Random.value;
-        _eyeColorGradient = Random.value;
-
-        _customizationSliders[0].value = System.Array.IndexOf(_hairStyles, _currentHairStyle);
-        _customizationSliders[1].value = _hairColorGradient;
-        _customizationSliders[2].value = _skinColorGradient;
-        _customizationSliders[3].value = _eyeColorGradient;
     }
 
     private void Update()
@@ -69,10 +72,7 @@ public class CharacterCustomization : MonoBehaviour
 
         if (_oldHairColorValue != Mathf.Round(_hairColorGradient * 100f) / 100f)
         {
-            if (_currentHairStyle.name != "Bald") 
-            {
-                SetColor(_currentHairStyle, "Hair", _hairColorGradient);
-            }
+            SetColor(_currentHairStyle, "Hair", _hairColorGradient);
         }
 
         if (_oldEyeColorValue != Mathf.Round(_hairColorGradient * 100f) / 100f) 
@@ -117,7 +117,6 @@ public class CharacterCustomization : MonoBehaviour
 
     public void SetColor(GameObject _target, string _feature, float _value) 
     {
-        Debug.Log("Setting Color of target: " + _target.name + ", Body Feature: " + _feature + ", To Value: " + _value);
         Material _material;
         Renderer _targetRenderer;
         Image _sliderHandle;
@@ -147,5 +146,13 @@ public class CharacterCustomization : MonoBehaviour
                 break;
         }
         _targetRenderer.sharedMaterial.SetFloat("_SamplePos", _value);
+    }
+
+    private void CreateCharacter() 
+    {
+        _hasCharacter = true;
+        _isCreatingCharacter = false;
+
+        //if playerthe save the character options
     }
 }
