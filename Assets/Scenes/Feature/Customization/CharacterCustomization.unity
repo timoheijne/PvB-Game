@@ -703,7 +703,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.9857813
+  m_Value: 0.8283763
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.31646112
+  m_Value: 0.15389217
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1602,11 +1602,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 302c66ec6d9ecd243898ae96a1312dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isCreatingPlayer: 0
   _hairStyles:
   - {fileID: 575760182}
   - {fileID: 1770403892}
   - {fileID: 1946048350}
   - {fileID: 44485218}
+  _materials:
+  - {fileID: 2100000, guid: b905ffa4280e80246a8e65135f5b4a59, type: 2}
+  - {fileID: 2100000, guid: a92160cdad1e548a18a019579437048e, type: 2}
+  - {fileID: 2100000, guid: 2717bc10c95472a4a936a205e6801a07, type: 2}
   _customizationSliders:
   - {fileID: 1006648040}
   - {fileID: 1066855142}
@@ -1697,7 +1702,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.56208843
+  m_Value: 0.86217546
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2691,7 +2696,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _SamplePos: 0.31646112
+    - _SamplePos: 0.15389217
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
