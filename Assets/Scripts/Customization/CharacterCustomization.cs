@@ -112,75 +112,6 @@ public class CharacterCustomization : MonoBehaviour
         _currentHairStyle = _hairStyles[value];
     }
 
-    //public void SetHairColor(GameObject target, float value)
-    //{
-    //    Slider _slider;
-    //    Image _sliderHandle;
-    //    Renderer _targetRenderer;
-
-    //    if (target == _hairStyles[0])
-    //    {
-    //        return;
-    //    } 
-
-    //    _targetRenderer = target.GetComponent<Renderer>();
-
-    //    _slider = _customizationSliders[3];
-    //    _sliderHandle = _slider.transform.Find("Handle").gameObject.GetComponent<Image>();
-
-    //    foreach (Material material in _materials) 
-    //    {
-    //        if (material.name == "Hair") 
-    //        {
-    //            _sliderHandle.material = material;
-    //        }
-    //    }
-
-    //    _targetRenderer.sharedMaterial.SetFloat("_SamplePos", value);
-    //}
-
-    //public void SetEyeColor(GameObject target, float value) 
-    //{
-    //    Slider _slider;
-    //    Image _sliderHandle;
-    //    Renderer _targetRenderer;
-
-    //    _targetRenderer = target.GetComponent<Renderer>();
-    //    _slider = _customizationSliders[3];
-    //    _sliderHandle = _slider.transform.Find("Handle").gameObject.GetComponent<Image>();
-
-    //    foreach (Material material in _materials) 
-    //    {
-    //        if (material.name == "Eyes") 
-    //        {
-    //            _sliderHandle.material = material;
-    //        }
-    //    }
-    //    _targetRenderer.sharedMaterial.SetFloat("_SamplePos", value);
-    //}
-
-    //public void SetSkinColor(GameObject target, float value) 
-    //{
-    //    Slider _slider;
-    //    Image _sliderHandle;
-    //    Renderer _targetRenderer;
-
-    //    _targetRenderer = target.GetComponent<Renderer>();
-
-    //    _slider = _customizationSliders[2];
-    //    _sliderHandle = _slider.transform.Find("Handle").gameObject.GetComponent<Image>();
-
-    //    foreach (Material material in _materials) 
-    //    {
-    //        if (material.name == "Skin") 
-    //        {
-    //            _sliderHandle.material = material;
-    //        }
-    //    }
-
-    //    _targetRenderer.sharedMaterial.SetFloat("_SamplePos", value);
-    //}
-
     public void SetColor(GameObject target, string feature, float value) 
     {
         Debug.Log("Setting Color of target: " + target.name + ", Body Feature: " + feature + ", To Value: " + value);
@@ -194,7 +125,7 @@ public class CharacterCustomization : MonoBehaviour
         {
             Debug.Log("Creating Character: " + _isCreatingPlayer);
             Slider _featureColorSlider = null;
-            Image _sliderHandle = null;
+            Image _sliderHandle;
 
             foreach (Slider _slider in _customizationSliders) 
             {
