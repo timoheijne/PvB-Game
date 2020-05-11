@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3035859969465188547}
   - component: {fileID: 3035859969465188548}
   m_Layer: 0
-  m_Name: Tim's muur N
+  m_Name: Tim's muur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3035859969465188549}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.80247164, y: 2.9491212, z: -7.113716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5adbd2bf08b4a794288f49d281f80e11, type: 2}
+  - {fileID: 2100000, guid: 0a76b9bec99ef1d44901959ccb2e3cd7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90,7 +90,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}

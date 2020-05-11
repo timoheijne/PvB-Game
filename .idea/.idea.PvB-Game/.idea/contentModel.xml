@@ -67,6 +67,11 @@
             </e>
             <e p="GameManager.cs" t="Include" />
             <e p="InputNumber.cs" t="Include" />
+            <e p="Inventory" t="Include">
+              <e p="BlockInventory.cs" t="Include" />
+              <e p="InventoryBlockInstantiator.cs" t="Include" />
+              <e p="InventoryItem.cs" t="Include" />
+            </e>
             <e p="ManagerStartTest.cs" t="Include" />
             <e p="Nodes" t="Include">
               <e p="FunctionNode.cs" t="Include" />

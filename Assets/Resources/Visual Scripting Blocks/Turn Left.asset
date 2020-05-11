@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28b0bf24dc9e4e2385538a13e655d78e, type: 3}
-  m_Name: Up
+  m_Name: Turn Left
   m_EditorClassIdentifier: 
-  ItemName: Up
-  Prefab: {fileID: 7977583683059739139, guid: e9110fe380a721342bbf59c49274e64f, type: 3}
+  ItemName: Turn Left
+  Prefab: {fileID: 738834251344158453, guid: c7b454d57653cda48bfaa7cf73ec887d, type: 3}
