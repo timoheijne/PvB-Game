@@ -32,6 +32,10 @@ public class PatientSpawningHook : MonoBehaviour
 
         GameObject _patient = Instantiate(obj.Prefab);
         Patient _data = _patient.GetComponent<Patient>();
+        
+        _data.PatientFile = obj;
+        _data.PatientFile.GameObject = _patient;
+        
         if (_data == null)
         {
             throw new ArgumentNullException("Patient Data");
