@@ -193,4 +193,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f6c74b390bb41168a49666231df97e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timeout: 1
   _interactor: {fileID: 0}
