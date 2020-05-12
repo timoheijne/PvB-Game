@@ -72,7 +72,10 @@ public class CharacterCustomization : MonoBehaviour {
 
         if (_oldHairColorValue != Mathf.Round(_hairColorGradient * 100f) / 100f)
         {
-            SetColor(_currentHairStyle, "Hair", _hairColorGradient);
+            if (!_currentHairStyle == _hairStyles[0]) 
+            {
+                SetColor(_currentHairStyle, "Hair", _hairColorGradient);
+            }
         }
 
         if (_oldEyeColorValue != Mathf.Round(_hairColorGradient * 100f) / 100f) 
