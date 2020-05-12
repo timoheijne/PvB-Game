@@ -20,7 +20,7 @@ public class MoveBlock : FunctionBlock
             yield return StartCoroutine(movement.Forward());
         }
         
-        yield return new WaitForSeconds(.25f);
+        yield return new WaitForSeconds(_timeout);
         
         yield return 0;
     }

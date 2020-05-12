@@ -27,7 +27,7 @@ public class PickupBlock : FunctionBlock
             _carryObject.StartCarry(_interactableObject.TakePatient());
         }
         
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(_timeout);
         
         // TODO: Create notification if object does not contain patient. Make visual scripting fail.
 
