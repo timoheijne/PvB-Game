@@ -12,6 +12,8 @@ public class PatientFileEditor : UnityEditor.Editor
     
     public override void OnInspectorGUI()
     {
+        serializedObject.Update();
+        
         PatientFile _patientFile = (PatientFile) target;
 
         _patientFile.PatientName = EditorGUILayout.TextField("Patient Name", _patientFile.PatientName);
@@ -71,6 +73,14 @@ public class PatientFileEditor : UnityEditor.Editor
         }
         
         EditorGUILayout.EndHorizontal();
+        
+        serializedObject.ApplyModifiedProperties();
+        if (GUILayout.Button("Save Patient"))
+        {
+            EditorUtility.SetDirty(target);
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh ();
+        }
     }
 
     private void AddToObjectives(PatientFile _target, string _objectiveName)

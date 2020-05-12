@@ -26,16 +26,16 @@ public class ObjectInteractor : MonoBehaviour
 
         private GameObject FindObject()
         {
-                bool _hitDetect = Physics.BoxCast(transform.position, transform.localScale, transform.forward, out RaycastHit _hitInfo, Quaternion.identity, _maxDistance);
+                bool _hitDetect = Physics.BoxCast(transform.position - transform.forward*_maxDistance, Vector3.one * 0.45f, transform.forward, out RaycastHit _hitInfo, transform.rotation, 1.9f);
+                
                 return (_hitDetect) ?  _hitInfo.transform.gameObject : null;
         }
         
         void OnDrawGizmos()
         {
                 Gizmos.color = Color.red;
-
-                Gizmos.DrawRay(transform.position, transform.forward * _maxDistance * 2);
-                //Draw a cube at the maximum distance
-                Gizmos.DrawWireCube(transform.position + transform.forward * _maxDistance * 2, transform.localScale);
+                Gizmos.DrawRay(transform.position, transform.forward);
+                //Draw a cube in front of this gameobject
+                Gizmos.DrawWireCube(transform.position + transform.forward, Vector3.one * _maxDistance);
         }
 }
