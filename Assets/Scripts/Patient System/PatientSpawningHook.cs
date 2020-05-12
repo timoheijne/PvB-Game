@@ -46,7 +46,8 @@ public class PatientSpawningHook : MonoBehaviour
     
     private void OnPatientDone(PatientFile obj)
     {
-        throw new NotImplementedException();
+        // TODO: Spawn particle so it doesn't look like absolute magic
+        Destroy(obj.GameObject);
     }
 
 }
