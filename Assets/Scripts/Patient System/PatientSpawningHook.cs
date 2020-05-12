@@ -15,6 +15,8 @@ public class PatientSpawningHook : MonoBehaviour
         
         PatientSystem.Instance.OnPatientChange += OnPatientChange;
         PatientSystem.Instance.OnPatientDone += OnPatientDone;
+        
+        print("Spawning hook loaded");
     }
     
     private void OnPatientChange(PatientFile obj)
