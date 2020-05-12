@@ -9,13 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32de20a49aa83f4784901d63f32a9e5, type: 3}
-  m_Name: Level 1
+  m_Script: {fileID: 11500000, guid: 28b0bf24dc9e4e2385538a13e655d78e, type: 3}
+  m_Name: Interact
   m_EditorClassIdentifier: 
-  LevelName: Level 1
-  Difficulty: 0
-  SceneName: Level 1
-  IsEnabled: 1
-  NextLevel: 
-  PatientFiles:
-  - {fileID: 11400000, guid: cf759d7e16872304987a94430f271c06, type: 2}
+  ItemName: Interact
+  Prefab: {fileID: 4819696642221337501, guid: 02756a11679234a4baf04e525d307d73, type: 3}

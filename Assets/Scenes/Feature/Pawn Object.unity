@@ -1576,6 +1576,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dokter
       objectReference: {fileID: 0}
+    - target: {fileID: 6574941077357908637, guid: 8b833c11cf5c02349aff21053b422d88,
+        type: 3}
+      propertyPath: m_TagString
+      value: PawnObject
+      objectReference: {fileID: 0}
     - target: {fileID: 7882913207237222542, guid: 8b833c11cf5c02349aff21053b422d88,
         type: 3}
       propertyPath: m_LocalPosition.x
