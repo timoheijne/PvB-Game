@@ -17,6 +17,7 @@ public class LevelObjectEditor : Editor
     
     public override void OnInspectorGUI()
     {
+        serializedObject.Update();
         LevelObject _levelObject = (LevelObject) target;
 
         _levelObject.LevelName = EditorGUILayout.TextField("Level Name", _levelObject.LevelName);
@@ -68,6 +69,14 @@ public class LevelObjectEditor : Editor
             _selectedPatient = 0;
         }
         EditorGUILayout.EndHorizontal();
+
+        serializedObject.ApplyModifiedProperties();
+        if (GUILayout.Button("Save Level"))
+        {
+            EditorUtility.SetDirty(target);
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh ();
+        }
     }
 
     private PatientFile[] DeletePatient(LevelObject _levelObject, PatientFile patientFile)

@@ -10,6 +10,8 @@ public class ObjectiveEditor : Editor
     
     public override void OnInspectorGUI()
     {
+        serializedObject.Update();
+        
         LoadObjectives();
         Objective _objective = (Objective) target;
         
@@ -23,6 +25,14 @@ public class ObjectiveEditor : Editor
         _objective.FriendlyName = EditorGUILayout.TextField("Friendly Name", _objective.FriendlyName);
         _objective.InternalName = EditorGUILayout.TextField("Internal Name", _objective.InternalName);
         _objective.Active = EditorGUILayout.Toggle("Active", _objective.Active);
+        
+        serializedObject.ApplyModifiedProperties();
+        if (GUILayout.Button("Save Objective"))
+        {
+            EditorUtility.SetDirty(target);
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh ();
+        }
     }
     
     private void LoadObjectives()
