@@ -13,6 +13,13 @@ public class PatientFile : UnityEngine.ScriptableObject
     
     public Objective[] Objectives;
 
+    public GameObject GameObject
+    {
+        get => _gameObject;
+        set => _gameObject = value;
+    }
+    private GameObject _gameObject;
+
     public void ResetObjectives() 
     {
         foreach (Objective objective in Objectives)
