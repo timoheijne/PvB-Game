@@ -553,36 +553,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 135132225}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &167199908
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 167199909}
-  m_Layer: 0
-  m_Name: Patient Palce
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &167199909
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167199908}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.9623, z: 0.092}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 262213967915511014}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &189935916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,6 +1405,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529069161}
   m_CullTransparentMesh: 0
+--- !u!114 &629847794 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2433854205277857708, guid: 53e419ea9d7031043bf8b06233be5cf6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2433854206440911152}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e97891e261b4789903aa3ddabf6974b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &643818664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,18 +1918,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1178353717 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7107547658775856773, guid: 80827f38ced04a444a5bef611bc663f5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7107547659860785911}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e97891e261b4789903aa3ddabf6974b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1188606527
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,7 +3076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a72c80a03c84dafb4cc3a34be463e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnObject: {fileID: 1178353717}
+  _spawnObject: {fileID: 629847794}
 --- !u!1 &1807854439
 GameObject:
   m_ObjectHideFlags: 0
@@ -3842,11 +3812,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1254339803}
     m_Modifications:
-    - target: {fileID: 4900387756389470835, guid: 53e419ea9d7031043bf8b06233be5cf6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5973783662806843041, guid: 53e419ea9d7031043bf8b06233be5cf6,
         type: 3}
       propertyPath: m_Name
@@ -4126,11 +4091,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7107547658775856773, guid: 80827f38ced04a444a5bef611bc663f5,
-        type: 3}
-      propertyPath: _patientPlace
-      value: 
-      objectReference: {fileID: 167199909}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80827f38ced04a444a5bef611bc663f5, type: 3}
 --- !u!4 &7287720548025419737 stripped
