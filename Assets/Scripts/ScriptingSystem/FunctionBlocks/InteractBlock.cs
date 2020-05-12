@@ -15,7 +15,7 @@ public class InteractBlock : FunctionBlock
     {
         _interactor.InteractWithObject();
         
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(_timeout);
         
         yield return 0;
     }
