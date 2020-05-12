@@ -121,7 +121,7 @@ public class TutorialCreationWindow : EditorWindow
         {
             EditorUtility.SetDirty(_selectedObject);
             AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh ();
+            AssetDatabase.Refresh();
         }
         
         if (GUILayout.Button("Back to list"))
