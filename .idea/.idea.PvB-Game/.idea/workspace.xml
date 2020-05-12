@@ -35,11 +35,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Editor/Level System/LevelObjectEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Inventory/BlockInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Nodes/Node.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/FunctionBlocks/InteractBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/Nodes/FunctionNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Runtime/TextMeshProUGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactable Object System/ObjectInteractor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/Tutorial System/TutorialCreationWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Patient System/PatientFile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/DragUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Patient System/PatientSystem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -77,8 +77,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Movement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/FunctionBlocks/MoveBlock.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Patient System/PatientSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Level System/PatientSystemHook.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/Tutorial System/TutorialCreationWindow.cs" />
       </list>
     </option>
   </component>

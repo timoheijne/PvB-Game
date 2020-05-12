@@ -17,12 +17,12 @@ MonoBehaviour:
   isEnabled: 1
   TutorialSections:
   - Name: test 1
-    ObjectReferenceID: 
+    ObjectReferenceID: highlight 1
     PanelPosition: 0
     DoctorOnLeft: 0
     Body: Section 1 Test
   - Name: TEst 1
-    ObjectReferenceID: 
+    ObjectReferenceID: highlight 2
     PanelPosition: 0
     DoctorOnLeft: 0
     Body: Test Body
