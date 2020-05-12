@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using TMPro;
 using UnityEngine;
 
@@ -42,21 +43,21 @@ public class PatientUI : MonoBehaviour
     {
         _name?.SetText($"Naam: {obj.PatientName}");
         _age?.SetText($"Leeftijd: {obj.Age}");
-
-        string _objectiveText = "Doelen: \n";
+        
+        StringBuilder _objectiveText = new StringBuilder("Doelen: \n");
         foreach (Objective _objective in obj.Objectives)
         {
             if (_objective.IsDone)
             {
-                _objectiveText += $" - <s>{_objective.FriendlyName}</s>\n";
+                _objectiveText.Append($" - <s>{_objective.FriendlyName}</s>\n");
             }
             else
             {
-                _objectiveText += $" - {_objective.FriendlyName}\n";
+                _objectiveText.Append($" - {_objective.FriendlyName}\n");
             }
             
         }
         
-        _objectives?.SetText(_objectiveText);
+        _objectives?.SetText(_objectiveText.ToString());
     }
 }
