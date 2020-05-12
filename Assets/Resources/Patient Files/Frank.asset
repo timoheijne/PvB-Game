@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c30626a6d2a3a74e8ba6d8b1c3d7c7f, type: 3}
   m_Name: Frank
   m_EditorClassIdentifier: 
-  PatientName: Test
+  PatientName: Frank
   Age: 7
   Prefab: {fileID: 9028509714186217942, guid: 309df3c9436465d48be11382bd859711, type: 3}
   Difficulty: 2
