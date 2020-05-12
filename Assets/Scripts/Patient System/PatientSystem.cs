@@ -55,6 +55,8 @@ public class PatientSystem : MonoBehaviour
             if (index > -1)
             {
                 _activePatientIndex = index;
+                patient.ResetObjectives();
+                
                 OnPatientChange?.Invoke(patient);
             }
             else
