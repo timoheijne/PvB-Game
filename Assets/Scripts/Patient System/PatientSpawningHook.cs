@@ -27,6 +27,8 @@ public class PatientSpawningHook : MonoBehaviour
         {
             throw new ArgumentNullException("Patient Prefab");
         }
+        
+        // TODO: Spawn particle so it doesn't just "plop" in
 
         GameObject _patient = Instantiate(obj.Prefab);
         Patient _data = _patient.GetComponent<Patient>();
