@@ -29,6 +29,11 @@ public class InteractableObject : MonoBehaviour
 
     public void PlacePatient(Patient patient)
     {
+        if (patient == null)
+        {
+            throw new ArgumentNullException("Patient");
+        }
+        
         _patient = patient;
 
         _patient.transform.position = _patientPlace.position;
