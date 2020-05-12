@@ -9,6 +9,9 @@ public class PatientSystem : MonoBehaviour
     
     public event Action<PatientFile> OnPatientDone;
     public event Action<PatientFile> OnPatientChange;
+    
+    public event Action<Objective, PatientFile> OnObjectiveComplete;
+    
     public PatientFile ActivePatient => (_activePatientIndex < _patientFiles.Count) ? _patientFiles[_activePatientIndex] : null;
     
     private int _activePatientIndex;
@@ -75,14 +78,19 @@ public class PatientSystem : MonoBehaviour
             return false;
         }
         
-        bool _success = this.ActivePatient.MarkObjectiveDone(_objectiveName);
+        Tuple<bool, Objective> _objective = this.ActivePatient.MarkObjectiveDone(_objectiveName);
+
+        if (_objective.Item1)
+        {
+            OnObjectiveComplete?.Invoke(_objective.Item2, this.ActivePatient);
+        }
         
         if (this.ActivePatient.IsDone())
         {
             OnPatientDone?.Invoke(this.ActivePatient);
         }
 
-        return _success;
+        return _objective.Item1;
     }
     
     
