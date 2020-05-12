@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PatientName: Test
   Age: 7
-  Prefab: {fileID: 0}
+  Prefab: {fileID: 9028509714186217942, guid: 309df3c9436465d48be11382bd859711, type: 3}
   Difficulty: 2
   Active: 1
   Objectives:
