@@ -7,5 +7,6 @@ public class Patient : MonoBehaviour
         get => _patientFile;
         set => _patientFile = value;
     }
+    
     private PatientFile _patientFile;
 }
