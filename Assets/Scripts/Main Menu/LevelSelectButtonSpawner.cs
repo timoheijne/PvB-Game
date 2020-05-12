@@ -11,6 +11,27 @@ public class LevelSelectButtonSpawner : MonoBehaviour
     void Start()
     {
         levelSystem = FindObjectOfType<LevelSystem>();
+
+        CreateLevelSelect();
+    }
+
+    public void CreateLevelSelect()
+    {
+
+    }
+
+    public void CreateButtonGroup(LevelObject[] _levels, Vector2 size, Vector2 cellSize, Vector2 spacing)
+    {
+        GameObject group = new GameObject();
+        group.transform.parent = transform;
+        RectTransform rect = group.AddComponent<RectTransform>();
+        GridLayoutGroup gridLayout = group.AddComponent<GridLayoutGroup>();
+        gridLayout.SetLayoutHorizontal();
+
+        for (int i = 0; i < _levels.Length; i++)
+        {
+            GameObject button = CreateButton(_levels[i], group.transform);
+        }
     }
 
 
