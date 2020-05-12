@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class PickupBlock : FunctionBlock
+public class PlaceBlock : FunctionBlock
 {
     [SerializeField] private ObjectInteractor _interactor;
     [SerializeField] private CarryObject _carryObject;
@@ -22,12 +22,16 @@ public class PickupBlock : FunctionBlock
             yield break;
         }
 
-        if (_interactableObject.HasPatient())
+        if (_carryObject.IsCarrying())
         {
-            _carryObject.StartCarry(_interactableObject.TakePatient());
+            Patient _target = _carryObject.StopCarry().GetComponent<Patient>();
+            if (_target != null)
+            {
+                _interactableObject.PlacePatient(_target);
+            }
         }
         
-        // TODO: Create notification if object does not contain patient. Make visual scripting fail.
+        // TODO: Create notification if not carrying patient. Make visual scripting fail.
 
         yield return 0;
     }

@@ -15,6 +15,11 @@ public class CarryObject : MonoBehaviour
         }
     }
 
+    public bool IsCarrying()
+    {
+        return _object != null;
+    }
+
     public void StartCarry(Transform _target)
     {
         if (_target == null)
@@ -25,8 +30,11 @@ public class CarryObject : MonoBehaviour
         _object = _target;
     }
 
-    public void StopCarry()
+    public Transform StopCarry()
     {
+        Transform _target = _object;
         _object = null;
+
+        return _target;
     }
 }
