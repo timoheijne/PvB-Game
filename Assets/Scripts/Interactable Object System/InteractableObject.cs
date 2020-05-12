@@ -35,7 +35,7 @@ public class InteractableObject : MonoBehaviour
         _patient.transform.rotation = _patientPlace.rotation;
     }
 
-    public GameObject TakePatient()
+    public Transform TakePatient()
     {
         if (_patient == null)
         {
@@ -45,7 +45,7 @@ public class InteractableObject : MonoBehaviour
         Patient patient = _patient;
         _patient = null;
         
-        return patient.gameObject;
+        return patient.transform;
     }
     
     
