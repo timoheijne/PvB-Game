@@ -703,7 +703,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.8623496
+  m_Value: 0.7076234
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -733,7 +733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &575760183
 Transform:
   m_ObjectHideFlags: 0
@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.63004047
+  m_Value: 0.99142265
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1479,7 +1479,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 3
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1602,7 +1602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 302c66ec6d9ecd243898ae96a1312dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isCreatingCharacter: 0
+  _isCreatingCharacter: 1
   _hasCharacter: 0
   _isNPC: 0
   _hairStyles:
@@ -1708,7 +1708,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.101341024
+  m_Value: 0.4393167
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2550,7 +2550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1946048351
 Transform:
   m_ObjectHideFlags: 0

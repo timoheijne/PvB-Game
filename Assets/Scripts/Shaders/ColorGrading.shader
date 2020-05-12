@@ -9,7 +9,12 @@
 
 		SubShader{
 
+			Tags {"Queue" = "Transparent" }
+
 			Pass {
+				ZWrite On
+				Blend SrcAlpha OneMinusSrcAlpha
+
 				CGPROGRAM
 
 				#pragma vertex vert
