@@ -14,6 +14,9 @@ public class InteractBlock : FunctionBlock
     public override IEnumerator Act()
     {
         _interactor.InteractWithObject();
+        
+        yield return new WaitForSeconds(1);
+        
         yield return 0;
     }
 }
