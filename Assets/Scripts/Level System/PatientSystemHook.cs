@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PatientSystemHook : MonoBehaviour
 {
-    private LevelSystem _levelSystem;
     private void Start()
     {
         if(PatientSystem.Instance == null)
@@ -11,8 +10,7 @@ public class PatientSystemHook : MonoBehaviour
             throw new ArgumentNullException("PatientSystem");
         }
 
-        _levelSystem = GetComponent<LevelSystem>();
-        if(_levelSystem == null) 
+        if(LevelSystem.Instance == null) 
         {
             throw new ArgumentNullException("LevelSystem");
         }
@@ -20,18 +18,18 @@ public class PatientSystemHook : MonoBehaviour
         Debug.Log("Patient System Loaded");
         
         PatientSystem.Instance.OnPatientDone += OnPatientDone;
-        PatientSystem.Instance.SetLevelFiles(_levelSystem.ActiveLevel.PatientFiles);
+        PatientSystem.Instance.SetLevelFiles(LevelSystem.Instance.ActiveLevel.PatientFiles);
     }
 
     private void OnPatientDone(PatientFile obj)
     {
-        if (_levelSystem.ActiveLevel.NextLevel != string.Empty)
+        if (LevelSystem.Instance.ActiveLevel.NextLevel != string.Empty)
         {
-            LevelObject _level = _levelSystem.GetLevel(_levelSystem.ActiveLevel.NextLevel);
-            _levelSystem.ChangeLevel(_level);
+            LevelObject _level = LevelSystem.Instance.GetLevel(LevelSystem.Instance.ActiveLevel.NextLevel);
+            LevelSystem.Instance.ChangeLevel(_level);
         }
         
         // TODO: Open level success menu!
-        _levelSystem.ChangeToMainMenu(true);
+        LevelSystem.Instance.ChangeToMainMenu(true);
     }
 }
