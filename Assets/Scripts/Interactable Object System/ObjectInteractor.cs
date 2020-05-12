@@ -13,15 +13,19 @@ public class ObjectInteractor : MonoBehaviour
                         throw new ArgumentNullException("PatientSystem");
                 }
                 
+                InteractableObject _interactableObject = FindInteractableObject();
+                return _interactableObject != null && PatientSystem.Instance.MarkObjectiveDone(_interactableObject.ObjectiveName);
+        }
+
+        public InteractableObject FindInteractableObject()
+        {
                 GameObject _gameObject = FindObject();
-                
                 if (_gameObject == null)
                 {
-                        return false;
+                        return null;
                 }
                 
-                InteractableObject _interactableObject = _gameObject.GetComponent<InteractableObject>();
-                return _interactableObject != null && PatientSystem.Instance.MarkObjectiveDone(_interactableObject.ObjectiveName);
+                return _gameObject.GetComponent<InteractableObject>();
         }
 
         private GameObject FindObject()
