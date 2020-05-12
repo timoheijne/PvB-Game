@@ -14,6 +14,7 @@ public class LevelSystem : MonoBehaviour
         [SerializeField, Tooltip("The name of the main menu scene")]
     private string _mainMenuScene;
     private bool _returnToLevelSelect;
+    public List<LevelObject> Levels => _levels;
     private List<LevelObject> _levels;
 
     public LevelObject ActiveLevel => _activeLevel;
