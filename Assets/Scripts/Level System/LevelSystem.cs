@@ -14,7 +14,6 @@ public class LevelSystem : MonoBehaviour
         [SerializeField, Tooltip("The name of the main menu scene")]
     private string _mainMenuScene;
     private bool _returnToLevelSelect;
-    public List<LevelObject> Levels => _levels;
     private List<LevelObject> _levels;
 
     public LevelObject ActiveLevel => _activeLevel;
@@ -63,17 +62,16 @@ public class LevelSystem : MonoBehaviour
             return;
         }
 
-        _activeLevel = _level;
-        SceneManager.LoadScene(_level.SceneName);
+        ChangeLevel(_level);
     }
-    
+
     public void ChangeLevel(LevelObject _level)
     {
         if (_level.IsEnabled == false)
         {
             return;
         }
-        
+
         SceneManager.LoadScene(_level.SceneName);
     }
 
@@ -96,6 +94,11 @@ public class LevelSystem : MonoBehaviour
         {
             OnLevelLoad?.Invoke(_activeLevel);
         }
+    }
+
+    private List<LevelObject> GetAllLevels(bool _mustBeEnabled = true)
+    {
+        return _levels.FindAll(l => l.IsEnabled = _mustBeEnabled);
     }
 
     public void SortLevelsByPosition()
