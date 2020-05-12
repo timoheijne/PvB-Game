@@ -32,6 +32,7 @@ public class InteractableObject : MonoBehaviour
         _patient = patient;
 
         _patient.transform.position = _patientPlace.position;
+        _patient.transform.rotation = _patientPlace.rotation;
     }
 
     public GameObject TakePatient()
