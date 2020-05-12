@@ -119,7 +119,9 @@ public class TutorialCreationWindow : EditorWindow
 
         if (GUILayout.Button("Save Tutorial"))
         {
-            AssetDatabase.SaveAssets ();
+            EditorUtility.SetDirty(_selectedObject);
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh ();
         }
         
         if (GUILayout.Button("Back to list"))
