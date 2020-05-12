@@ -30,6 +30,8 @@ public class InteractableObject : MonoBehaviour
     public void PlacePatient(Patient patient)
     {
         _patient = patient;
+
+        _patient.transform.position = _patientPlace.position;
     }
 
     public GameObject TakePatient()
