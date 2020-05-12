@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using Object = System.Object;
 
 [CanEditMultipleObjects]
 [CustomEditor(typeof(InteractableObject))]
@@ -13,10 +14,12 @@ public class InteractableObjectEditor : Editor
     private int _selectedObject;
 
     private SerializedProperty _objectiveName;
+    private SerializedProperty _patientPlace;
 
     private void OnEnable()
     {
         _objectiveName = serializedObject.FindProperty("_objectiveName");
+        _patientPlace = serializedObject.FindProperty("_patientPlace");
     }
 
     public override void OnInspectorGUI()
@@ -26,12 +29,16 @@ public class InteractableObjectEditor : Editor
         ParseOptions(_interactableObject);
         EditorGUILayout.LabelField("Selected Objective");
         _selectedObject = EditorGUILayout.Popup(_selectedObject, _popupOptions.ToArray());
+        
+        EditorGUILayout.LabelField("Patient Place Transform");
+        UnityEngine.Object _selectedPlace = EditorGUILayout.ObjectField(_interactableObject.PatientPlace, typeof(Transform), true);
 
         if (_selectedObject == 0)
         {
             return;
         }
         _objectiveName.stringValue = _popupOptions[_selectedObject];
+        _patientPlace.objectReferenceValue = _selectedPlace;
         serializedObject.ApplyModifiedProperties();
     }
     
