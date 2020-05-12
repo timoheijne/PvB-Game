@@ -10,6 +10,8 @@ public class InteractableObject : MonoBehaviour
     private string _objectiveName;
     [SerializeField, Tooltip("A child object, the system can place the patient if the scripter wants to place a patient on this object.")]
     private Transform _patientPlace;
+
+    private Patient _patient;
     
     private void Start()
     {
@@ -22,17 +24,25 @@ public class InteractableObject : MonoBehaviour
 
     public bool HasPatient()
     {
-        return false;
+        return _patient != null;
     }
 
-    public void PlacePatient()
+    public void PlacePatient(Patient patient)
     {
-        
+        _patient = patient;
     }
 
     public GameObject TakePatient()
     {
-        return null;
+        if (_patient == null)
+        {
+            return null;
+        }
+        
+        Patient patient = _patient;
+        _patient = null;
+        
+        return patient.gameObject;
     }
     
     
