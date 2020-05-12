@@ -8,5 +8,6 @@ public class Patient : MonoBehaviour
         set => _patientFile = value;
     }
     
+    [SerializeField]
     private PatientFile _patientFile;
 }
