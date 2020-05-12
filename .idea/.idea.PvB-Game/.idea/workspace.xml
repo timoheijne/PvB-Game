@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5057bac5-0064-4330-9e5c-1161a76c2f65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PvB-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PvB-Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level System/PatientSystemHook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level System/PatientSystemHook.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +60,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Level System/LevelObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/Level System/LevelObjectEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/Level System/LevelSystemEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Level System/PatientSystemHook.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Level System/LevelSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Main Menu/ButtonHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Main Menu/SpriteHandler.cs" />
@@ -78,6 +78,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptingSystem/FunctionBlocks/MoveBlock.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Patient System/PatientSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level System/PatientSystemHook.cs" />
       </list>
     </option>
   </component>
