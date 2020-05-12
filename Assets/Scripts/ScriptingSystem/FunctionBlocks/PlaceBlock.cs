@@ -31,6 +31,8 @@ public class PlaceBlock : FunctionBlock
             }
         }
         
+        yield return new WaitForSeconds(1);
+        
         // TODO: Create notification if not carrying patient. Make visual scripting fail.
 
         yield return 0;
