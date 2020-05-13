@@ -12,7 +12,7 @@ public class DepthNormalsFeature : ScriptableRendererFeature
     {
         private RenderTargetHandle destination { get; set; }
 
-        private Material depthNormalsMaterial = null;
+        private Material depthNormalsMaterial;
         private FilteringSettings m_FilteringSettings;
         private ShaderTagId m_ShaderTagId = new ShaderTagId("DepthOnly");
 
