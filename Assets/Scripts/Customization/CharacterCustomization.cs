@@ -13,9 +13,12 @@ public class CharacterCustomization : MonoBehaviour {
     private bool _isCreatingCharacter, _hasCharacter, _isNPC;
 
     [SerializeField]
+    private GameObject _targetCharacter;
+
+    [SerializeField]
     private GameObject[] _hairStyles;
     private GameObject _currentHairStyle;
-    private GameObject _playerEyes;
+    private GameObject _eyes;
 
     [SerializeField]
     private Material[] _materials;
@@ -42,7 +45,7 @@ public class CharacterCustomization : MonoBehaviour {
         _renderer = gameObject.GetComponent<Renderer>();
         _renderer.sharedMaterial.shader = Shader.Find("PVB/ColorGrading");
 
-        _playerEyes = GameObject.Find("Eyes");
+        _eyes = GameObject.Find("Eyes");
 
         if (!_hasCharacter && _isCreatingCharacter || _isNPC) 
         {
@@ -67,7 +70,7 @@ public class CharacterCustomization : MonoBehaviour {
     {
         if (_oldSkinColorValue != Mathf.Round(_skinColorGradient * 100f) / 100f)
         {
-            SetColor(GameObject.Find("Player").transform.Find("Body").gameObject, "Skin", _skinColorGradient);
+            SetColor(_targetCharacter.transform.Find("Body").gameObject, "Skin", _skinColorGradient);
         }
 
         if (_oldHairColorValue != Mathf.Round(_hairColorGradient * 100f) / 100f)
@@ -80,7 +83,7 @@ public class CharacterCustomization : MonoBehaviour {
 
         if (_oldEyeColorValue != Mathf.Round(_hairColorGradient * 100f) / 100f) 
         {
-            SetColor(_playerEyes, "Eyes", _eyeColorGradient);
+            SetColor(_eyes, "Eyes", _eyeColorGradient);
         }
     }
 
