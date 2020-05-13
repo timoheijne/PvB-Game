@@ -37,7 +37,7 @@ public class OutlineFeature : ScriptableRendererFeature
         // The render pipeline will ensure target setup and clearing happens in an performance manner.
         public override void Configure(CommandBuffer cmd, RenderTextureDescriptor cameraTextureDescriptor)
         {
-            throw new NotImplementedException();
+            throw new NotSupportedException();
         }
 
         // Here you can implement the rendering logic.
