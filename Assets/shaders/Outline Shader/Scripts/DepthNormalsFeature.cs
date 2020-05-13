@@ -63,7 +63,10 @@ public class DepthNormalsFeature : ScriptableRendererFeature
                 ref CameraData cameraData = ref renderingData.cameraData;
                 Camera camera = cameraData.camera;
                 if (cameraData.isStereoEnabled)
+                {
                     context.StartMultiEye(camera);
+                }
+                    
 
 
                 drawSettings.overrideMaterial = depthNormalsMaterial;
