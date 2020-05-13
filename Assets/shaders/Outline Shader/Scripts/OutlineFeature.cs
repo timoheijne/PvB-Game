@@ -4,12 +4,17 @@ using UnityEngine.Rendering.Universal;
 
 public class OutlineFeature : ScriptableRendererFeature
 {
+    public OutlineSettings settings = new OutlineSettings();
+    private OutlinePass outlinePass;
+    private RenderTargetHandle outlineTexture;
+    
     class OutlinePass : ScriptableRenderPass
     {
+        
+        public Material outlineMaterial;
         private RenderTargetIdentifier source { get; set; }
         private RenderTargetHandle destination { get; set; }
-        public Material outlineMaterial;
-        RenderTargetHandle temporaryColorTexture;
+        private RenderTargetHandle temporaryColorTexture;
 
         public void Setup(RenderTargetIdentifier source, RenderTargetHandle destination)
         {
@@ -31,7 +36,7 @@ public class OutlineFeature : ScriptableRendererFeature
         // The render pipeline will ensure target setup and clearing happens in an performance manner.
         public override void Configure(CommandBuffer cmd, RenderTextureDescriptor cameraTextureDescriptor)
         {
-
+            
         }
 
         // Here you can implement the rendering logic.
@@ -72,10 +77,7 @@ public class OutlineFeature : ScriptableRendererFeature
     {
         public Material outlineMaterial = null;
     }
-
-    public OutlineSettings settings = new OutlineSettings();
-    OutlinePass outlinePass;
-    RenderTargetHandle outlineTexture;
+    
 
     public override void Create()
     {
