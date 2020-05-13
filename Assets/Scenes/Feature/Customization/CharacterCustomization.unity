@@ -1347,12 +1347,12 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 4
   m_WholeNumbers: 1
-  m_Value: 4
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1534557862336406789}
-        m_MethodName: HairStyleControl
+      - m_Target: {fileID: 6821138474182275004}
+        m_MethodName: SetHairStyle
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2629,7 +2629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1214005030782211182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2822,7 +2822,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534557862336406788}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 302c66ec6d9ecd243898ae96a1312dec, type: 3}
   m_Name: 
@@ -3357,7 +3357,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621693987315859789}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.098999985, y: 7.996, z: -0.021999994}
+  m_LocalPosition: {x: 0.062, y: 7.901, z: -0.387}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children: []
   m_Father: {fileID: 555484287}
@@ -4891,7 +4891,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214005030782211181}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.098999985, y: 7.996, z: -0.021999994}
+  m_LocalPosition: {x: 0.079, y: 7.974, z: -0.228}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children: []
   m_Father: {fileID: 555484287}
@@ -5788,6 +5788,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7562340463054986664}
+  - component: {fileID: 6821138474182275004}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5795,6 +5796,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6821138474182275004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6821138474182275003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a390ef1ecf32ca4db61510366c6a04f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BodyModel: {fileID: 2941396573924323249}
+  FaceModel: {fileID: 0}
+  TorsoBone: {fileID: 5379808512442851658}
+  HeadBone: {fileID: 0}
+  HairStyles:
+  - {fileID: 801483464}
+  - {fileID: 7576357062672519716}
+  - {fileID: 621693987315859789}
+  - {fileID: 6148394888831986303}
+  - {fileID: 1214005030782211181}
 --- !u!1 &6827340385553849297
 GameObject:
   m_ObjectHideFlags: 0
@@ -6146,7 +6169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &7576357062672519717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6527,7 +6550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6148394888831986303}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.098999985, y: 7.996, z: -0.021999994}
+  m_LocalPosition: {x: 0.098999985, y: 7.996, z: 0.05}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children: []
   m_Father: {fileID: 555484287}
@@ -6937,7 +6960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7576357062672519716}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.098999985, y: 7.996, z: -0.021999994}
+  m_LocalPosition: {x: 0.078, y: 7.805, z: -0.182}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children: []
   m_Father: {fileID: 555484287}
