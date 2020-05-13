@@ -3,20 +3,17 @@ using UnityEngine;
 
 public class PickupBlock : FunctionBlock
 {
-    [SerializeField] private ObjectInteractor _interactor;
-    [SerializeField] private CarryObject _carryObject;
+    private ActorObject _actorObject;
     
     private void Start()
     {
         // TODO: Refactor to not need to lookup object, This needs to be set dynamically via the visual scripting UI
-        GameObject _pawn = GameObject.FindWithTag("PawnObject");
-        _interactor = _pawn.GetComponent<ObjectInteractor>();
-        _carryObject = _pawn.GetComponent<CarryObject>();
+        _actorObject = GameObject.FindWithTag("PawnObject").GetComponent<ActorObject>();
     }
     
     public override IEnumerator Act()
     {
-        InteractableObject _interactableObject = _interactor.FindInteractableObject();
+        InteractableObject _interactableObject = _actorObject.ObjectInteractor.FindInteractableObject();
         if (_interactableObject == null)
         {
             yield break;
@@ -24,7 +21,7 @@ public class PickupBlock : FunctionBlock
 
         if (_interactableObject.HasPatient())
         {
-            _carryObject.StartCarry(_interactableObject.TakePatient());
+            _actorObject.CarryObject.StartCarry(_interactableObject.TakePatient());
         }
         
         yield return new WaitForSeconds(_timeout);
