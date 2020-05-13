@@ -67,7 +67,7 @@ namespace UnityTemplateProjects
         [Tooltip("Whether or not to invert our Y axis for mouse input to rotation.")]
         public bool invertY = false;
 
-        private CameraState m_TargetCameraState = new CameraState();
+        private readonly CameraState m_TargetCameraState = new CameraState();
         private CameraState m_InterpolatingCameraState = new CameraState();
         
         void OnEnable()
