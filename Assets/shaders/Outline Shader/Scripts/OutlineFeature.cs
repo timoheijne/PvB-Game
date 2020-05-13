@@ -58,7 +58,10 @@ public class OutlineFeature : ScriptableRendererFeature
                 Blit(cmd, temporaryColorTexture.Identifier(), source);
 
             }
-            else Blit(cmd, source, destination.Identifier(), outlineMaterial, 0);
+            else
+            {
+                Blit(cmd, source, destination.Identifier(), outlineMaterial, 0);
+            }
 
             context.ExecuteCommandBuffer(cmd);
             CommandBufferPool.Release(cmd);
