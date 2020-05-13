@@ -12,9 +12,13 @@ public class InteractBlock : FunctionBlock
     
     public override IEnumerator Act()
     {
+        _actorObject.Animator.SetTrigger("Interact");
+        
+        yield return new WaitUntillAnimationIsPlaying(_actorObject.Animator, 0, "Interact");
+        
         _actorObject.ObjectInteractor.InteractWithObject();
         
-        yield return new WaitForSeconds(_timeout);
+        yield return new WaitUntillAnimationIsFinished(_actorObject.Animator, 0, "Interact");
         
         yield return 0;
     }
