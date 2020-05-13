@@ -21,6 +21,9 @@ public class PickupBlock : FunctionBlock
 
         if (_interactableObject.HasPatient())
         {
+            _actorObject.Animator.SetBool("Hold", true);
+            yield return new WaitUntillAnimationIsPlaying(_actorObject.Animator, 1, "Hold");
+            
             _actorObject.CarryObject.StartCarry(_interactableObject.TakePatient());
         }
         
