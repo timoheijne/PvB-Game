@@ -25,6 +25,8 @@ public class PlaceBlock : FunctionBlock
             if (_target != null)
             {
                 _interactableObject.PlacePatient(_target);
+                
+                _actorObject.Animator.SetBool("Hold", false);
             }
         }
         
