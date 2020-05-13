@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class LevelSelectButtonSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject groupPrefab;
-    [SerializeField] GameObject levelButtonPrefab;
+    [SerializeField] private GameObject groupPrefab;
+    [SerializeField] private GameObject levelButtonPrefab;
 
     [SerializeField] private float xOffset = 1600;
 
     public int Groups;
 
-    LevelSystem levelSystem;
+    private LevelSystem levelSystem;
     
     void Start()
     {
