@@ -3139,7 +3139,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2968a492a1b33754aa4f1466dbf21bef,
+      objectReference: {fileID: 21300000, guid: 52575ffbf8c3d4440b49249e228a54be,
         type: 3}
     - target: {fileID: 292348985588137207, guid: 995eb1599079d89448fca60b42bf4df8,
         type: 3}
@@ -3663,6 +3663,7 @@ MonoBehaviour:
   levelButtonPrefab: {fileID: 7078151925168046976, guid: 220824dc19d22fb4fae84100c5f76e8b,
     type: 3}
   xOffset: 1600
+  Groups: 0
 --- !u!114 &1952079028
 MonoBehaviour:
   m_ObjectHideFlags: 0
