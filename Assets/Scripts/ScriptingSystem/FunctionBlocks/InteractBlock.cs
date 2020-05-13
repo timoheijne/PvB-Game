@@ -3,17 +3,16 @@ using UnityEngine;
 
 public class InteractBlock : FunctionBlock
 {
-    [SerializeField] private ObjectInteractor _interactor;
-
+    private ActorObject _actorObject;
     private void Start()
     {
         // TODO: Refactor to not need to lookup object, This needs to be set dynamically via the visual scripting UI
-        _interactor = GameObject.FindWithTag("PawnObject").GetComponent<ObjectInteractor>();
+        _actorObject = GameObject.FindWithTag("PawnObject").GetComponent<ActorObject>();
     }
     
     public override IEnumerator Act()
     {
-        _interactor.InteractWithObject();
+        _actorObject.ObjectInteractor.InteractWithObject();
         
         yield return new WaitForSeconds(_timeout);
         
