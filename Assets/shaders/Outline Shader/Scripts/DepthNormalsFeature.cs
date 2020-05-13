@@ -14,7 +14,7 @@ public class DepthNormalsFeature : ScriptableRendererFeature
 
         private readonly Material depthNormalsMaterial;
         private FilteringSettings m_FilteringSettings;
-        private ShaderTagId m_ShaderTagId = new ShaderTagId("DepthOnly");
+        private readonly ShaderTagId m_ShaderTagId = new ShaderTagId("DepthOnly");
 
         public DepthNormalsPass(RenderQueueRange renderQueueRange, LayerMask layerMask, Material material)
         {
