@@ -72,7 +72,9 @@ public class OutlineFeature : ScriptableRendererFeature
         {
 
             if (destination == RenderTargetHandle.CameraTarget)
+            {
                 cmd.ReleaseTemporaryRT(temporaryColorTexture.id);
+            }
         }
     }
 
