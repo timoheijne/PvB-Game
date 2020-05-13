@@ -35,6 +35,9 @@ public class BlockInventory : UnityEngine.MonoBehaviour
 
             InventoryBlockInstantiator _blockInstantiator = _blockObject.AddComponent<InventoryBlockInstantiator>();
             _blockInstantiator.SetPrefab(_item.Prefab);
+
+            TutorialReferenceObject _referenceObject = _blockObject.AddComponent<TutorialReferenceObject>();
+            _referenceObject.ReferenceID = $"VSB-{_item.ItemName}";
         }
     }
 }
