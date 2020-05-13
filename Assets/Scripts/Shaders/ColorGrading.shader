@@ -2,8 +2,14 @@
 
 	Properties{
 		_mainTex("Base (RGB)", 2D) = "white" {}
-		_secondTex("Lighting Color Gradient", 2D) = "white"{}
+		_secondTex("Color Gradient", 2D) = "white"{}
 		_lightTex("The amount of light", 2D) = "white"{}
+		_maskSkin("The Skin Mask", 2D) = "white"{}
+		_maskEye("The Eye Mask", 2D) = "white"{}
+		_maskShirt("The Shirt Mask", 2D) = "white"{}
+		_maskPant("The Pants Mask", 2D) = "white"{}
+		_maskShoe("The Shoes Mask", 2D) = "white"{}
+		_maskGlove("The Gloves Mask", 2D) = "white"{}
 		_samplePos("Position In Gradient", Range(0,1)) = 0.25
 	}
 
@@ -25,6 +31,13 @@
 				uniform sampler2D _mainTex;
 				uniform sampler2D _secondTex;
 				uniform sampler2D _lightTex;
+
+				uniform sampler2D _maskSkin;
+				uniform sampler2D _maskEye;
+				uniform sampler2D _maskShirt;
+				uniform sampler2D _maskPant;
+				uniform sampler2D _maskShoe;
+				uniform sampler2D _maskGlove;
 
 				float _samplePos;
 
