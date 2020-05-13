@@ -1,10 +1,10 @@
 ﻿Shader "PVB/ColorGrading" {
 
 	Properties{
-		_MainTex("Base (RGB)", 2D) = "white" {}
-		_SecondTex("Lighting Color Gradient", 2D) = "white"{}
-		_LightTex("The amount of light", 2D) = "white"{}
-		_SamplePos("Position In Gradient", Range(0,1)) = 0.25
+		_mainTex("Base (RGB)", 2D) = "white" {}
+		_secondTex("Lighting Color Gradient", 2D) = "white"{}
+		_lightTex("The amount of light", 2D) = "white"{}
+		_samplePos("Position In Gradient", Range(0,1)) = 0.25
 	}
 
 		SubShader{
@@ -22,11 +22,11 @@
 
 				#include "UnityCG.cginc"
 
-				uniform sampler2D _MainTex;
-				uniform sampler2D _SecondTex;
-				uniform sampler2D _LightTex;
+				uniform sampler2D _mainTex;
+				uniform sampler2D _secondTex;
+				uniform sampler2D _lightTex;
 
-				float _SamplePos;
+				float _samplePos;
 
 				struct appdata
 				{
@@ -52,10 +52,10 @@
 				}
 
 				float4 frag(v2f i) : COLOR {
-					float2 uv = float2(_SamplePos,0);
-					float4 c = tex2D(_MainTex, i.uv);
-					float4 g = tex2D(_SecondTex, uv);
-					float intensity = tex2D(_LightTex, uv);
+					float2 uv = float2(_samplePos,0);
+					float4 c = tex2D(_mainTex, i.uv);
+					float4 g = tex2D(_secondTex, uv);
+					float intensity = tex2D(_lightTex, uv);
 
 					float4 result = c * g * intensity;
 					return result;
