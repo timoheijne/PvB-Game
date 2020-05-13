@@ -45,18 +45,16 @@ public class Movement : MonoBehaviour
 
     public IEnumerator Left()
     {
-        _animator.SetBool("TurnRight", false);
-        
-        _animator.SetTrigger("Turn");
+        _animator.SetTrigger("TurnLeft");
         
         // Wait for the turn animation to start playing
-        while (!_animator.GetCurrentAnimatorStateInfo(0).IsName("Dokter_walk_turn"))
+        while (!_animator.GetCurrentAnimatorStateInfo(0).IsName("TurnLeft"))
         {
             yield return null;
         }
         
         //Wait until Animator is done playing
-        while (_animator.GetCurrentAnimatorStateInfo(0).IsName("Dokter_walk_turn") &&
+        while (_animator.GetCurrentAnimatorStateInfo(0).IsName("TurnLeft") &&
                _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
         {
             //Wait every frame until animation has finished
@@ -72,18 +70,16 @@ public class Movement : MonoBehaviour
 
     public IEnumerator Right()
     {
-        _animator.SetBool("TurnRight", true);
-        
-        _animator.SetTrigger("Turn");
+        _animator.SetTrigger("TurnRight");
         
         // Wait for the turn animation to start playing
-        while (!_animator.GetCurrentAnimatorStateInfo(0).IsName("Dokter_walk_turn"))
+        while (!_animator.GetCurrentAnimatorStateInfo(0).IsName("TurnRight"))
         {
             yield return null;
         }
         
         //Wait until Animator is done playing
-        while (_animator.GetCurrentAnimatorStateInfo(0).IsName("Dokter_walk_turn") &&
+        while (_animator.GetCurrentAnimatorStateInfo(0).IsName("TurnRight") &&
                _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
         {
             //Wait every frame until animation has finished
