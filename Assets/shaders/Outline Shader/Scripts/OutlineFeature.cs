@@ -8,7 +8,7 @@ public class OutlineFeature : ScriptableRendererFeature
     {
         private RenderTargetIdentifier source { get; set; }
         private RenderTargetHandle destination { get; set; }
-        public Material outlineMaterial = null;
+        public Material outlineMaterial;
         RenderTargetHandle temporaryColorTexture;
 
         public void Setup(RenderTargetIdentifier source, RenderTargetHandle destination)
