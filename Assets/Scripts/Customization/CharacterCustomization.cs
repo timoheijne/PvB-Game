@@ -18,7 +18,6 @@ public class CharacterCustomization : MonoBehaviour {
     [SerializeField]
     private GameObject[] _hairStyles;
     private GameObject _currentHairStyle;
-    private GameObject _eyes;
 
     [SerializeField]
     private Material[] _materials;
@@ -43,9 +42,7 @@ public class CharacterCustomization : MonoBehaviour {
     private void Start() 
     {
         _renderer = gameObject.GetComponent<Renderer>();
-        _renderer.sharedMaterial.shader = Shader.Find("PVB/ColorGrading");
-
-        _eyes = GameObject.Find("Eyes");
+        _renderer.sharedMaterial.shader = Shader.Find("Shader Graphs/CharacterCustomization");
 
         if (!_hasCharacter && _isCreatingCharacter || _isNPC) 
         {
@@ -83,7 +80,7 @@ public class CharacterCustomization : MonoBehaviour {
 
         if (_oldEyeColorValue != Mathf.Round(_hairColorGradient * 100f) / 100f) 
         {
-            SetColor(_eyes, "Eyes", _eyeColorGradient);
+            SetColor(_targetCharacter.transform.Find("Body").gameObject, "Eyes", _eyeColorGradient);
         }
     }
 
@@ -134,24 +131,26 @@ public class CharacterCustomization : MonoBehaviour {
                 _sliderHandle = _sliderHandles[0];
                 _material = _materials[0];
                 _sliderHandle.material = _material;
+                _targetRenderer.sharedMaterial.SetFloat("_SamplePos", _value);
                 break;
 
             case "Skin":
                 _sliderHandle = _sliderHandles[1];
                 _material = _materials[1];
                 _sliderHandle.material = _material;
+                _targetRenderer.sharedMaterial.SetFloat("Skin_Gradient_Position", _value);
                 break;
 
             case "Eyes":
                 _sliderHandle = _sliderHandles[2];
                 _material = _materials[2];
                 _sliderHandle.material = _material;
+                _targetRenderer.sharedMaterial.SetFloat("Eye_Gradient_Position", _value);
                 break;
 
             default:
                 break;
         }
-        _targetRenderer.sharedMaterial.SetFloat("_SamplePos", _value);
     }
 
     private void CreateCharacter() 
