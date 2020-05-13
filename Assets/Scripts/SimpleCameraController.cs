@@ -68,7 +68,7 @@ namespace UnityTemplateProjects
         public bool invertY = false;
 
         private readonly CameraState m_TargetCameraState = new CameraState();
-        private CameraState m_InterpolatingCameraState = new CameraState();
+        private readonly CameraState m_InterpolatingCameraState = new CameraState();
         
         void OnEnable()
         {
