@@ -103,10 +103,10 @@ abstract public class Node : MonoBehaviour
 
     private void Snap(Node node)
     {
-        node.GetComponent<RectTransform>().position = (Vector2)GetComponent<RectTransform>().position + Vector2.down * 100;
+        node.GetComponent<RectTransform>().position = (Vector2)GetComponent<RectTransform>().position + Vector2.down * 30;
     }
 
-    abstract public void Act();
+    public abstract IEnumerator Act();
 
     public Node NextNode()
     {

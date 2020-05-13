@@ -4,13 +4,17 @@ using UnityEngine.Rendering.Universal;
 
 public class DepthNormalsFeature : ScriptableRendererFeature
 {
+    private DepthNormalsPass depthNormalsPass;
+    private RenderTargetHandle depthNormalsTexture;
+    private Material depthNormalsMaterial;
+    
     class DepthNormalsPass : ScriptableRenderPass
     {
         private RenderTargetHandle destination { get; set; }
 
-        private Material depthNormalsMaterial = null;
+        private readonly Material depthNormalsMaterial;
         private FilteringSettings m_FilteringSettings;
-        ShaderTagId m_ShaderTagId = new ShaderTagId("DepthOnly");
+        private readonly ShaderTagId m_ShaderTagId = new ShaderTagId("DepthOnly");
 
         public DepthNormalsPass(RenderQueueRange renderQueueRange, LayerMask layerMask, Material material)
         {
@@ -59,7 +63,10 @@ public class DepthNormalsFeature : ScriptableRendererFeature
                 ref CameraData cameraData = ref renderingData.cameraData;
                 Camera camera = cameraData.camera;
                 if (cameraData.isStereoEnabled)
+                {
                     context.StartMultiEye(camera);
+                }
+                    
 
 
                 drawSettings.overrideMaterial = depthNormalsMaterial;
@@ -85,10 +92,6 @@ public class DepthNormalsFeature : ScriptableRendererFeature
             }
         }
     }
-
-    DepthNormalsPass depthNormalsPass;
-    RenderTargetHandle depthNormalsTexture;
-    Material depthNormalsMaterial;
 
     public override void Create()
     {

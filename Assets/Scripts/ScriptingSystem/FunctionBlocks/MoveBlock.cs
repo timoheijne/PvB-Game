@@ -1,16 +1,27 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveBlock : FunctionBlock
 {
     [SerializeField] private Movement movement;
-    
-    public override void Act()
+
+    private void Start()
+    {
+        // TODO: Refactor to not need to lookup object, This needs to be set dynamically via the visual scripting UI
+        movement = GameObject.FindWithTag("PawnObject").GetComponent<Movement>();
+    }
+
+    public override IEnumerator Act()
     {
         if (movement.CanMoveForward())
         {
-            movement.Forward();
+            yield return StartCoroutine(movement.Forward());
         }
+        
+        yield return new WaitForSeconds(_timeout);
+        
+        yield return 0;
     }
 }

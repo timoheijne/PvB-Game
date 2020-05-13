@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d37c4b93f9b4286b18a06b961cb8581, type: 3}
   m_Name: Scale
   m_EditorClassIdentifier: 
-  FriendlyName: 
-  InternalName: 
+  FriendlyName: Scale
+  InternalName: scale
   Active: 1
   IsDone: 0

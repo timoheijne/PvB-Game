@@ -1,15 +1,21 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
 public class OutlineFeature : ScriptableRendererFeature
 {
+    public OutlineSettings settings = new OutlineSettings();
+    private OutlinePass outlinePass;
+    private RenderTargetHandle outlineTexture;
+    
     class OutlinePass : ScriptableRenderPass
     {
+        
+        public Material outlineMaterial;
         private RenderTargetIdentifier source { get; set; }
         private RenderTargetHandle destination { get; set; }
-        public Material outlineMaterial = null;
-        RenderTargetHandle temporaryColorTexture;
+        private RenderTargetHandle temporaryColorTexture;
 
         public void Setup(RenderTargetIdentifier source, RenderTargetHandle destination)
         {
@@ -31,7 +37,7 @@ public class OutlineFeature : ScriptableRendererFeature
         // The render pipeline will ensure target setup and clearing happens in an performance manner.
         public override void Configure(CommandBuffer cmd, RenderTextureDescriptor cameraTextureDescriptor)
         {
-
+            throw new NotSupportedException();
         }
 
         // Here you can implement the rendering logic.
@@ -52,7 +58,10 @@ public class OutlineFeature : ScriptableRendererFeature
                 Blit(cmd, temporaryColorTexture.Identifier(), source);
 
             }
-            else Blit(cmd, source, destination.Identifier(), outlineMaterial, 0);
+            else
+            {
+                Blit(cmd, source, destination.Identifier(), outlineMaterial, 0);
+            }
 
             context.ExecuteCommandBuffer(cmd);
             CommandBufferPool.Release(cmd);
@@ -63,7 +72,9 @@ public class OutlineFeature : ScriptableRendererFeature
         {
 
             if (destination == RenderTargetHandle.CameraTarget)
+            {
                 cmd.ReleaseTemporaryRT(temporaryColorTexture.id);
+            }
         }
     }
 
@@ -72,10 +83,7 @@ public class OutlineFeature : ScriptableRendererFeature
     {
         public Material outlineMaterial = null;
     }
-
-    public OutlineSettings settings = new OutlineSettings();
-    OutlinePass outlinePass;
-    RenderTargetHandle outlineTexture;
+    
 
     public override void Create()
     {
