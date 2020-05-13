@@ -1,0 +1,213 @@
+adb5148,Timo Heijne,2020-05-13,Replace null check actually before the logic
+9de848d,Timo Heijne,2020-05-12,Make sure patient system is loaded before level system
+9daaf7b,Timo Heijne,2020-05-12,Refactor PatientUI objective to string builder
+f398232,Timo Heijne,2020-05-12,Reset patient objectives when patient is activated
+5162eb7,Timo Heijne,2020-05-12,Add OnObjectiveComplete listener to patient system UI
+929c853,Timo Heijne,2020-05-12,Add OnObjectiveComplete event to patientsystem & Refactor PatientFile to return tuple when calling MarkObjectiveComplete
+9ff8cc4,Timo Heijne,2020-05-12,Add basic patient system UI display
+f705c54,Timo Heijne,2020-05-12,Update lightmap in level 1
+3a0e25a,Timo Heijne,2020-05-12,Change size and style of the Visual Scripting Blocks
+fe56c67,Timo Heijne,2020-05-12,Change CarryMaster on doctor by 90 degrees
+1c2aecb,Timo Heijne,2020-05-12,Add function block assets
+1e88b9a,Timo Heijne,2020-05-12,Add Place Function block behaviour
+a2bee47,Timo Heijne,2020-05-12,Add Pickup Function block behaviour & Refactor ObjectInteractor
+35190a2,Timo Heijne,2020-05-12,Add carry master to doctor
+5fe3298,Timo Heijne,2020-05-12,Add CarryObject behaviour
+9c229ca,Timo Heijne,2020-05-12,Destroy patient when patient file is done
+a2fd7b8,Timo Heijne,2020-05-12,Refactor Patient data tracker so the patient file is set dynamically
+05ff3a8,Timo Heijne,2020-05-12,Add GameObject tracking to PatientFile
+920ac43,Timo Heijne,2020-05-12,Add null check to PlacePatient
+7162720,Timo Heijne,2020-05-12,Refactor TakePatient to return transform instead of gameObject
+e1510d1,Timo Heijne,2020-05-12,Set patient name to Frank
+b7b3ae4,Timo Heijne,2020-05-12,Add prefab to frank patient file
+81ed623,Timo Heijne,2020-05-12,Reset starting postion of patient back to reception
+d9e0721,Timo Heijne,2020-05-12,Add patient place to scale
+1b79c8e,Timo Heijne,2020-05-12,Add patient palce to Washing Table
+5efcc76,Timo Heijne,2020-05-12,Add patient place to Operating Table
+c69e6a6,Timo Heijne,2020-05-12,Set PatientPlace on reception
+a1ccb88,Timo Heijne,2020-05-12,Add rotation to PlacePatient
+3a0ccfe,Timo Heijne,2020-05-12,Change cavia pivot center
+c1a9673,Timo Heijne,2020-05-12,Change cavia pivor origin
+2ba0a4e,Timo Heijne,2020-05-12,Add patient place to interactable object inspector
+78c5701,Timo Heijne,2020-05-12,Add prefab to patient file & Add classes to the gameobjects
+f4ae0f5,Timo Heijne,2020-05-12,Change patient position on PlacePatient
+ea49ff6,Timo Heijne,2020-05-12,Add [SerializeField] to Patient tracker
+9b0ee24,Timo Heijne,2020-05-12,Add patient spawning behaviour
+031150d,Timo Heijne,2020-05-12,Add Interactable Object patient tracking behaviour
+1e75f57,Timo Heijne,2020-05-12,Add patient behaviour class
+f3e709b,Timo Heijne,2020-05-12,Add Patient Tracking to interactable object
+c0cdbf7,Timo,2020-05-12,Remove .idea directory (#27)
+e202a6e,Timo,2020-05-12,Fix tutorial data not saving (#26)
+16ed991,Timo,2020-05-12,Merge pull request #25 from timoheijne/feature/visual-scripting-interact
+e246756,Timo Heijne,2020-05-12,Remove TMP resources meta
+1a84f57,Timo Heijne,2020-05-12,Bake lighting for level 1
+4595eba,Timo Heijne,2020-05-12,Move patient system hook to PatientSystem Object
+4803579,Timo Heijne,2020-05-12,Update level one with interactable object data
+66aee13,Timo Heijne,2020-05-12,Update box-collider on ObjectInteractor
+10485b6,Timo Heijne,2020-05-12,Add PawnObject tag to doctor
+fe637d5,Timo Heijne,2020-05-12,Fix asset data
+9662946,Timo Heijne,2020-05-12,Rename function blocks
+cd765b0,Timo Heijne,2020-05-12,Fix asset not saving
+9e15388,Timo,2020-05-11,Merge pull request #13 from timoheijne/feature/tutorial-system
+a7a158b,Timo Heijne,2020-05-11,Merge branch 'master' into feature/tutorial-system
+7828228,Timo Heijne,2020-05-11,Add level data object
+4b3cd51,Timo Heijne,2020-05-11,Add first development level
+a7db4e5,Timo Heijne,2020-05-11,Fix merge request by deleting
+fc5dc88,Timo Heijne,2020-05-11,Remove .idea folder from git
+a7f88b7,Timo Heijne,2020-05-11,Add null check
+43b378e,Timo Heijne,2020-05-11,Refactor long foreach to linq
+ce7f94d,Timo Heijne,2020-05-11,Add .idea to ignore file
+a77d787,Timo,2020-05-11,Merge branch 'master' into feature/tutorial-system
+26d2346,Timo Heijne,2020-05-11,Update TutorialSystem feature scene
+0f30f93,Timo Heijne,2020-05-11,Add padding to tutorial highlight
+192bc5b,Timo Heijne,2020-05-11,Add proper turorial assets
+ab71a7d,Timo,2020-05-10,Merge pull request #18 from timoheijne/feature/pawn-object
+0996ae2,Timo,2020-05-10,Merge branch 'master' into feature/pawn-object
+8505971,Timo Heijne,2020-05-10,Fix code consistency
+30417f4,Timo Heijne,2020-05-10,Fix code convention and consistency issue
+8065667,Timo Heijne,2020-05-10,Remove unnecesairy default instantiation
+ad7628c,Timo Heijne,2020-05-10,Fix basic rotation
+bdf7b32,Timo Heijne,2020-05-10,Add basic rotation coroutine
+5aa9798,Timo Heijne,2020-05-10,Add basic doctor animations to controller
+d5905af,Timo Heijne,2020-05-10,Refactor VisualScripting Manager to work with CoRoutines
+6b4b1e1,Timo Heijne,2020-05-08,Add block trashcan
+c5eb095,Timo Heijne,2020-05-08,Fix vertical layout group content fitting
+89f6fbe,Timo Heijne,2020-05-08,Add basic inventory block instantiating and refactored DragUI
+5eddfd0,Timo Heijne,2020-05-09,Merge branch 'artist/tim' of https://github.com/timoheijne/PvB-Game into feature/pawn-object
+a7df14e,Timo Heijne,2020-05-09,Merge branch 'artist/tim' into feature/pawn-object
+1b3722f,coen,2020-05-09,Change MovementTest.unity to a working movement demo
+0670fe4,coen,2020-05-09,Add RotateBlock.cs
+cf44e4e,coen,2020-05-09,Add MoveBlock.cs
+98e0f7e,coen,2020-05-09,Add Movement.cs which lets other script move and rotate gameobjects with this script
+abb2b17,Tim Buhrs,2020-05-08,Add <Props en Character anim>
+e9630ea,Timo,2020-05-08,Merge pull request #12 from timoheijne/prototype/visual-scripting
+81d6314,Timo,2020-05-08,Merge branch 'master' into prototype/visual-scripting
+4a4be43,coen,2020-05-08,Fix issues with code conventions
+0a73faf,coen,2020-05-08,Fix issue #14 and #15
+d241b66,Timo Heijne,2020-05-07,Remove unused code
+f29b8d9,Timo Heijne,2020-05-07,Add tutorial UI controls and display
+6d61dbf,Timo Heijne,2020-05-07,Add GetHashCode to TutorialSection struct for equality checking
+eb9725e,Timo Heijne,2020-05-07,Add ImageFade for highligher
+2d54c93,Timo Heijne,2020-05-07,Add IEquatable to TutorialSection script
+d022e86,coen,2020-05-07,Fix null reference error
+0c4c817,coen,2020-05-07,Clean GameManager.cs and add comments
+9031895,Timo Heijne,2020-05-07,Remove debug line
+184fda9,Timo Heijne,2020-05-07,Add basic object highlighting
+1e80be6,coen,2020-05-07,Fix issues with code conventions
+ddcb3c3,coen,2020-05-07,Fix issues with code conventions
+7a0ce47,Timo Heijne,2020-05-07,Add basic tutorial system custom inspector
+104ccdc,Timo Heijne,2020-05-07,Add tutorial editor window
+817e8c0,coen,2020-05-07,Fix issues in Node.cs: Now calls correct Act()
+05de980,coen,2020-05-06,Remove DebugN.cs
+5936232,coen,2020-05-06,Remove all Debug.Log
+8ede51b,Timo,2020-05-06,Merge pull request #4 from timoheijne/feature/main-menu
+8d3c9b6,Timo,2020-05-06,Merge branch 'master' into feature/main-menu
+030a979,Timo Heijne,2020-05-06,Fix double interaction feedback
+3aa83c7,Timo Heijne,2020-05-06,Merge branch 'feature/main-menu' of https://github.com/timoheijne/PvB-Game into feature/main-menu
+db33c08,Timo Heijne,2020-05-06,Fix menu positioning
+38045ff,Timo Heijne,2020-05-06,Fix stop popup scaling
+6ce00cd,Timo Heijne,2020-05-06,Fix credit screen back button scale
+2ef70a9,Timo Heijne,2020-05-06,Fix default open window
+60e2776,Timo Heijne,2020-05-06,Fix button scaling and slider scale
+73c0794,MarrowOfAlbion,2020-05-06,Fixed an issue where the buttons were not able to change sprite
+0138d8d,MarrowOfAlbion,2020-05-06,Remove unnecesary code
+4ac84df,MarrowOfAlbion,2020-05-06,Rework of the Sprite handler script
+e099815,Timo Heijne,2020-05-06,Add stop icon
+8b66d0c,MarrowOfAlbion,2020-05-06,Add IPointer events instead of OnMouse events
+f17609d,Timo Heijne,2020-05-06,Add basic tutorial assets
+51dd6f6,MarrowOfAlbion,2020-05-06,Fix all wrongly executed code conventions
+376d18e,coen,2020-05-06,change head to a node that returns itself or the next node depending on a condition
+8373ecf,Timo Heijne,2020-05-05,Add tutorial reference object component
+b363552,Timo Heijne,2020-05-05,Add tutorial system
+a33ae7c,Timo Heijne,2020-05-05,Add tutorial data object
+6a0f9a9,coen,2020-05-02,Remove unnecessary functions from Head.cs
+c53491c,coen,2020-05-02,Set currentNode to NextNode on tick
+92fcc83,coen,2020-05-02,Set currentNode to NextNode on tick
+4c73dc2,coen,2020-05-02,Add tick function which calls act on current nodes
+3f96bab,coen,2020-05-02,Add FunctionNode.cs
+330b6f2,coen,2020-05-02,Remove unnecessary functions from Node.cs
+db1a695,coen,2020-05-02,Add GameManager.cs
+8bb03d1,Timo Heijne,2020-04-23,Remove unecessary default instantiators
+983132a,Timo Heijne,2020-04-23,Fix single equals assignment, should be comparison
+af901f0,Timo Heijne,2020-04-23,Fix SetLevelFiles, Call SetActivePatient properly
+ea4f366,Timo Heijne,2020-04-23,Add the loading of patient files when level has been loaded
+581deb9,Timo Heijne,2020-04-23,Fix LevelSystem editor > Level switch back to first when switched
+d4b9f92,Timo Heijne,2020-04-23,Fix LevelSystem duplication on scene load
+461bb0a,Timo Heijne,2020-04-23,Add level system custom editor
+d8ccb18,Timo Heijne,2020-04-23,Fix null reference when level object is made
+b8fae3a,Timo Heijne,2020-04-23,Add custom level object inspector
+0113a3a,Timo Heijne,2020-04-23,Add patient system to level system hook
+e12ad42,Timo Heijne,2020-04-23,Add more level object options
+f4135de,Timo Heijne,2020-04-23,Add basic level system
+9cda947,Timo Heijne,2020-04-23,Add level scriptable object
+6942229,samjerry,2020-04-26,Add a SpriteHandler script to easily change the sprites of objects in different states
+900e3cc,coen,2020-04-26,Add a base class for nodes
+190ea82,coen,2020-04-26,Remove unused scripts
+3ccbccf,samjerry,2020-04-24,Add collider on the Button prefab
+b251069,samjerry,2020-04-24,Add Sprite swapping based on curren button state
+cb9619f,samjerry,2020-04-24,Add image for audio slider and set the same image for SFX and Music slider as placeholder
+97c762f,samjerry,2020-04-24,Add the Terug buttons to the main-menu scene, and repositioned the terug buttons in the options and credits menu
+954745e,samjerry,2020-04-24,Fix an issue where the buttons were not able to function because of static functions
+3029fca,samjerry,2020-04-24,Add Terug button to main menu and renamed clicked buttons to click
+7eff2ab,samjerry,2020-04-24,Add a Backdrop to the Pop-Up prefab
+1213275,samjerry,2020-04-23,Add agree and decline button to  main menu quit pop-up
+7e73501,samjerry,2020-04-23,Add new Pop-Up screen assets to main menu scene
+c34d409,samjerry,2020-04-23,Add the new Logo to the main menu
+00397fd,Timo,2020-04-22,Merge/import assets (#8)
+4b84a15,Tim Buhrs,2020-04-22,props artists
+80f6e6d,Timo Heijne,2020-04-21,Fix codeconvention issue
+db11c69,Timo Heijne,2020-04-16,Fix codacy style issues
+614b574,Timo Heijne,2020-04-16,Add interactable object system editor
+a65175b,Timo Heijne,2020-04-15,Add feature scene for interactable object
+7b9efdc,Timo Heijne,2020-04-15,Add custom editor for object interactor
+8e05660,Timo Heijne,2020-04-15,Add Object Interactor
+da8b895,Timo Heijne,2020-04-15,Add Interactable Object Reference Script
+27fb4c1,MarrowOfAlbion,2020-04-21,Add the empty hover-state UI buttons for options menu to project
+ca65119,MarrowOfAlbion,2020-04-21,Add the empty idle-state UI buttons for options menu to project
+80eb525,MarrowOfAlbion,2020-04-21,Add the idle-state UI buttons for options menu to project
+f44ee19,MarrowOfAlbion,2020-04-21,Add the used font's file to the project
+4f2ccc3,MarrowOfAlbion,2020-04-21,Add the hover-state UI buttons for options menu to project
+4f74cd4,MarrowOfAlbion,2020-04-21,Add the click-state UI buttons for options menu to project
+63bab6e,MarrowOfAlbion,2020-04-20,Add all Idle buttons to project
+0ca770a,MarrowOfAlbion,2020-04-20,Add all Hover buttons to project
+1f62c6f,MarrowOfAlbion,2020-04-20,Rescale UI buttons in Options and Credits to the correct size
+cbae7c5,MarrowOfAlbion,2020-04-20,Add the first version of the game logo  into the project
+2acac15,MarrowOfAlbion,2020-04-20,Add all the click-state UI buttons to the project as placeholders for the buttons
+c72c97c,coen,2020-04-20,Add basic connection between UI based nodes
+ba35698,coen,2020-04-15,Add nodes base
+fddcc38,The Codacy Badger,2020-04-15,Add Codacy badge
+286856a,Timo Heijne,2020-04-15,Fix pull request issues
+425069e,Timo Heijne,2020-04-09,Fix member naming issues
+a10e52c,Timo Heijne,2020-04-09,Fix curly encasulation
+fd0d453,Timo Heijne,2020-04-09,Remove default initialization
+2bb6a9e,Timo Heijne,2020-04-09,Fix codacy issues PatientSystemEditor
+d2e6b8c,Timo Heijne,2020-04-09,Fix codacy issues PatientFileEditor
+f2f6a31,Timo Heijne,2020-04-09,Add OnPatientChange invoke on change function
+638498a,Timo Heijne,2020-04-09,Add custom patient file inspector
+1569bbc,Timo Heijne,2020-04-09,Add patient system (Loading & Tracking)
+3648976,Timo Heijne,2020-04-08,Add unity meta files for patient-system
+97d3eab,Timo Heijne,2020-04-08,Add custom patient file inspector
+e958377,Timo Heijne,2020-04-08,Add custom objective system inspector
+de9e556,Timo Heijne,2020-04-08,Add basic patient system objects
+9167359,MarrowOfAlbion,2020-04-14,Fix issue in AudioManager.cs: Replaced Break; with NotSupportedException
+f397af5,MarrowOfAlbion,2020-04-14,Fix issue in SliderHandler.cs: Added static to methods
+ec223b1,MarrowOfAlbion,2020-04-14,Fix issue in ButtonHandler.cs: Added static to dfunctions
+c8866aa,MarrowOfAlbion,2020-04-14,Fix issue in SoundLibrary.cs: Added readonly to _groupDictionary
+25b4929,MarrowOfAlbion,2020-04-14,fix issues in AudioManager.cs: Renamed public variables, added a default to the channel switch
+08149b6,MarrowOfAlbion,2020-04-14,Add MusicManager and SoundLibrary to Audio Manager prefab
+195584d,MarrowOfAlbion,2020-04-14,Remove comments in AudioManager
+7e20dd9,MarrowOfAlbion,2020-04-14,Add SoundLibrary script, MusicManager script and applied code conventions to AudioManager script
+880866b,MarrowOfAlbion,2020-04-14,Add volume sliders functionality it will add an AudioManager script
+6d6ff6b,MarrowOfAlbion,2020-04-14,Add SliderHandler, Pop-Up Prefab and quit button functionality
+bfd7beb,MarrowOfAlbion,2020-04-14,Add SFX slider to the options menu
+09c60d3,Codacy Badger,2020-04-09,Add Codacy badge (#3)
+42e04d1,MarrowOfAlbion,2020-04-09,Add Credits Menu layout
+631ab00,MarrowOfAlbion,2020-04-09,Update menu items so they disable themselves
+f13826c,MarrowOfAlbion,2020-04-09,Add options menu layout, and Button_Options functionality
+32615f2,MarrowOfAlbion,2020-04-09,Add the UI layout for main menu
+4665514,Tim Buhrs,2020-04-08,Add a test scene
+3898fde,Tim Buhrs,2020-04-08,Add a test file
+89218ed,coen,2020-04-01,Add draggable and connectable blocks
+1fa3db6,coen,2020-03-30,Add base function class
+53a836c,Timo Heijne,2020-03-27,Add basic unity project
+7c49000,Timo,2020-03-25,Initial commit
