@@ -13,18 +13,32 @@ public class CameraMovement : MonoBehaviour
         private Vector3 _maxClamp;
         
         private Vector3 dragOrigin;
-        
-        
+
+        public bool Freeze => _freeze;
+        private bool _freeze;
+
+        public void SetFreeze(bool freeze)
+        {
+                _freeze = freeze;
+        }
         
         void Update()
         {
+                if (_freeze)
+                {
+                        return;
+                }
+                
                 if (Input.GetMouseButtonDown(0))
                 {
                         dragOrigin = Input.mousePosition;
                         return;
                 }
- 
-                if (!Input.GetMouseButton(0)) return;
+
+                if (!Input.GetMouseButton(0))
+                {
+                        return;
+                }
 
                 Vector3 pos = Input.mousePosition - dragOrigin;
                 

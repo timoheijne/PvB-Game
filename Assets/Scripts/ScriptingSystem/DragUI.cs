@@ -8,8 +8,15 @@ using UnityEngine;
 
 public class DragUI : MonoBehaviour, IPointerDownHandler
 {
+
+    private CameraMovement _cameraMovement;
     private Vector2 lastMousePosition;
     private bool isDragging;
+
+    private void Start()
+    {
+        _cameraMovement = Camera.main.transform.parent.GetComponent<CameraMovement>();
+    }
 
     /// <summary>
     /// This method will be called on the start of the mouse drag
@@ -20,6 +27,7 @@ public class DragUI : MonoBehaviour, IPointerDownHandler
         lastMousePosition = eventData.position;
         GetComponent<Node>()?.RemoveNode();
         isDragging = true;
+        
     }
 
     private void Update()
@@ -29,6 +37,7 @@ public class DragUI : MonoBehaviour, IPointerDownHandler
             return;
         }  
         
+        _cameraMovement?.SetFreeze(isDragging);
         if (isDragging && Input.GetMouseButtonUp(0))
         {
             ReleaseDrag();
@@ -51,6 +60,7 @@ public class DragUI : MonoBehaviour, IPointerDownHandler
     private void ReleaseDrag()
     {
         isDragging = false;
+        _cameraMovement?.SetFreeze(false);
 
         Node[] nodes = FindObjectsOfType<Node>();
         foreach (Node node in nodes)
