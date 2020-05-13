@@ -28,7 +28,6 @@ public class LevelSystem : MonoBehaviour
             
             SceneManager.sceneLoaded += OnSceneLoaded;
             LoadAllLevels();
-            SortLevelsByPosition();
 
             _activeLevel = _levels.Find(l => l.SceneName == SceneManager.GetActiveScene().name);
         }
@@ -96,13 +95,8 @@ public class LevelSystem : MonoBehaviour
         }
     }
 
-    private List<LevelObject> GetAllLevels(bool _mustBeEnabled = true)
+    public List<LevelObject> GetAllLevels(bool _mustBeEnabled = true)
     {
         return _levels.FindAll(l => l.IsEnabled = _mustBeEnabled);
-    }
-
-    public void SortLevelsByPosition()
-    {
-        _levels.Sort((p1, p2) => p1.Position.CompareTo(p2.Position));
     }
 }

@@ -5,28 +5,43 @@ using UnityEngine.UI;
 
 public class LevelSelectButtonSpawner : MonoBehaviour
 {
-    LevelSystem levelSystem;
+    [SerializeField] GameObject groupPrefab;
+    [SerializeField] GameObject levelButtonPrefab;
 
-    // Start is called before the first frame update
+    [SerializeField] private float xOffset = 1600;
+
+    public int Groups;
+
+    LevelSystem levelSystem;
+    
     void Start()
     {
-        levelSystem = FindObjectOfType<LevelSystem>();
+        levelSystem = LevelSystem.Instance;
 
         CreateLevelSelect();
     }
 
     public void CreateLevelSelect()
     {
+        List<LevelObject> _levels = levelSystem.GetAllLevels();
+        for (int i = 0; _levels.Count > 0; i++)
+        {
+            int levelsOnNextBlock = Mathf.Min(_levels.Count, 8);
+            LevelObject[] objects = new LevelObject[levelsOnNextBlock];
+            for (int j = 0; j < levelsOnNextBlock; j++)
+            {
+                objects[j] = _levels[j];
+            }
+            _levels.RemoveRange(0, levelsOnNextBlock);
 
+            CreateButtonGroup(objects, i * xOffset);
+        }
     }
 
-    public void CreateButtonGroup(LevelObject[] _levels, Vector2 size, Vector2 cellSize, Vector2 spacing)
+    public void CreateButtonGroup(LevelObject[] _levels, float _xOffset)
     {
-        GameObject group = new GameObject();
-        group.transform.parent = transform;
-        RectTransform rect = group.AddComponent<RectTransform>();
-        GridLayoutGroup gridLayout = group.AddComponent<GridLayoutGroup>();
-        gridLayout.SetLayoutHorizontal();
+        GameObject group = Instantiate(groupPrefab, transform.position + Vector3.right * _xOffset, transform.rotation, transform);
+        
 
         for (int i = 0; i < _levels.Length; i++)
         {
@@ -35,12 +50,10 @@ public class LevelSelectButtonSpawner : MonoBehaviour
     }
 
 
-    public GameObject CreateButton(LevelObject _level, Transform parent)
+    public GameObject CreateButton(LevelObject _level, Transform _parent)
     {
-        GameObject button = new GameObject();
-        button.transform.parent = parent;
-        RectTransform rect = button.AddComponent<RectTransform>();
-        button.AddComponent<Button>().onClick.AddListener(() => levelSystem.ChangeLevel(_level));
+        GameObject button = Instantiate(levelButtonPrefab, _parent);
+        button.GetComponent<Button>()?.onClick.AddListener(() => levelSystem.ChangeLevel(_level));
         return button;
     }
 }
