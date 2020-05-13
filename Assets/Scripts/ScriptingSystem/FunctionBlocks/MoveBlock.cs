@@ -5,19 +5,19 @@ using UnityEngine;
 
 public class MoveBlock : FunctionBlock
 {
-    [SerializeField] private Movement movement;
+    private ActorObject _actorObject;
 
     private void Start()
     {
         // TODO: Refactor to not need to lookup object, This needs to be set dynamically via the visual scripting UI
-        movement = GameObject.FindWithTag("PawnObject").GetComponent<Movement>();
+        _actorObject = GameObject.FindWithTag("PawnObject").GetComponent<ActorObject>();
     }
 
     public override IEnumerator Act()
     {
-        if (movement.CanMoveForward())
+        if (_actorObject.Movement.CanMoveForward())
         {
-            yield return StartCoroutine(movement.Forward());
+            yield return StartCoroutine(_actorObject.Movement.Forward());
         }
         
         yield return new WaitForSeconds(_timeout);
