@@ -14,7 +14,7 @@ public class ResetSystem : MonoBehaviour
         
         foreach (ResetBehaviour _behaviour in _resetObjects)
         {
-            _behaviour.InvokeReset();
+            _behaviour?.InvokeReset();
         }
     }
 }
