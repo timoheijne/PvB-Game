@@ -29,7 +29,7 @@ public class BlockInventory : UnityEngine.MonoBehaviour
             {
                 if (_script.GetType() != typeof(Image))
                 {
-                    _script.enabled = false;
+                    Destroy(_script);
                 }
             }
 
