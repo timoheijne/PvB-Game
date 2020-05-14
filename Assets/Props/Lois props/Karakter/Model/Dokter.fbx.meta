@@ -30,6 +30,12 @@ ModelImporter:
   - first:
       74: -5401127607411917085
     second: Dokter_win_idle
+  - first:
+      74: -5386267323552814955
+    second: Dokter_walk_turn (1)
+  - first:
+      74: -4490955524342807318
+    second: Dokter_Idle_var_1 (1)
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -59,8 +65,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Dokter_walk_forward
-      takeName: Dokter_walk_forward
+      name: Dokter_Idle_var_1 (1)
+      takeName: Dokter_Idle_var_1
       internalID: 0
       firstFrame: 0
       lastFrame: 30
@@ -71,7 +77,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -369,7 +375,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: root
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -377,7 +383,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
