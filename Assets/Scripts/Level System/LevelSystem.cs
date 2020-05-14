@@ -61,23 +61,22 @@ public class LevelSystem : MonoBehaviour
             return;
         }
 
-        _activeLevel = _level;
-        SceneManager.LoadScene(_level.SceneName);
+        ChangeLevel(_level);
     }
-    
+
     public void ChangeLevel(LevelObject _level)
     {
         if (_level.IsEnabled == false)
         {
             return;
         }
-        
+
         SceneManager.LoadScene(_level.SceneName);
     }
     
     private void LoadAllLevels()
     {
-        _levels = Resources.LoadAll<LevelObject>("Levels").ToList();
+        _levels = Resources.LoadAll<LevelObject>("Levels").ToList().FindAll(l => l.IsEnabled == true);
     }
     
     private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
@@ -94,5 +93,10 @@ public class LevelSystem : MonoBehaviour
         {
             OnLevelLoad?.Invoke(_activeLevel);
         }
+    }
+
+    public List<LevelObject> GetAllLevels(bool _mustBeEnabled = true)
+    {
+        return _levels.FindAll(l => l.IsEnabled = _mustBeEnabled);
     }
 }

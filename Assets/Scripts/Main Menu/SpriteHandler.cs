@@ -26,7 +26,6 @@ public class SpriteHandler : MonoBehaviour, IPointerDownHandler, IPointerEnterHa
     {
         if (gameObject.GetComponent<Image>().sprite != null) 
         {
-            print("ohai");
             ChangeSprite("Hover");
         } 
         else 
@@ -39,7 +38,6 @@ public class SpriteHandler : MonoBehaviour, IPointerDownHandler, IPointerEnterHa
     {
         if (gameObject.GetComponent<Image>().sprite != null) 
         {
-            print("obai");
             ChangeSprite("Idle");
         } 
         else 
@@ -52,7 +50,6 @@ public class SpriteHandler : MonoBehaviour, IPointerDownHandler, IPointerEnterHa
     {
         if (gameObject.GetComponent<Image>().sprite != null) 
         {
-            print("obai");
             ChangeSprite("Idle");
         } 
         else 
