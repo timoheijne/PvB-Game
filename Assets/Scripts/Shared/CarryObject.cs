@@ -21,7 +21,7 @@ public class CarryObject : MonoBehaviour
         
         _object = _target;
         
-        _object.parent = (_targetMaster != null) ? _targetMaster : transform;;
+        _object.parent = (_targetMaster != null) ? _targetMaster : transform;
         _object.position = (_targetMaster != null) ? _targetMaster.position : transform.position;
     }
 
