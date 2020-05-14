@@ -65,13 +65,13 @@ public class DragUI : MonoBehaviour, IPointerDownHandler
         Node[] nodes = FindObjectsOfType<Node>();
         foreach (Node node in nodes)
         {
-            if (node.gameObject.tag.Equals("TrashCan") && node.IsColliding(GetComponent<RectTransform>().position))
+            if (node.gameObject.tag.Equals("TrashCan") && GetComponent<Head>() == null && node.IsColliding(GetComponent<RectTransform>().position))
             {
                 Destroy(gameObject);
                 return;
             }
             
-            if(node.gameObject != gameObject && node.IsColliding(GetComponent<RectTransform>().position))
+            if(node.gameObject != gameObject && node.IsColliding(GetComponent<RectTransform>().position) && !node.gameObject.tag.Equals("TrashCan"))
             {
                 node.InsertNode(GetComponent<Node>(), 30);
                 return;
