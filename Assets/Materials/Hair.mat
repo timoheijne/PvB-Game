@@ -189,7 +189,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _samplePos: 0.523
+    - _samplePos: 1
     m_Colors:
     - EyeGradientPos: {r: -0.47, g: 0, b: 0, a: 0}
     - GlovesGradientPos: {r: -0.12, g: 0, b: 0, a: 0}

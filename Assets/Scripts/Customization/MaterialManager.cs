@@ -12,7 +12,7 @@ public class MaterialManager : MonoBehaviour
     [SerializeField]
     private Texture2D _mainTex, _gradientTex, _handleTex;
     [SerializeField]
-    private Material _material;
+    private Material _sliderHandleMaterial;
     private Image _sliderHandle;
     private Renderer _renderer;
 
@@ -28,8 +28,19 @@ public class MaterialManager : MonoBehaviour
         if (_objectType == _objectTypes.Handle) 
         {
             _sliderHandle = gameObject.GetComponent<Image>();
-            _sliderHandle.material = _material;
+            _sliderHandle.material = _sliderHandleMaterial;
             _sliderHandle.material.SetTexture("_mainTex", _handleTex);
+        }
+    }
+
+    private void Update() 
+    {
+        if (_objectType == _objectTypes.Model) 
+        {
+            if (_renderer.sharedMaterial.GetTexture("_mainTex") != _mainTex) 
+            {
+                _renderer.sharedMaterial.SetTexture("_mainTex", _mainTex);
+            }
         }
     }
 }
