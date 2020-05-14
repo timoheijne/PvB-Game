@@ -71,7 +71,7 @@ public class DragUI : MonoBehaviour, IPointerDownHandler
                 return;
             }
             
-            if(node.gameObject != gameObject && node.IsColliding(GetComponent<RectTransform>().position))
+            if(node.gameObject != gameObject && node.IsColliding(GetComponent<RectTransform>().position) && GetComponent<Head>() == null)
             {
                 node.InsertNode(GetComponent<Node>(), 30);
                 return;
