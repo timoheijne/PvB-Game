@@ -4,9 +4,9 @@ using System.Collections;
 public class Clock : MonoBehaviour {
 
 	//-- set start time 00:00
-    public int minutes = 0;
-    public int hour = 0;
-	public int seconds = 0;
+    public int minutes;
+    public int hour;
+	public int seconds;
 	public bool realTime=true;
 	
 	public GameObject pointerSeconds;
@@ -46,8 +46,10 @@ public class Clock : MonoBehaviour {
 	            {
 	                minutes = 0;
 	                hour++;
-	                if(hour >= 24)
-	                    hour = 0;
+	                if (hour >= 24)
+	                {
+		                hour = 0;
+	                }
 	            }
 	        }
 	    }
