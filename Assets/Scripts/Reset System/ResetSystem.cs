@@ -5,38 +5,16 @@ using UnityEngine;
 
 public class ResetSystem : MonoBehaviour
 {
-    private List<ResetBehaviour> _resetObjects = new List<ResetBehaviour>();
-    
-    private void Start()
-    {
-        _resetObjects = GameObject.FindObjectsOfType<ResetBehaviour>().ToList();
-    }
-
     public void InvokeResets()
     {
+        // This is done each time reset is being invoked because ResetBehaviours will change in run time.
+        // Technically this system could be a singleton and the reset could register it self on creation.
+        // But since its a low call system this way reduces clutter.
+        ResetBehaviour[] _resetObjects = GameObject.FindObjectsOfType<ResetBehaviour>();
+        
         foreach (ResetBehaviour _behaviour in _resetObjects)
         {
             _behaviour.InvokeReset();
         }
-    }
-
-    public void RegisterBehaviour(ResetBehaviour _behaviour)
-    {
-        if (_behaviour == null)
-        {
-            throw new ArgumentNullException("ResetBehaviour");
-        }
-        
-        _resetObjects.Add(_behaviour);
-    }
-
-    public void DeregisterBehaviour(ResetBehaviour _behaviour)
-    {
-        if (_behaviour == null)
-        {
-            throw new ArgumentNullException("ResetBehaviour");
-        }
-
-        _resetObjects.Remove(_behaviour);
     }
 }
