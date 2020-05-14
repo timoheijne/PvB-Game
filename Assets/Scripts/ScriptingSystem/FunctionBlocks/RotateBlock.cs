@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class RotateBlock : FunctionBlock
 {
-    [SerializeField] private Movement movement;
     [SerializeField] private bool right;
 
+    private ActorObject _actorObject;
+    
     private void Start()
     {
         // TODO: Refactor to not need to lookup object, This needs to be set dynamically via the visual scripting UI
-        movement = GameObject.FindWithTag("PawnObject").GetComponent<Movement>();
+        _actorObject = GameObject.FindWithTag("PawnObject").GetComponent<ActorObject>();
     }
 
     
@@ -18,11 +19,11 @@ public class RotateBlock : FunctionBlock
     {
         if (right)
         {
-            yield return StartCoroutine(movement.Right());
+            yield return StartCoroutine(_actorObject.Movement.Right());
         }
         else
         {
-            yield return StartCoroutine(movement.Left());
+            yield return StartCoroutine(_actorObject.Movement.Left());
         }
 
         yield return 0;

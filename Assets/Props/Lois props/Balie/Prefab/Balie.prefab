@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 262213966894747784}
   - component: {fileID: 8965468122317521824}
   - component: {fileID: 4391318200886000511}
+  - component: {fileID: 2232370389541550555}
   m_Layer: 0
   m_Name: Balie
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2232370389541550555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5007619200680088845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e97891e261b4789903aa3ddabf6974b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectiveName: reception
