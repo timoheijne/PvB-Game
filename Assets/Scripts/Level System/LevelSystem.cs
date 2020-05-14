@@ -73,12 +73,12 @@ public class LevelSystem : MonoBehaviour
 
         SceneManager.LoadScene(_level.SceneName);
     }
-    
+
     private void LoadAllLevels()
     {
         _levels = Resources.LoadAll<LevelObject>("Levels").ToList().FindAll(l => l.IsEnabled == true);
     }
-    
+
     private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
         if (arg0.name == MainMenuScene && _returnToLevelSelect)

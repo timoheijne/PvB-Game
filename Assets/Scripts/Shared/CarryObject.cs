@@ -6,14 +6,6 @@ public class CarryObject : MonoBehaviour
     [SerializeField, Tooltip("The object the target should follow, leave empty for the current transform")]
     private Transform _targetMaster;
     private Transform _object;
-        
-    private void Update()
-    {
-        if (_object != null)
-        {
-            _object.position = (_targetMaster != null) ? _targetMaster.position : transform.position;
-        }
-    }
 
     public bool IsCarrying()
     {
@@ -26,12 +18,17 @@ public class CarryObject : MonoBehaviour
         {
             throw new ArgumentNullException("Carrier");
         }
-
+        
         _object = _target;
+        
+        _object.parent = (_targetMaster != null) ? _targetMaster : transform;
+        _object.position = (_targetMaster != null) ? _targetMaster.position : transform.position;
     }
 
     public Transform StopCarry()
     {
+        _object.parent = null;
+        
         Transform _target = _object;
         _object = null;
 
