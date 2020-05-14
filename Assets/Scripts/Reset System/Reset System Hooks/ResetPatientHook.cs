@@ -35,7 +35,7 @@ public class ResetPatientHook : ResetBehaviour
             _object.TakePatient();
         }
         
-        _patient.PatientFile.ResetObjectives();
-        _originalObject.PlacePatient(_patient);
+        PatientSystem.Instance?.SetActivePatient(_patient.PatientFile);
+        Destroy(gameObject);
     }
 }
