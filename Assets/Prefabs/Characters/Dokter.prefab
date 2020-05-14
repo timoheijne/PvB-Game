@@ -24,11 +24,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934262848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.00282, z: 0.00672}
+  m_LocalPosition: {x: 0, y: -0.00576, z: 0.00027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5228470916350276325}
-  m_RootOrder: 1
+  m_Father: {fileID: 7979357010104584790}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &17508297422887454
 GameObject:
@@ -272,7 +272,6 @@ Transform:
   m_LocalScale: {x: 1, y: 0.99999976, z: 0.99999994}
   m_Children:
   - {fileID: 6812902954372868201}
-  - {fileID: 934262849}
   m_Father: {fileID: 283370398910016680}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2473,7 +2472,7 @@ Transform:
   m_Children:
   - {fileID: 1624832634319685323}
   m_Father: {fileID: 7979357010104584790}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5240011351507859868
 GameObject:
@@ -2626,6 +2625,7 @@ Transform:
   m_LocalPosition: {x: 5.0524246e-10, y: -0.00012088079, z: 0.002289494}
   m_LocalScale: {x: 1.0000004, y: 1.0000002, z: 1.0000001}
   m_Children:
+  - {fileID: 934262849}
   - {fileID: 7165665451167084699}
   m_Father: {fileID: 8279393551849277269}
   m_RootOrder: 0
@@ -4232,6 +4232,7 @@ GameObject:
   - component: {fileID: 3434591198810114966}
   - component: {fileID: 3434591199492639187}
   - component: {fileID: 6574941077582392929}
+  - component: {fileID: 2016118967}
   m_Layer: 0
   m_Name: Dokter
   m_TagString: PawnObject
@@ -4314,6 +4315,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetMaster: {fileID: 934262849}
+--- !u!114 &2016118967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8400616749708959991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b771034053a84bc0846df7c8f6afaa2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8434732102038268319
 GameObject:
   m_ObjectHideFlags: 0
