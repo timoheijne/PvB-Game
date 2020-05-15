@@ -27,6 +27,11 @@ public class CarryObject : MonoBehaviour
 
     public Transform StopCarry()
     {
+        if (_object == null)
+        {
+            return null;
+        }
+        
         _object.parent = null;
         
         Transform _target = _object;
