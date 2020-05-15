@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Interact
   m_EditorClassIdentifier: 
   ItemName: Interact
-  Prefab: {fileID: 4819696642221337501, guid: 02756a11679234a4baf04e525d307d73, type: 3}
+  Prefab: {fileID: 2576063706456242927, guid: 5990fa3cd9b926a42853d909bb8a4be9, type: 3}
