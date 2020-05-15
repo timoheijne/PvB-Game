@@ -25,6 +25,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Place Down
       objectReference: {fileID: 0}
+    - target: {fileID: 6414886224695525117, guid: 9a99a8788746999458347de546bd5191,
+        type: 3}
+      propertyPath: functionBlock
+      value: 
+      objectReference: {fileID: -1949287209829515459}
     - target: {fileID: 6414886224695525119, guid: 9a99a8788746999458347de546bd5191,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -149,6 +154,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.wordCount
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858220318536891308, guid: 9a99a8788746999458347de546bd5191,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 14.4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -1698848929799014113, guid: 9a99a8788746999458347de546bd5191, type: 3}

@@ -130,7 +130,7 @@ PrefabInstance:
         type: 3}
       propertyPath: functionBlock
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3611344814618968625}
     - target: {fileID: 2576063706456242916, guid: 5990fa3cd9b926a42853d909bb8a4be9,
         type: 3}
       propertyPath: m_Sprite
@@ -161,6 +161,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.wordCount
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732293307276050355, guid: 5990fa3cd9b926a42853d909bb8a4be9,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 15.9
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -3455763092515691799, guid: 5990fa3cd9b926a42853d909bb8a4be9, type: 3}
