@@ -97,9 +97,12 @@ public class TutorialCreationWindow : EditorWindow
         GuiLine();
         EditorGUILayout.Space(10);
 
-        for (int i = 0; i < _selectedObject.TutorialSections.Length; i++)
+        if (_selectedObject.TutorialSections != null)
         {
-            ShowSectionEditor(ref _selectedObject.TutorialSections[i]);
+            for (int i = 0; i < _selectedObject.TutorialSections.Length; i++)
+            {
+                ShowSectionEditor(ref _selectedObject.TutorialSections[i]);
+            }
         }
 
         EditorGUILayout.Space(10);
