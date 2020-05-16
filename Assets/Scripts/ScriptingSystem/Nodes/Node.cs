@@ -8,6 +8,8 @@ abstract public class Node : MonoBehaviour
     public Node next;
     public Node previous;
 
+    public Vector2 UiOffset => _UIOffset;
+    
     [FormerlySerializedAs("yOffset")] [SerializeField]
     private Vector2 _UIOffset;
 
