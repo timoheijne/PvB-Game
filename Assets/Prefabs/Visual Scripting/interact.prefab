@@ -61,6 +61,11 @@ PrefabInstance:
       propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1467290744141442330, guid: c86301a46a07c2b40bc4f947bd4b1d9f,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1467290744141442332, guid: c86301a46a07c2b40bc4f947bd4b1d9f,
         type: 3}
       propertyPath: functionBlock
@@ -69,7 +74,7 @@ PrefabInstance:
     - target: {fileID: 1467290744141442332, guid: c86301a46a07c2b40bc4f947bd4b1d9f,
         type: 3}
       propertyPath: _UIOffset.x
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1467290744141442332, guid: c86301a46a07c2b40bc4f947bd4b1d9f,
         type: 3}
