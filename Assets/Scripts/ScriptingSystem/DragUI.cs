@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Security.Cryptography;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -38,6 +39,7 @@ public class DragUI : MonoBehaviour, IPointerDownHandler
         }  
         
         _cameraMovement?.SetFreeze(isDragging);
+
         if (isDragging && Input.GetMouseButtonUp(0))
         {
             ReleaseDrag();
