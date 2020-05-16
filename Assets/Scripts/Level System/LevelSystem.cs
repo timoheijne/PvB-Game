@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -9,15 +10,18 @@ public class LevelSystem : MonoBehaviour
     public static LevelSystem Instance;
     public string MainMenuScene => _mainMenuScene;
 
-    public event Action<LevelObject> OnLevelLoad; 
+    public event Action<LevelObject> OnLevelLoad;
 
-        [SerializeField, Tooltip("The name of the main menu scene")]
+    [SerializeField, Tooltip("The name of the main menu scene")]
     private string _mainMenuScene;
+
     private bool _returnToLevelSelect;
     private List<LevelObject> _levels;
 
     public LevelObject ActiveLevel => _activeLevel;
     private LevelObject _activeLevel;
+
+    [SerializeField] private GameObject _loadingScreen;
 
     private void Awake()
     {
@@ -25,7 +29,7 @@ public class LevelSystem : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            
+
             SceneManager.sceneLoaded += OnSceneLoaded;
             LoadAllLevels();
 
@@ -48,7 +52,7 @@ public class LevelSystem : MonoBehaviour
         {
             throw new ArgumentNullException("MainMenuScene");
         }
-        
+
         _returnToLevelSelect = _showLevelSelect;
         SceneManager.LoadScene(MainMenuScene);
     }
@@ -71,7 +75,21 @@ public class LevelSystem : MonoBehaviour
             return;
         }
 
-        SceneManager.LoadScene(_level.SceneName);
+        StartCoroutine(LoadScene(_level.SceneName));
+    }
+
+    private IEnumerator LoadScene(string _sceneName)
+    {
+        _loadingScreen.gameObject.SetActive(true);
+        
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(_sceneName);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+        
+        _loadingScreen.gameObject.SetActive(false);
     }
 
     private void LoadAllLevels()
