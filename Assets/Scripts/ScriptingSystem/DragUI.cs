@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Security.Cryptography;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -38,6 +39,7 @@ public class DragUI : MonoBehaviour, IPointerDownHandler
         }  
         
         _cameraMovement?.SetFreeze(isDragging);
+
         if (isDragging && Input.GetMouseButtonUp(0))
         {
             ReleaseDrag();
@@ -74,7 +76,8 @@ public class DragUI : MonoBehaviour, IPointerDownHandler
             if(node.gameObject != gameObject && node.IsColliding(GetComponent<RectTransform>().position) && GetComponent<Head>() == null && !node.gameObject.tag.Equals("TrashCan"))
 
             {
-                node.InsertNode(GetComponent<Node>(), GetComponent<RectTransform>().rect.height);
+                Node _thisNode = GetComponent<Node>();
+                node.InsertNode(_thisNode, GetComponent<RectTransform>().rect.height + -_thisNode.UiOffset.y);
                 return;
             }
         }

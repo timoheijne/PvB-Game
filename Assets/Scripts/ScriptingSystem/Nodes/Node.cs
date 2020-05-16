@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 abstract public class Node : MonoBehaviour
 {
     public Node next;
     public Node previous;
+
+    public Vector2 UiOffset => _UIOffset;
+    
+    [FormerlySerializedAs("yOffset")] [SerializeField]
+    private Vector2 _UIOffset;
 
     public Node GetNode(int nodeNumber)
     {
@@ -58,7 +64,7 @@ abstract public class Node : MonoBehaviour
         if (next != null)
         {
             next.previous = previous;
-            next.MoveVertical(-GetComponent<RectTransform>().rect.height);
+            next.MoveVertical(-GetComponent<RectTransform>().rect.height + _UIOffset.y);
         }
         if (previous != null)
         {
@@ -104,7 +110,7 @@ abstract public class Node : MonoBehaviour
 
     private void Snap(Node node)
     {
-        node.GetComponent<RectTransform>().position = (Vector2)GetComponent<RectTransform>().position + Vector2.down * GetComponent<RectTransform>().rect.height;
+        node.GetComponent<RectTransform>().position = (Vector2)GetComponent<RectTransform>().position + (Vector2.down * GetComponent<RectTransform>().rect.height) + _UIOffset;
     }
 
     public abstract IEnumerator Act();
