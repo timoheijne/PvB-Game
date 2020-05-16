@@ -257,5 +257,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   next: {fileID: 0}
   previous: {fileID: 0}
-  _UIOffset: {x: 2, y: 11}
+  _UIOffset: {x: 0, y: 11}
   condition: 1
