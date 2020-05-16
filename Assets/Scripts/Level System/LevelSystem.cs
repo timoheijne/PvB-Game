@@ -23,6 +23,9 @@ public class LevelSystem : MonoBehaviour
 
     [SerializeField] private GameObject _loadingScreen;
 
+    // Decrease this value for "Load time optimizations"
+    [SerializeField] private float _minLoadTime = 5;
+
     private void Awake()
     {
         if (Instance == null)
@@ -80,13 +83,19 @@ public class LevelSystem : MonoBehaviour
 
     private IEnumerator LoadScene(string _sceneName)
     {
+        float _startLoad = Time.time;
         _loadingScreen.gameObject.SetActive(true);
-        
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(_sceneName);
 
         while (!asyncLoad.isDone)
         {
             yield return null;
+        }
+
+        float _endLoad = Time.time;
+        if (_endLoad - _startLoad < _minLoadTime)
+        {
+            yield return new WaitForSeconds(_minLoadTime - (_endLoad - _startLoad));
         }
         
         _loadingScreen.gameObject.SetActive(false);
