@@ -127,7 +127,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 93b310858ba2191468af8e5a2b70035e,
+      objectReference: {fileID: 21300000, guid: a693bc879f883bd41ba7524cf2bc9378,
         type: 3}
     - target: {fileID: 999767403765927300, guid: 091a858dd15deb949874c2a42927d411,
         type: 3}
@@ -242,7 +242,7 @@ PrefabInstance:
     - target: {fileID: 999767403765927305, guid: 091a858dd15deb949874c2a42927d411,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up
+      value: pick up
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8214405350222263157, guid: 091a858dd15deb949874c2a42927d411, type: 3}
