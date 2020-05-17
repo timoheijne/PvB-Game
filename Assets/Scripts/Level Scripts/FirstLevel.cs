@@ -10,6 +10,9 @@ public class FirstLevel : MonoBehaviour
 {
     [SerializeField]
     private TutorialUIController _tutorialUi;
+
+    [SerializeField]
+    private GameManager _gameManager;
     
     private void Start()
     {

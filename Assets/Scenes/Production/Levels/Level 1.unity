@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 23fc51441a1883249b4fc69e4d6c4e01,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5323,6 +5323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tutorialUi: {fileID: 1747023016}
+  _gameManager: {fileID: 249548148}
 --- !u!1001 &1922823337
 PrefabInstance:
   m_ObjectHideFlags: 0
