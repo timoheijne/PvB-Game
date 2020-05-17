@@ -36,7 +36,7 @@ public class PatientUI : MonoBehaviour
     
     private void OnPatientDone(PatientFile obj)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 
     private void UpdateUI(PatientFile obj)

@@ -7,6 +7,13 @@ public class CarryObject : MonoBehaviour
     private Transform _targetMaster;
     private Transform _object;
 
+    private Animator _animator;
+
+    private void Start()
+    {
+        _animator = GetComponent<Animator>();
+    }
+
     public bool IsCarrying()
     {
         return _object != null;
@@ -32,6 +39,7 @@ public class CarryObject : MonoBehaviour
             return null;
         }
         
+        _animator.SetBool("Hold", false);
         _object.parent = null;
         
         Transform _target = _object;

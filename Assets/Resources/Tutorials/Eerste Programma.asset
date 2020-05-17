@@ -16,7 +16,7 @@ MonoBehaviour:
   TutorialID: first-program
   isEnabled: 1
   TutorialSections:
-  - Name: Vooruit
+  - Name: move-forward
     ObjectReferenceID: VSB-Forward
     PanelPosition: 4
     DoctorOnLeft: 1
@@ -24,9 +24,39 @@ MonoBehaviour:
       de \u201CVooruit\u201D block twee keer op de \u201CStart\u201D blok\r\nWanneer
       je dat gedaan heb druk op \u201CCOMPILEER\u201D\r"
     ExternalControls: 1
-  - Name: Heel goed
+  - Name: pickup-and-turn
     ObjectReferenceID: 
     PanelPosition: 4
     DoctorOnLeft: 1
-    Body: Goed gedaan broeder. Nu kan je programmeren DOEI
+    Body: "Heel goed gedaan!\r\n\r\nLaten we nu nog wat extra dingentjes toevoegen.
+      Sleep \u201CPak Op\u201D 1 keer op de meest onderste \u201CVooruit\u201D en
+      sleep dan 2 keer \u201CDraai Rechts\u201D op \u201CPak Op\u201D\r\n\r\nAls
+      je dat gedaan heb druk op \u201CCOMPILEER\u201D en kijk wat er gebeurd. "
+    ExternalControls: 1
+  - Name: walk-to-table
+    ObjectReferenceID: 
+    PanelPosition: 4
+    DoctorOnLeft: 1
+    Body: "Laten we de opdracht even af maken nu ok?\r\nTel hoe veel stappen de doctor
+      moet zetten om bij de operatie tafel te komen. En sleep zo veel keer \u201CVooruit\u201D
+      op het laatste blokje in je script.\r\n\r\nMaar nu moet de doctor ook nog draaien.
+      Sleep ook de juiste draai op het laatste blokje in je script. En klik dan op
+      \u201CCOMPILEER\u201D en kijk wat er gebeurd"
+    ExternalControls: 1
+  - Name: heal-patient
+    ObjectReferenceID: 
+    PanelPosition: 4
+    DoctorOnLeft: 1
+    Body: "Bijna klaar!\r\n\r\nWat je nu nog moet doen. Is de patient op de operatie
+      tafel te plaatsen door \u201CLeg Neer\u201D op het laatste blokje in je script
+      te slepen.\r\n\r\nWaneer je dat gedaan heb sleep het blokje \u201CGebruik\u201D
+      op het laatste blokje en klik dan op \u201CCOMPILEER\u201D en kijk wat er gebeurd\r\n"
+    ExternalControls: 1
+  - Name: done
+    ObjectReferenceID: 
+    PanelPosition: 0
+    DoctorOnLeft: 1
+    Body: "Gefelicteerd, Je heb je eerste dier gered!\r\n\r\nNu weet je genoeg dat
+      je even voor je zelf aan de slag mag. \r\n\r\nProbeer zelf nog 2 pati\xEBnten
+      beter te maken en dan sturen we je naar de echte kliniek!\r"
     ExternalControls: 1
