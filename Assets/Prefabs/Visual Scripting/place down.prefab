@@ -23,7 +23,7 @@ PrefabInstance:
     - target: {fileID: 6414886224695525104, guid: 9a99a8788746999458347de546bd5191,
         type: 3}
       propertyPath: m_Name
-      value: Place Down
+      value: place down
       objectReference: {fileID: 0}
     - target: {fileID: 6414886224695525117, guid: 9a99a8788746999458347de546bd5191,
         type: 3}
@@ -138,12 +138,12 @@ PrefabInstance:
     - target: {fileID: 6858220318536891308, guid: 9a99a8788746999458347de546bd5191,
         type: 3}
       propertyPath: m_text
-      value: PLACE DOWN
+      value: LEG NEER
       objectReference: {fileID: 0}
     - target: {fileID: 6858220318536891308, guid: 9a99a8788746999458347de546bd5191,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6858220318536891308, guid: 9a99a8788746999458347de546bd5191,
         type: 3}
@@ -158,7 +158,7 @@ PrefabInstance:
     - target: {fileID: 6858220318536891308, guid: 9a99a8788746999458347de546bd5191,
         type: 3}
       propertyPath: m_fontSize
-      value: 14.4
+      value: 14.95
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -1698848929799014113, guid: 9a99a8788746999458347de546bd5191, type: 3}

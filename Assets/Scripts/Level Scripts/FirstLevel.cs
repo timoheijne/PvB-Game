@@ -29,10 +29,14 @@ public class FirstLevel : MonoBehaviour
 
     private void OnFinished()
     {
-        if (TutorialSystem.Instance.ActiveTutorial.name == "first-program" && _doctor.position.z > 13 &&
+        Debug.Log(TutorialSystem.Instance.ActiveTutorial);
+        if (TutorialSystem.Instance.ActiveTutorial.TutorialID == "first-program" 
+            && _doctor.position.z > 13 &&
             _doctor.position.z < 14)
         {
             // Correct. Move to next section.
+            Debug.Log("Done");
+            _tutorialUi.NextSection();
         }
     }
 

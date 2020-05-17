@@ -96,12 +96,12 @@ PrefabInstance:
     - target: {fileID: 861569802366322901, guid: 091a858dd15deb949874c2a42927d411,
         type: 3}
       propertyPath: m_text
-      value: PICK UP
+      value: PAK OP
       objectReference: {fileID: 0}
     - target: {fileID: 861569802366322901, guid: 091a858dd15deb949874c2a42927d411,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 861569802366322901, guid: 091a858dd15deb949874c2a42927d411,
         type: 3}
@@ -123,6 +123,11 @@ PrefabInstance:
       propertyPath: m_subTextObjects.Array.data[1]
       value: 
       objectReference: {fileID: 6026037760002708791}
+    - target: {fileID: 861569802366322901, guid: 091a858dd15deb949874c2a42927d411,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 14.95
+      objectReference: {fileID: 0}
     - target: {fileID: 999767403765927298, guid: 091a858dd15deb949874c2a42927d411,
         type: 3}
       propertyPath: m_Sprite

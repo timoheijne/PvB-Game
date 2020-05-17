@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1467290744141442332}
   - component: {fileID: 1467290744141442335}
   m_Layer: 5
-  m_Name: Forward
+  m_Name: forward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: FORWARD
+  m_text: VOORUIT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fbf4f1975a43acd4ea61e4ad9e8c942e, type: 2}
   m_sharedMaterial: {fileID: 5483411769920817899, guid: fbf4f1975a43acd4ea61e4ad9e8c942e,
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 12.6
+  m_fontSize: 15.9
   m_fontSizeBase: 29.35
   m_fontWeight: 400
   m_enableAutoSizing: 1

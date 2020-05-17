@@ -46,8 +46,10 @@ public class TutorialSystem : MonoBehaviour
 
     public void DeactivateTutorial()
     {
-        OnDeactivate?.Invoke(_activeTutorial);
+        TutorialObject _oldObject = _activeTutorial;
         _activeTutorial = null;
+        
+        OnDeactivate?.Invoke(_oldObject);
     }
 
     private void LoadTutorials()
