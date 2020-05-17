@@ -140,17 +140,17 @@ PrefabInstance:
     - target: {fileID: 2576063706456242927, guid: 5990fa3cd9b926a42853d909bb8a4be9,
         type: 3}
       propertyPath: m_Name
-      value: Left
+      value: left
       objectReference: {fileID: 0}
     - target: {fileID: 2732293307276050355, guid: 5990fa3cd9b926a42853d909bb8a4be9,
         type: 3}
       propertyPath: m_text
-      value: TURN LEFT
+      value: DRAAI LINKS
       objectReference: {fileID: 0}
     - target: {fileID: 2732293307276050355, guid: 5990fa3cd9b926a42853d909bb8a4be9,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2732293307276050355, guid: 5990fa3cd9b926a42853d909bb8a4be9,
         type: 3}
@@ -165,7 +165,17 @@ PrefabInstance:
     - target: {fileID: 2732293307276050355, guid: 5990fa3cd9b926a42853d909bb8a4be9,
         type: 3}
       propertyPath: m_fontSize
-      value: 15.9
+      value: 13.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954926487944765904, guid: 5990fa3cd9b926a42853d909bb8a4be9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.9850006
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954926487944765904, guid: 5990fa3cd9b926a42853d909bb8a4be9,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -13.730001
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -3455763092515691799, guid: 5990fa3cd9b926a42853d909bb8a4be9, type: 3}

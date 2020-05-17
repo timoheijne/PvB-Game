@@ -12,15 +12,30 @@ PrefabInstance:
       propertyPath: right
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4971017704148690930, guid: 5f2ec2eddb20e4d48b91db0039ea78c4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.3949966
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971017704148690930, guid: 5f2ec2eddb20e4d48b91db0039ea78c4,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -16.909998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971017704148690930, guid: 5f2ec2eddb20e4d48b91db0039ea78c4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5.800003
+      objectReference: {fileID: 0}
     - target: {fileID: 5194222632978839953, guid: 5f2ec2eddb20e4d48b91db0039ea78c4,
         type: 3}
       propertyPath: m_text
-      value: TURN RIGHT
+      value: DRAAI RECHTS
       objectReference: {fileID: 0}
     - target: {fileID: 5194222632978839953, guid: 5f2ec2eddb20e4d48b91db0039ea78c4,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5194222632978839953, guid: 5f2ec2eddb20e4d48b91db0039ea78c4,
         type: 3}
@@ -31,6 +46,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.wordCount
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5194222632978839953, guid: 5f2ec2eddb20e4d48b91db0039ea78c4,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 12.25
       objectReference: {fileID: 0}
     - target: {fileID: 5638119659585371330, guid: 5f2ec2eddb20e4d48b91db0039ea78c4,
         type: 3}
@@ -151,7 +171,7 @@ PrefabInstance:
     - target: {fileID: 5638119659585371341, guid: 5f2ec2eddb20e4d48b91db0039ea78c4,
         type: 3}
       propertyPath: m_Name
-      value: Right
+      value: right
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f2ec2eddb20e4d48b91db0039ea78c4, type: 3}

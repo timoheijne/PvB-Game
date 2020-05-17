@@ -2,6 +2,7 @@
 {
     public enum Position
     {
+        Center,
         Left,
         Top,
         Right,

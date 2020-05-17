@@ -23,7 +23,7 @@ PrefabInstance:
     - target: {fileID: 1330768798327826509, guid: c86301a46a07c2b40bc4f947bd4b1d9f,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1330768798327826509, guid: c86301a46a07c2b40bc4f947bd4b1d9f,
         type: 3}
@@ -43,12 +43,12 @@ PrefabInstance:
     - target: {fileID: 1330768798327826509, guid: c86301a46a07c2b40bc4f947bd4b1d9f,
         type: 3}
       propertyPath: m_text
-      value: INTERACT
+      value: GEBRUIK
       objectReference: {fileID: 0}
     - target: {fileID: 1467290744141442321, guid: c86301a46a07c2b40bc4f947bd4b1d9f,
         type: 3}
       propertyPath: m_Name
-      value: Interact
+      value: interact
       objectReference: {fileID: 0}
     - target: {fileID: 1467290744141442330, guid: c86301a46a07c2b40bc4f947bd4b1d9f,
         type: 3}

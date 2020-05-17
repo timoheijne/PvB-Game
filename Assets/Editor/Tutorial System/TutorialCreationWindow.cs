@@ -19,7 +19,6 @@ public class TutorialCreationWindow : EditorWindow
         TutorialCreationWindow window = GetWindow<TutorialCreationWindow>();
         window.titleContent = new GUIContent("Tutorial Editor");
         window.minSize = new Vector2(500, 750);
-        window.maxSize = new Vector2(500, 750);
         window.Show();
     }
 
@@ -97,9 +96,12 @@ public class TutorialCreationWindow : EditorWindow
         GuiLine();
         EditorGUILayout.Space(10);
 
-        for (int i = 0; i < _selectedObject.TutorialSections.Length; i++)
+        if (_selectedObject.TutorialSections != null)
         {
-            ShowSectionEditor(ref _selectedObject.TutorialSections[i]);
+            for (int i = 0; i < _selectedObject.TutorialSections.Length; i++)
+            {
+                ShowSectionEditor(ref _selectedObject.TutorialSections[i]);
+            }
         }
 
         EditorGUILayout.Space(10);
@@ -144,6 +146,7 @@ public class TutorialCreationWindow : EditorWindow
         _section.ObjectReferenceID = EditorGUILayout.TextField("Object Reference ID", _section.ObjectReferenceID);
         _section.PanelPosition = (Position)EditorGUILayout.EnumPopup("Panel Position", _section.PanelPosition);
         _section.DoctorOnLeft = EditorGUILayout.Toggle("Doctor on left", _section.DoctorOnLeft);
+        _section.ExternalControls = EditorGUILayout.Toggle("External Controls", _section.ExternalControls);
         EditorGUILayout.LabelField("Tutorial Body:");
         _section.Body = EditorGUILayout.TextArea(_section.Body);
 
@@ -152,6 +155,11 @@ public class TutorialCreationWindow : EditorWindow
 
     private TutorialObject.TutorialSection[] AddSection(string _name)
     {
+        if (_selectedObject.TutorialSections == null)
+        {
+            _selectedObject.TutorialSections = new TutorialObject.TutorialSection[0];
+        }
+        
         List<TutorialObject.TutorialSection> _sections = _selectedObject.TutorialSections.ToList();
         TutorialObject.TutorialSection _newSection = new TutorialObject.TutorialSection();
         _newSection.Name = _name;

@@ -1,9 +1,13 @@
 ﻿using System;
+using Shared;
 using TMPro;
 using UnityEngine;
 
 public class TutorialUIController : MonoBehaviour
 {
+
+    public event Action<TutorialObject.TutorialSection, TutorialObject> OnSectionChange; 
+    
     [SerializeField]
     private Transform _objectHighlight;
 
@@ -36,7 +40,7 @@ public class TutorialUIController : MonoBehaviour
         TutorialSystem.Instance.OnDeactivate += OnDeactivate;
     }
 
-    private void OnDeactivate()
+    private void OnDeactivate(TutorialObject _tutorialObject)
     {
         // TODO: Clean UI and hide object highlighters
         _tutorialWindow.SetActive(false);
@@ -59,10 +63,22 @@ public class TutorialUIController : MonoBehaviour
         if (_activeTutorial.TutorialSections.Length > _activeSection)
         {
             TutorialObject.TutorialSection _section = _activeTutorial.TutorialSections[_activeSection];
+            OnSectionChange?.Invoke(_section, _activeTutorial);
             
-            // Within bounds
-            _prevButton.SetActive(_activeSection != 0);
-            _nextButton.SetActive(_activeSection < _activeTutorial.TutorialSections.Length - 1);
+            // Reposition Tutorial window
+            UpdateWindowPosition(_section.PanelPosition);
+
+            if (_section.ExternalControls)
+            {
+                _prevButton.SetActive(false);
+                _nextButton.SetActive(false);
+            }
+            else
+            {
+                // Within bounds
+                _prevButton.SetActive(_activeSection != 0);
+                _nextButton.SetActive(_activeSection < _activeTutorial.TutorialSections.Length - 1);
+            }
 
             _textObject.text = _section.Body;
             
@@ -102,6 +118,34 @@ public class TutorialUIController : MonoBehaviour
         }
     }
 
+    private void UpdateWindowPosition(Position _position)
+    {
+        RectTransform _windowTransfrom = _tutorialWindow.GetComponent<RectTransform>();
+        
+        // This is assuming that the tutorial window's anchor is center screen!
+        switch (_position)
+        {
+            case Position.Center:
+                _windowTransfrom.localPosition = new Vector3(0,0, 0);
+                break;
+            case Position.Left:
+                Debug.Log("Yas");
+                _windowTransfrom.localPosition = new Vector3(-Screen.width/2 + _windowTransfrom.rect.width/2 + 20, 0, 0);
+                break;
+            case Position.Top:
+                _windowTransfrom.localPosition = new Vector3(0, Screen.height/2 - _windowTransfrom.rect.height/2 - 20, 0);
+                break;
+            case Position.Right:
+                _windowTransfrom.localPosition = new Vector3(Screen.width/2 - _windowTransfrom.rect.width/2 - 20, 0, 0);
+                break;
+            case Position.Bottom:
+                _windowTransfrom.localPosition = new Vector3(0, -Screen.height/2 + _windowTransfrom.rect.height/2 + 20, 0);
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(_position), _position, null);
+        }
+    }
+
     public void NextSection()
     {
         TutorialObject _activeTutorial = TutorialSystem.Instance.ActiveTutorial;
@@ -138,7 +182,7 @@ public class TutorialUIController : MonoBehaviour
                 _objectHighlight.gameObject.SetActive(true);
                 _objectHighlight.position = referenceObject.transform.position;
                 RectTransform rectTransform = _objectHighlight.GetComponent<RectTransform>();
-                Vector2 _sizeDelta = referenceObject.GetComponent<RectTransform>().sizeDelta;
+                Vector2 _sizeDelta = new Vector2(referenceObject.GetComponent<RectTransform>().rect.width, referenceObject.GetComponent<RectTransform>().rect.height);
                 _sizeDelta += new Vector2(50, 40);
                 
                 rectTransform.sizeDelta = _sizeDelta;

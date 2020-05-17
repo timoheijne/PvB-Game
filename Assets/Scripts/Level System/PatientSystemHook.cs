@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
+using Object = System.Object;
 
 public class PatientSystemHook : MonoBehaviour
 {
@@ -17,7 +19,7 @@ public class PatientSystemHook : MonoBehaviour
         
         Debug.Log("Patient System Loaded");
         
-        PatientSystem.Instance.OnPatientDone += OnPatientDone;
+        //PatientSystem.Instance.OnPatientDone += OnPatientDone;
         PatientSystem.Instance.SetLevelFiles(LevelSystem.Instance.ActiveLevel.PatientFiles);
     }
 

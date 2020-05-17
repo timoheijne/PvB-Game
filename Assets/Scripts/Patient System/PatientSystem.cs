@@ -11,11 +11,22 @@ public class PatientSystem : MonoBehaviour
     public event Action<PatientFile> OnPatientChange;
     
     public event Action<Objective, PatientFile> OnObjectiveComplete;
-    
     public PatientFile ActivePatient => (_activePatientIndex < _patientFiles.Count) ? _patientFiles[_activePatientIndex] : null;
     
+    public bool AutoContinue
+    {
+        get => _autoContinue;
+        set => _autoContinue = value;
+    }
+
+    [SerializeField, Tooltip("If you want to automatically continue to new patient when current is finished")]
+    private bool _autoContinue = true;
+    
     private int _activePatientIndex;
+    
     private List<PatientFile> _patientFiles = new List<PatientFile>();
+
+    
 
     private void Awake()
     {
@@ -43,6 +54,17 @@ public class PatientSystem : MonoBehaviour
         {
             SetActivePatient(_patientFiles[0]);
         }
+    }
+
+    public PatientFile GetNextPatient()
+    {
+        PatientFile _nextPatient = null;
+        if (_autoContinue && _activePatientIndex + 1 < _patientFiles.Count - 1)
+        {
+            _nextPatient = _patientFiles[_activePatientIndex + 1];
+        }
+
+        return _nextPatient;
     }
     
     
@@ -90,6 +112,11 @@ public class PatientSystem : MonoBehaviour
         if (this.ActivePatient.IsDone())
         {
             OnPatientDone?.Invoke(this.ActivePatient);
+
+            if (_autoContinue && _activePatientIndex + 1 < _patientFiles.Count - 1)
+            {
+                SetActivePatient(_patientFiles[_activePatientIndex + 1]);
+            }
         }
 
         return _objective.Item1;

@@ -19,6 +19,7 @@ public class TutorialObject : ScriptableObject
         public Shared.Position PanelPosition;
         public bool DoctorOnLeft;
         public string Body;
+        public bool ExternalControls;
 
         public bool Equals(TutorialSection other)
         {

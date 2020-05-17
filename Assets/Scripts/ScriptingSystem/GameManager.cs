@@ -1,9 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public event Action OnStart;
+
+    public event Action OnFinished;
+    
     private class nodeHolder
     {
         public Head head;
@@ -34,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator RunSequence()
     {
+        OnStart?.Invoke();
         for (int i = 0; i < nodeHolders.Count; i++)
         {
             if (nodeHolders[i].currentNode == null)
@@ -53,9 +59,9 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-
         _isRunning = false;
-
+        OnFinished?.Invoke();
+        
         yield return 0;
     }
 
