@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 // This script is for controlling the tutorials in the first level
@@ -8,8 +9,8 @@ using UnityEngine;
 
 public class FirstLevel : MonoBehaviour
 {
-    [SerializeField]
-    private TutorialUIController _tutorialUi;
+    [FormerlySerializedAs("_tutorialUi")] [SerializeField]
+    private TutorialUIController _tutorialUI;
 
     [SerializeField]
     private GameManager _gameManager;
@@ -22,7 +23,7 @@ public class FirstLevel : MonoBehaviour
     private void Start()
     {
         TutorialSystem.Instance.OnDeactivate += OnDeactivate;
-        _tutorialUi.OnSectionChange += OnSectionChange;
+        _tutorialUI.OnSectionChange += OnSectionChange;
         
         _gameManager.OnFinished += OnFinished;
         
@@ -37,7 +38,7 @@ public class FirstLevel : MonoBehaviour
             && _activeSection.Name == "heal-patient")
         {
             // Correct. Move to next section.
-            _tutorialUi.NextSection();
+            _tutorialUI.NextSection();
         }
     }
 
@@ -49,7 +50,7 @@ public class FirstLevel : MonoBehaviour
             && _actor.transform.position.z < 14)
         {
             // Correct. Move to next section.
-            _tutorialUi.NextSection();
+            _tutorialUI.NextSection();
         }
 
         if (TutorialSystem.Instance.ActiveTutorial.TutorialID == "first-program" 
@@ -60,7 +61,7 @@ public class FirstLevel : MonoBehaviour
             && _actor.CarryObject.IsCarrying())
         {
             // Correct. Move to next section.
-            _tutorialUi.NextSection();
+            _tutorialUI.NextSection();
         }
         
         if (TutorialSystem.Instance.ActiveTutorial.TutorialID == "first-program" 
@@ -71,7 +72,7 @@ public class FirstLevel : MonoBehaviour
             && _actor.CarryObject.IsCarrying())
         {
             // Correct. Move to next section.
-            _tutorialUi.NextSection();
+            _tutorialUI.NextSection();
         }
     }
 
