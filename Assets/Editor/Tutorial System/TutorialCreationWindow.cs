@@ -155,6 +155,11 @@ public class TutorialCreationWindow : EditorWindow
 
     private TutorialObject.TutorialSection[] AddSection(string _name)
     {
+        if (_selectedObject.TutorialSections == null)
+        {
+            _selectedObject.TutorialSections = new TutorialObject.TutorialSection[0];
+        }
+        
         List<TutorialObject.TutorialSection> _sections = _selectedObject.TutorialSections.ToList();
         TutorialObject.TutorialSection _newSection = new TutorialObject.TutorialSection();
         _newSection.Name = _name;
