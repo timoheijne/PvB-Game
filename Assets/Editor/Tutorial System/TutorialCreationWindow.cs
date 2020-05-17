@@ -147,6 +147,7 @@ public class TutorialCreationWindow : EditorWindow
         _section.ObjectReferenceID = EditorGUILayout.TextField("Object Reference ID", _section.ObjectReferenceID);
         _section.PanelPosition = (Position)EditorGUILayout.EnumPopup("Panel Position", _section.PanelPosition);
         _section.DoctorOnLeft = EditorGUILayout.Toggle("Doctor on left", _section.DoctorOnLeft);
+        _section.ExternalControls = EditorGUILayout.Toggle("External Controls", _section.ExternalControls);
         EditorGUILayout.LabelField("Tutorial Body:");
         _section.Body = EditorGUILayout.TextArea(_section.Body);
 
