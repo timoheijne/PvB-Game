@@ -61,9 +61,9 @@ MonoBehaviour:
     ObjectReferenceID: main-window
     PanelPosition: 3
     DoctorOnLeft: 0
-    Body: "Nog \xE9\xE9n dingentje voor dat we gaan beginnen. \r\n\r\nVerplaats je
-      muis over de linker kant van je scherm (De kliniek deel  van het scherm) hou
-      je rechter muisknop in gedruk en beweeg je muis. \r\n\r\nZo kan je de camera
-      bewegen zo dat je alles beter kan zien en volgen. \r\n\r\nGebruik de scrollwiel
-      op je muis om dichter bij of verder af te kijken."
+    Body: "Nog \xE9\xE9n dingentje voor dat we gaan beginnen. \n\rVerplaats je muis
+      over de linker kant van je scherm (De kliniek deel  van het scherm) hou je
+      rechter muisknop in gedruk en beweeg je muis. \r\n\r\nZo kan je de camera bewegen
+      zo dat je alles beter kan zien en volgen. \r\nGebruik de scrollwiel om van
+      dichter bij of verder af te kijken."
     ExternalControls: 0
