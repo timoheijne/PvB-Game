@@ -57,7 +57,7 @@ public class LevelSystem : MonoBehaviour
         }
 
         _returnToLevelSelect = _showLevelSelect;
-        SceneManager.LoadScene(MainMenuScene);
+        ChangeLevel(MainMenuScene);
     }
 
     public void ChangeLevel(string _levelName)

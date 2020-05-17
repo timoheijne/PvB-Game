@@ -1884,12 +1884,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f293f08651498489aefeb0d416be65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &592653922 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4814248719246398180, guid: a7185508f8a0ad14db4f3e6a9851ce9a,
+--- !u!114 &592653917 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2016118967, guid: a7185508f8a0ad14db4f3e6a9851ce9a,
     type: 3}
   m_PrefabInstance: {fileID: 3434591200809930391}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592653914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b771034053a84bc0846df7c8f6afaa2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &598560710
 GameObject:
   m_ObjectHideFlags: 0
@@ -2206,7 +2212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e0894886fc423a960487d9441d2474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainMenuScene: 
+  _mainMenuScene: MainMenuScene
   _loadingScreen: {fileID: 0}
   _minLoadTime: 5
 --- !u!1 &731164848
@@ -4979,6 +4985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a15c22aedb48aaba4f073b3743dbc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _autoContinue: 1
 --- !u!114 &1790051149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5330,7 +5337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tutorialUi: {fileID: 1747023016}
   _gameManager: {fileID: 249548148}
-  _doctor: {fileID: 592653922}
+  _actor: {fileID: 592653917}
 --- !u!1001 &1922823337
 PrefabInstance:
   m_ObjectHideFlags: 0

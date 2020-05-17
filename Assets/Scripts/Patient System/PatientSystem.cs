@@ -56,7 +56,7 @@ public class PatientSystem : MonoBehaviour
         }
     }
 
-    private PatientFile GetNextPatient()
+    public PatientFile GetNextPatient()
     {
         PatientFile _nextPatient = null;
         if (_autoContinue && _activePatientIndex + 1 < _patientFiles.Count - 1)

@@ -86,5 +86,18 @@ public class FirstLevel : MonoBehaviour
         {
             TutorialSystem.Instance.ActivateTutorial("first-program");
         }
+        
+        if (_tutorialObject.TutorialID == "first-program")
+        {
+            if (PatientSystem.Instance.GetNextPatient() == null)
+            {
+                // Well this is not supposed to happen. But then we just move back to main menu
+                LevelSystem.Instance.ChangeToMainMenu();
+                return;
+            }
+            
+            PatientSystem.Instance.SetActivePatient(PatientSystem.Instance.GetNextPatient());
+            PatientSystem.Instance.AutoContinue = true;
+        }
     }
 }
