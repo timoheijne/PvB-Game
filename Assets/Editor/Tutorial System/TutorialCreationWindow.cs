@@ -19,7 +19,6 @@ public class TutorialCreationWindow : EditorWindow
         TutorialCreationWindow window = GetWindow<TutorialCreationWindow>();
         window.titleContent = new GUIContent("Tutorial Editor");
         window.minSize = new Vector2(500, 750);
-        window.maxSize = new Vector2(500, 750);
         window.Show();
     }
 

@@ -8,11 +8,20 @@ using UnityEngine;
 
 public class FirstLevel : MonoBehaviour
 {
+    [SerializeField]
+    private TutorialUIController _tutorialUi;
+    
     private void Start()
     {
         TutorialSystem.Instance.OnDeactivate += OnDeactivate;
+        _tutorialUi.OnSectionChange += OnSectionChange;
         
         TutorialSystem.Instance.ActivateTutorial("basic-ui");
+    }
+
+    private void OnSectionChange(TutorialObject.TutorialSection _section, TutorialObject _object)
+    {
+        //throw new NotImplementedException();
     }
 
     private void OnDeactivate()

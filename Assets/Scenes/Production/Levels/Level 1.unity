@@ -3747,6 +3747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1513890713}
   - component: {fileID: 1513890714}
+  - component: {fileID: 1513890715}
   m_Layer: 5
   m_Name: Patient System UI
   m_TagString: Untagged
@@ -3791,6 +3792,19 @@ MonoBehaviour:
   _name: {fileID: 1332943629}
   _age: {fileID: 598560712}
   _objectives: {fileID: 2100430181}
+--- !u!114 &1513890715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513890712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ef37587e89e45b3927fe60d71da70bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ReferenceID: patient-system
 --- !u!1 &1521282209
 GameObject:
   m_ObjectHideFlags: 0
@@ -4754,6 +4768,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1771741826}
+  - component: {fileID: 1771741827}
   m_Layer: 5
   m_Name: Visual Scripting
   m_TagString: Untagged
@@ -4785,6 +4800,19 @@ RectTransform:
   m_AnchoredPosition: {x: 650, y: 0}
   m_SizeDelta: {x: -1300, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1771741827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771741825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ef37587e89e45b3927fe60d71da70bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ReferenceID: scripting-window
 --- !u!1 &1790051146
 GameObject:
   m_ObjectHideFlags: 0
@@ -5179,6 +5207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e807c272e2434611847b02cd0206ab4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tutorialUi: {fileID: 1747023016}
 --- !u!1001 &1922823337
 PrefabInstance:
   m_ObjectHideFlags: 0

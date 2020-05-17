@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class TutorialUIController : MonoBehaviour
 {
+
+    public event Action<TutorialObject.TutorialSection, TutorialObject> OnSectionChange; 
+    
     [SerializeField]
     private Transform _objectHighlight;
 
@@ -60,6 +63,7 @@ public class TutorialUIController : MonoBehaviour
         if (_activeTutorial.TutorialSections.Length > _activeSection)
         {
             TutorialObject.TutorialSection _section = _activeTutorial.TutorialSections[_activeSection];
+            OnSectionChange?.Invoke(_section, _activeTutorial);
             
             // Reposition Tutorial window
             UpdateWindowPosition(_section.PanelPosition);
