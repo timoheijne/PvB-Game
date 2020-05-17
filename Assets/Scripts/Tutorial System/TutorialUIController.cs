@@ -63,10 +63,18 @@ public class TutorialUIController : MonoBehaviour
             
             // Reposition Tutorial window
             UpdateWindowPosition(_section.PanelPosition);
-            
-            // Within bounds
-            _prevButton.SetActive(_activeSection != 0);
-            _nextButton.SetActive(_activeSection < _activeTutorial.TutorialSections.Length - 1);
+
+            if (_section.ExternalControls)
+            {
+                _prevButton.SetActive(false);
+                _nextButton.SetActive(false);
+            }
+            else
+            {
+                // Within bounds
+                _prevButton.SetActive(_activeSection != 0);
+                _nextButton.SetActive(_activeSection < _activeTutorial.TutorialSections.Length - 1);
+            }
 
             _textObject.text = _section.Body;
             
