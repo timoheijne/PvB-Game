@@ -19,7 +19,14 @@ public class FirstLevel : MonoBehaviour
         TutorialSystem.Instance.OnDeactivate += OnDeactivate;
         _tutorialUi.OnSectionChange += OnSectionChange;
         
+        _gameManager.OnFinished += OnFinished;
+        
         TutorialSystem.Instance.ActivateTutorial("basic-ui");
+    }
+
+    private void OnFinished()
+    {
+        throw new NotImplementedException();
     }
 
     private void OnSectionChange(TutorialObject.TutorialSection _section, TutorialObject _object)
@@ -27,7 +34,7 @@ public class FirstLevel : MonoBehaviour
         //throw new NotImplementedException();
     }
 
-    private void OnDeactivate()
+    private void OnDeactivate(TutorialObject _tutorialObject)
     {
         throw new NotImplementedException();
     }

@@ -40,7 +40,7 @@ public class TutorialUIController : MonoBehaviour
         TutorialSystem.Instance.OnDeactivate += OnDeactivate;
     }
 
-    private void OnDeactivate()
+    private void OnDeactivate(TutorialObject _tutorialObject)
     {
         // TODO: Clean UI and hide object highlighters
         _tutorialWindow.SetActive(false);

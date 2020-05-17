@@ -10,7 +10,7 @@ public class TutorialSystem : MonoBehaviour
     private static TutorialSystem _instance;
 
     public event Action<TutorialObject> OnActive;
-    public event Action OnDeactivate;
+    public event Action<TutorialObject> OnDeactivate;
 
     public TutorialObject ActiveTutorial => _activeTutorial;
     private TutorialObject _activeTutorial;
@@ -46,8 +46,8 @@ public class TutorialSystem : MonoBehaviour
 
     public void DeactivateTutorial()
     {
+        OnDeactivate?.Invoke(_activeTutorial);
         _activeTutorial = null;
-        OnDeactivate?.Invoke();
     }
 
     private void LoadTutorials()
