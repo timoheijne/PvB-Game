@@ -13,6 +13,9 @@ public class FirstLevel : MonoBehaviour
 
     [SerializeField]
     private GameManager _gameManager;
+
+    [SerializeField]
+    private Transform _doctor;
     
     private void Start()
     {
@@ -26,7 +29,11 @@ public class FirstLevel : MonoBehaviour
 
     private void OnFinished()
     {
-        throw new NotImplementedException();
+        if (TutorialSystem.Instance.ActiveTutorial.name == "first-program" && _doctor.position.z > 13 &&
+            _doctor.position.z < 14)
+        {
+            // Correct. Move to next section.
+        }
     }
 
     private void OnSectionChange(TutorialObject.TutorialSection _section, TutorialObject _object)
@@ -36,6 +43,9 @@ public class FirstLevel : MonoBehaviour
 
     private void OnDeactivate(TutorialObject _tutorialObject)
     {
-        throw new NotImplementedException();
+        if (_tutorialObject.TutorialID == "basic-ui")
+        {
+            TutorialSystem.Instance.ActivateTutorial("first-program");
+        }
     }
 }

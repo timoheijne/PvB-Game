@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -14,7 +15,12 @@ namespace Shared
             _image = GetComponent<Image>();
             StartCoroutine(FadeImage(true, true));
         }
- 
+
+        private void OnEnable()
+        {
+            StartCoroutine(FadeImage(true, true));
+        }
+
         IEnumerator FadeImage(bool fadeAway, bool repeat)
         {
             if (_image == null)

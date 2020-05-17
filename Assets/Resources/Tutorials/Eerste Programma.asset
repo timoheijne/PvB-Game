@@ -15,4 +15,12 @@ MonoBehaviour:
   TutorialName: Eerste Programma
   TutorialID: first-program
   isEnabled: 1
-  TutorialSections: []
+  TutorialSections:
+  - Name: Vooruit
+    ObjectReferenceID: VSB-Forward
+    PanelPosition: 4
+    DoctorOnLeft: 1
+    Body: "Laten we nu eens proberen de doctor naar de bali te laten lopen.\r\n\r\nSleep
+      de \u201CVooruit\u201D block twee keer op de \u201CStart\u201D blok\r\nWanneer
+      je dat gedaan heb druk op \u201CCOMPILEER\u201D\r"
+    ExternalControls: 1
