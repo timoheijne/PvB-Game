@@ -34,7 +34,7 @@ MonoBehaviour:
     ExternalControls: 0
   - Name: De kliniek
     ObjectReferenceID: main-window
-    PanelPosition: 1
+    PanelPosition: 3
     DoctorOnLeft: 0
     Body: "Het linker deel van je scherm noemen we de kliniek. \nDit is waar je docter
       en de patient zich bevindt. \r\n\r\nOok zie je hier al het apparatuur wat je
