@@ -57,7 +57,7 @@ public class LevelSystem : MonoBehaviour
         }
 
         _returnToLevelSelect = _showLevelSelect;
-        ChangeLevel(MainMenuScene);
+        StartCoroutine(LoadScene(MainMenuScene));
     }
 
     public void ChangeLevel(string _levelName)
@@ -84,7 +84,16 @@ public class LevelSystem : MonoBehaviour
     private IEnumerator LoadScene(string _sceneName)
     {
         float _startLoad = Time.time;
+
+        // If there is no loading screen, There is no need to async scene switching!
+        if (_loadingScreen == null)
+        {
+            SceneManager.LoadScene(_sceneName);
+            yield break;
+        }
+        
         _loadingScreen.gameObject.SetActive(true);
+        
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(_sceneName);
 
         while (!asyncLoad.isDone)
@@ -98,6 +107,7 @@ public class LevelSystem : MonoBehaviour
             yield return new WaitForSeconds(_minLoadTime - (_endLoad - _startLoad));
         }
         
+
         _loadingScreen.gameObject.SetActive(false);
     }
 
