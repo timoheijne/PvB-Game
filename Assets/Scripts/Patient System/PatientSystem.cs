@@ -11,17 +11,22 @@ public class PatientSystem : MonoBehaviour
     public event Action<PatientFile> OnPatientChange;
     
     public event Action<Objective, PatientFile> OnObjectiveComplete;
-
-    public event Action OnNoMorePatients;
-    
     public PatientFile ActivePatient => (_activePatientIndex < _patientFiles.Count) ? _patientFiles[_activePatientIndex] : null;
+    
+    public bool AutoContinue
+    {
+        get => _autoContinue;
+        set => _autoContinue = value;
+    }
+
+    [SerializeField, Tooltip("If you want to automatically continue to new patient when current is finished")]
+    private bool _autoContinue = true;
     
     private int _activePatientIndex;
     
     private List<PatientFile> _patientFiles = new List<PatientFile>();
 
-    [SerializeField, Tooltip("If you want to automatically continue to new patient when current is finished")]
-    private bool _autoContinue = true;
+    
 
     private void Awake()
     {
