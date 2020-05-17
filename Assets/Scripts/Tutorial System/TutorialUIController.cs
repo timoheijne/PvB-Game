@@ -1,4 +1,5 @@
 ﻿using System;
+using Shared;
 using TMPro;
 using UnityEngine;
 
@@ -60,6 +61,9 @@ public class TutorialUIController : MonoBehaviour
         {
             TutorialObject.TutorialSection _section = _activeTutorial.TutorialSections[_activeSection];
             
+            // Reposition Tutorial window
+            UpdateWindowPosition(_section.PanelPosition);
+            
             // Within bounds
             _prevButton.SetActive(_activeSection != 0);
             _nextButton.SetActive(_activeSection < _activeTutorial.TutorialSections.Length - 1);
@@ -99,6 +103,34 @@ public class TutorialUIController : MonoBehaviour
         else
         {
             throw new IndexOutOfRangeException();
+        }
+    }
+
+    private void UpdateWindowPosition(Position _position)
+    {
+        RectTransform _windowTransfrom = _tutorialWindow.GetComponent<RectTransform>();
+        
+        // This is assuming that the tutorial window's anchor is center screen!
+        switch (_position)
+        {
+            case Position.Center:
+                _windowTransfrom.localPosition = new Vector3(0,0, 0);
+                break;
+            case Position.Left:
+                Debug.Log("Yas");
+                _windowTransfrom.localPosition = new Vector3(-Screen.width/2 + _windowTransfrom.rect.width/2 + 20, 0, 0);
+                break;
+            case Position.Top:
+                _windowTransfrom.localPosition = new Vector3(0, Screen.height/2 - _windowTransfrom.rect.height/2 - 20, 0);
+                break;
+            case Position.Right:
+                _windowTransfrom.localPosition = new Vector3(Screen.width/2 - _windowTransfrom.rect.width/2 - 20, 0, 0);
+                break;
+            case Position.Bottom:
+                _windowTransfrom.localPosition = new Vector3(0, -Screen.height/2 + _windowTransfrom.rect.height/2 + 20, 0);
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(_position), _position, null);
         }
     }
 

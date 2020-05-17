@@ -20,12 +20,24 @@ MonoBehaviour:
     ObjectReferenceID: 
     PanelPosition: 0
     DoctorOnLeft: 0
-    Body: 'Fakka dude!
-
-
-      Jij wilt dus leren hoe je moet <color="blue">programmeren</color>?'
+    Body: Center
   - Name: Start Block
     ObjectReferenceID: VSB-Start
-    PanelPosition: 0
+    PanelPosition: 1
     DoctorOnLeft: 0
-    Body: 'Ja? Nou hier is het start blok. success. '
+    Body: Left
+  - Name: Top
+    ObjectReferenceID: 
+    PanelPosition: 2
+    DoctorOnLeft: 0
+    Body: Top
+  - Name: Right
+    ObjectReferenceID: 
+    PanelPosition: 3
+    DoctorOnLeft: 0
+    Body: Right
+  - Name: Bottom
+    ObjectReferenceID: 
+    PanelPosition: 4
+    DoctorOnLeft: 0
+    Body: Bottom

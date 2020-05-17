@@ -10,6 +10,13 @@ public class FirstLevel : MonoBehaviour
 {
     private void Start()
     {
+        TutorialSystem.Instance.OnDeactivate += OnDeactivate;
+        
         TutorialSystem.Instance.ActivateTutorial("basic-ui");
+    }
+
+    private void OnDeactivate()
+    {
+        throw new NotImplementedException();
     }
 }
