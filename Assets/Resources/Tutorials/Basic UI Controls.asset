@@ -23,7 +23,7 @@ MonoBehaviour:
     Body: 'Fakka dude!
 
 
-      Jij wilt dus leren hoe je moet programmeren?'
+      Jij wilt dus leren hoe je moet <color="blue">programmeren</color>?'
   - Name: Start Block
     ObjectReferenceID: VSB-Start
     PanelPosition: 0
