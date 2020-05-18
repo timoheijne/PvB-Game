@@ -19,9 +19,12 @@ public class FirstLevel : MonoBehaviour
     private ActorObject _actor;
 
     private TutorialObject.TutorialSection _activeSection;
+
+    private Vector3 _mainCameraOriginalPosition;
     
     private void Start()
     {
+        _mainCameraOriginalPosition = Camera.main.transform.position;
         TutorialSystem.Instance.OnDeactivate += OnDeactivate;
         _tutorialUI.OnSectionChange += OnSectionChange;
         
@@ -30,6 +33,17 @@ public class FirstLevel : MonoBehaviour
         PatientSystem.Instance.OnPatientDone += OnPatientDone;
         
         TutorialSystem.Instance.ActivateTutorial("basic-ui");
+    }
+
+    private void Update()
+    {
+        if (TutorialSystem.Instance.ActiveTutorial.TutorialID == "basic-ui" 
+            && _activeSection.Name == "de-camera"
+            && Vector3.Distance(Camera.main.transform.position, _mainCameraOriginalPosition) > 1)
+        {
+            // Correct. Move to next section.
+            _tutorialUI.NextSection();
+        }
     }
 
     private void OnPatientDone(PatientFile obj)
@@ -79,6 +93,12 @@ public class FirstLevel : MonoBehaviour
     private void OnSectionChange(TutorialObject.TutorialSection _section, TutorialObject _object)
     {
         _activeSection = _section;
+        
+        if (TutorialSystem.Instance.ActiveTutorial.TutorialID == "basic-ui" 
+            && _activeSection.Name == "de-camera")
+        {
+            _mainCameraOriginalPosition = Camera.main.transform.position;
+        }
     }
 
     private void OnDeactivate(TutorialObject _tutorialObject)

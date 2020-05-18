@@ -20,50 +20,56 @@ MonoBehaviour:
     ObjectReferenceID: 
     PanelPosition: 0
     DoctorOnLeft: 0
-    Body: "Welkom bij DigiDokter!\r\n\r\nEen interactief spelletje waar bij jij de
-      basis van programmeren kan leren door middel van dieren te redden als dieren
-      arts!\r\n\r\nVoor dat we jou je gang laten gaan. Zullen we even met z\u2019n
-      twee\xEBn doornemen hoe het werkt?\r"
+    Body: "Welkom bij DigiDokter!\r\n\r\nEen interactief spelletje waarbij jij de
+      basis van programmeren kan leren door middel van dieren te redden als dierenarts!\r\n\r\nVoor
+      dat we jou je gang laten gaan. Zullen we even met z\u2019n tweetjes doornemen
+      hoe het werkt?\r"
     ExternalControls: 0
   - Name: UI Definities
     ObjectReferenceID: 
     PanelPosition: 0
     DoctorOnLeft: 0
-    Body: Okay! Laten we beginnen met uit leggen wat er nu allemaal op je scherm
-      staat.
+    Body: Okay! Laten we beginnen met uitleggen wat er nu allemaal op je scherm staat.
     ExternalControls: 0
   - Name: De kliniek
     ObjectReferenceID: main-window
     PanelPosition: 3
     DoctorOnLeft: 0
-    Body: "Het linker deel van je scherm noemen we de kliniek. \nDit is waar je docter
-      en de patient zich bevindt. \r\n\r\nOok zie je hier al het apparatuur wat je
-      moet gaan gebruiken om je patient te helpen en beter te maken.\r\n"
+    Body: "Het linker deel van je scherm noemen we <i>de kliniek</i>. Dit is waar
+      je dokter en de pati\xEBnt zich bevinden.\r\n\r\nJe ziet hier al het apparatuur
+      wat jij moet gaan gebruiken om je pati\xEBnt beter te maken.\r"
     ExternalControls: 0
   - Name: Visual Scripting
     ObjectReferenceID: scripting-window
     PanelPosition: 1
     DoctorOnLeft: 1
-    Body: "Op de rechter kant van je scherm zie je de \u201CVisual Scripting\u201D
-      omgeving. \r\nHier ga je de instructies aan de docter geven over wat ze moet
-      doen.\r\n"
+    Body: 'Op de rechter kant van je scherm zie je <i>de werkplaats</i>.
+
+      Hier
+      kan je de dokter instructies geven.
+
+'
     ExternalControls: 0
   - Name: Patienten systeem
     ObjectReferenceID: patient-system
     PanelPosition: 3
     DoctorOnLeft: 0
-    Body: "Aan de linker kant van het kliniek scherm zie je een patienten dossier.
-      \r\nHier kan ze de naam, leeftijd en doelen van een pati\xEBnt zien. \r\n\r\nDe
-      doelen staan netjes in een rijtje en geven aan wat jij moet doen voor dat de
-      pati\xEBnt weer beter is en terug naar huis kan."
+    Body: "Linksboven de kliniek kan je <i>het pati\xEBntendossier</i> zien. \nHier
+      zie je alle info over het diertje wat je moet helpen, en natuurlijk wat je
+      precies moet doen!\r\n\r\nDe doelen staan netjes in een rijtje, en geven aan
+      wat jij moet doen voordat de pati\xEBnt weer beter is, en terug naar huis kan."
     ExternalControls: 0
   - Name: De camera
     ObjectReferenceID: main-window
     PanelPosition: 3
     DoctorOnLeft: 0
-    Body: "Nog \xE9\xE9n dingentje voor dat we gaan beginnen. \n\rVerplaats je muis
-      over de linker kant van je scherm (De kliniek deel  van het scherm) hou je
-      rechter muisknop in gedruk en beweeg je muis. \r\n\r\nZo kan je de camera bewegen
-      zo dat je alles beter kan zien en volgen. \r\nGebruik de scrollwiel om van
-      dichter bij of verder af te kijken."
+    Body: "Nog \xE9\xE9n dingetje voor dat we gaan beginnen...\r\n \r\nMet gebruik
+      van je muis, kan je de camera bewegen, zodat je alles kan zien en volgen. \r\nProbeer
+      het eens uit!\r"
+    ExternalControls: 1
+  - Name: Camera Moved
+    ObjectReferenceID: 
+    PanelPosition: 0
+    DoctorOnLeft: 0
+    Body: Goedzo! Nu kan je alles goed in de gaten houden binnen <i>de kliniek</i>.
     ExternalControls: 0
