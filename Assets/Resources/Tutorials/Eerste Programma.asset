@@ -20,43 +20,48 @@ MonoBehaviour:
     ObjectReferenceID: VSB-Forward
     PanelPosition: 4
     DoctorOnLeft: 1
-    Body: "Laten we nu eens proberen de doctor naar de bali te laten lopen.\r\n\r\nSleep
-      de \u201CVooruit\u201D block twee keer op de \u201CStart\u201D blok\r\nWanneer
-      je dat gedaan heb druk op \u201CCOMPILEER\u201D\r"
+    Body: "Laten we eerst proberen de dokter naar de balie te laten lopen.\r\n\r\nSleep
+      de <b>\u201CVooruit\u201D blok</b> twee keer op het <b>\u201CStart\u201D blok</b>.\r\n\nWanneer
+      je dat gedaan hebt, druk je op <b>\u201CCOMPILEER\u201D</b>"
     ExternalControls: 1
   - Name: pickup-and-turn
     ObjectReferenceID: 
     PanelPosition: 4
     DoctorOnLeft: 1
-    Body: "Heel goed gedaan!\r\n\r\nLaten we nu nog wat extra dingentjes toevoegen.
-      Sleep \u201CPak Op\u201D 1 keer op de meest onderste \u201CVooruit\u201D en
-      sleep dan 2 keer \u201CDraai Rechts\u201D op \u201CPak Op\u201D\r\n\r\nAls
-      je dat gedaan heb druk op \u201CCOMPILEER\u201D en kijk wat er gebeurd. "
+    Body: "Heel goed gedaan!\r\n\r\nLaten we nu nog wat extra dingetjes toevoegen.
+      Sleep <b>\u201CPak Op\u201D</b> 1 keer op de meest onderste <b>\u201CVooruit\u201D</b>,
+      en sleep dan 2 keer <b>\u201CDraai Rechts\u201D</b> op diezelfde <b>\u201CPak
+      Op\u201D</b>.\r\n\r\nAls je dat gedaan hebt druk je weer op <b>\u201CCOMPILEER\u201D</b>,
+      en kijk wat er gebeurd. "
     ExternalControls: 1
   - Name: walk-to-table
     ObjectReferenceID: 
     PanelPosition: 4
     DoctorOnLeft: 1
-    Body: "Laten we de opdracht even af maken nu ok?\r\nTel hoe veel stappen de doctor
-      moet zetten om bij de operatie tafel te komen. En sleep zo veel keer \u201CVooruit\u201D
-      op het laatste blokje in je script.\r\n\r\nMaar nu moet de doctor ook nog draaien.
-      Sleep ook de juiste draai op het laatste blokje in je script. En klik dan op
-      \u201CCOMPILEER\u201D en kijk wat er gebeurd"
+    Body: "Super! Je begint het al goed onder de knie te krijgen.\r\n\r\nWe zijn
+      bijna klaar.\r\n\r\nTel in je hoofd hoeveel stappen de dokter moet zetten om
+      bij de operatietafel te komen. Sleep zoveel keer <b>\u201CVooruit\u201D</b>
+      op het laatste blokje op de werkplaats.\r\n\r\nMaar nu moet de dokter ook nog
+      draaien. Sleep ook de juiste draai op het laatste blokje in je script. Ben
+      je klaar? Druk dan weer op <b>\u201CCOMPILEER\u201D</b> en kijk wat er gebeurd."
     ExternalControls: 1
   - Name: heal-patient
     ObjectReferenceID: 
     PanelPosition: 4
     DoctorOnLeft: 1
-    Body: "Bijna klaar!\r\n\r\nWat je nu nog moet doen. Is de patient op de operatie
-      tafel te plaatsen door \u201CLeg Neer\u201D op het laatste blokje in je script
-      te slepen.\r\n\r\nWaneer je dat gedaan heb sleep het blokje \u201CGebruik\u201D
-      op het laatste blokje en klik dan op \u201CCOMPILEER\u201D en kijk wat er gebeurd\r\n"
+    Body: "Laten we het afronden.\r\n\r\nNu we de pati\xEBnt met ons mee hebben gedragen
+      naar de operatietafel, hoeven wij hem alleen nog maar hier neer te leggen,
+      en dan natuurlijk helpe.\r\n\r\nEerst zetten we <b>\u2018\u2019leg neer\u2019\u2019</b>
+      onder het laatste blokje in de werkplaats. \r\nAls laatste slepen we het blokje
+      <b>\u2018\u2019Gebruik\u2019\u2019</b>.\r\n\r\nStaat alles goed? Ben je er
+      klaar voor? Dan drukken we op <b>\u2018\u2019COMPILEER\u2019\u2019</b>, en
+      kijken we weer wat er gebeurd."
     ExternalControls: 1
   - Name: done
     ObjectReferenceID: 
     PanelPosition: 0
     DoctorOnLeft: 1
-    Body: "Gefelicteerd, Je heb je eerste dier gered!\r\n\r\nNu weet je genoeg dat
-      je even voor je zelf aan de slag mag. \r\n\r\nProbeer zelf nog 2 pati\xEBnten
-      beter te maken en dan sturen we je naar de echte kliniek!\r"
+    Body: "Gefeliciteerd, Je hebt je eerste dier geholpen!\r\n\nJe bent al aardig
+      opweg. Ik laat je nog 2 pati\xEBnten zelf helpen, en daarna stuur ik je naar
+      de echte kliniek!\r\n\r\nSucces, en veel plezier!\r"
     ExternalControls: 1
