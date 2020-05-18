@@ -60,25 +60,26 @@ public class LevelSystem : MonoBehaviour
         StartCoroutine(LoadScene(MainMenuScene));
     }
 
-    public void ChangeLevel(string _levelName)
+    public bool ChangeLevel(string _levelName)
     {
         LevelObject _level = GetLevel(_levelName);
         if (_level == null)
         {
-            return;
+            return false;
         }
 
-        ChangeLevel(_level);
+        return ChangeLevel(_level);
     }
 
-    public void ChangeLevel(LevelObject _level)
+    public bool ChangeLevel(LevelObject _level)
     {
         if (_level.IsEnabled == false)
         {
-            return;
+            return false;
         }
 
         StartCoroutine(LoadScene(_level.SceneName));
+        return true;
     }
 
     private IEnumerator LoadScene(string _sceneName)
