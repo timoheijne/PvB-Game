@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
             bool _run = true;
             while (_run)
             {
+                yield return new WaitUntil(() => Time.timeScale != 0);
+                
                 yield return StartCoroutine(nodeHolders[i].currentNode.Act());
                 nodeHolders[i].currentNode = nodeHolders[i].currentNode.NextNode();
 
