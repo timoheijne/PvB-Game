@@ -14,7 +14,7 @@ public class PauseScreen : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            ToggleMenu();;
+            ToggleMenu();
         }
     }
 
