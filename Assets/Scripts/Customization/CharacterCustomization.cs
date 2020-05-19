@@ -23,9 +23,6 @@ public class CharacterCustomization : MonoBehaviour {
     private Material[] _materials;
 
     [SerializeField]
-    private Texture2D _skinTexture;
-
-    [SerializeField]
     private Image[] _sliderHandles;
 
     [SerializeField]
@@ -132,7 +129,7 @@ public class CharacterCustomization : MonoBehaviour {
 
             case "Skin":
                 _sliderHandle = _sliderHandles[1].GetComponent<Image>();
-                _sliderMaterial = _sliderHandle.GetComponent<Image>().material;
+                _sliderMaterial = _sliderHandle.material;
                 //_sliderHandle.color = _color;
                 _sliderMaterial.SetFloat("Bool_IsRainbow", 0);
                 _sliderMaterial.SetVector("Vector2_Texture_Position", new Vector2(_value, 0f));
@@ -141,6 +138,9 @@ public class CharacterCustomization : MonoBehaviour {
 
             case "Eyes":
                 _sliderHandle = _sliderHandles[2].GetComponent<Image>();
+                _sliderMaterial = _sliderHandle.material;
+                _sliderMaterial.SetFloat("Bool_IsRainbow", 1);
+                _sliderMaterial.SetVector("Vector2_Texture_Position", new Vector2(_value, 0f));
                 _targetRenderer.sharedMaterial.SetVector("EyeGradientPos", new Vector2(_value, 0f));
                 break;
 

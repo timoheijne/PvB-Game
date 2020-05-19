@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2a27055f1c693fb4c961440ab8a3aa07, type: 2}
+  m_Material: {fileID: 2100000, guid: a71ecaf30967060488fbec4cea5d9a78, type: 2}
   m_Color: {r: 0.9294118, g: 0.62352943, b: 0.41176474, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -516,7 +516,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.47716373
+  m_Value: 0.70262367
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -590,7 +590,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609886710}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 29431318}
@@ -701,7 +701,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712153011}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 229414598}
@@ -724,7 +724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 2a27055f1c693fb4c961440ab8a3aa07, type: 2}
   m_Color: {r: 0.3746209, g: 0, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -833,7 +833,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.9838079
+  m_Value: 0.77106595
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1325,7 +1325,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 4
   m_WholeNumbers: 1
-  m_Value: 3
+  m_Value: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1425,7 +1425,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.21630993
+  m_Value: 0.66688484
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2405,7 +2405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &621693987315859790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2913,7 +2913,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: a92160cdad1e548a18a019579437048e, type: 2}
   - {fileID: 2100000, guid: b905ffa4280e80246a8e65135f5b4a59, type: 2}
   - {fileID: 2100000, guid: 2717bc10c95472a4a936a205e6801a07, type: 2}
-  _skinTexture: {fileID: 2800000, guid: 29c3b0b64cae20744b074ff5aa51fe31, type: 3}
   _sliderHandles:
   - {fileID: 866206313}
   - {fileID: 29431319}
@@ -2923,9 +2922,9 @@ MonoBehaviour:
   - {fileID: 1066855142}
   - {fileID: 757156382}
   - {fileID: 538595732}
-  _skinColorGradient: 0.9838079
-  _eyeColorGradient: 0.47716373
-  _hairColorGradient: 0.21630993
+  _skinColorGradient: 0.77106595
+  _eyeColorGradient: 0.70262367
+  _hairColorGradient: 0.66688484
 --- !u!4 &1557737407410058749
 Transform:
   m_ObjectHideFlags: 0
@@ -5494,7 +5493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &6148394888831986304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5872,6 +5871,8 @@ MonoBehaviour:
   - {fileID: 621693987315859789}
   - {fileID: 6148394888831986303}
   - {fileID: 1214005030782211181}
+  _currentHairStyle: {fileID: 0}
+  _hairMaterial: {fileID: 0}
 --- !u!1 &6827340385553849297
 GameObject:
   m_ObjectHideFlags: 0
