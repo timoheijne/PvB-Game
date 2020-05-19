@@ -31,4 +31,14 @@ public class PauseScreen : MonoBehaviour
             Time.timeScale = 1;
         }
     }
+
+    public void QuitLevel()
+    {
+        LevelSystem.Instance.ChangeToMainMenu();
+    }
+
+    public void RestartLevel()
+    {
+        LevelSystem.Instance.ChangeLevel(LevelSystem.Instance.ActiveLevel);
+    }
 }
