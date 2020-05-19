@@ -23,12 +23,15 @@ public class CharacterCustomization : MonoBehaviour {
     private Material[] _materials;
 
     [SerializeField]
+    private Texture2D _skinTexture;
+
+    [SerializeField]
     private Image[] _sliderHandles;
 
     [SerializeField]
     private Slider[] _customizationSliders;
 
-    [Range(0, 1)]
+    [SerializeField, Range(0, 1)]
     private float _skinColorGradient,
                   _eyeColorGradient,
                   _hairColorGradient = 0.2f;
@@ -37,7 +40,11 @@ public class CharacterCustomization : MonoBehaviour {
 
     private int _oldHairColorValue,
                 _oldSkinColorValue,
-                _oldEyeColorValue;
+                _oldEyeColorValue,
+                _oldShirtColorValue,
+                _oldShoetColorValue,
+                _oldGloveColorValue,
+                _oldPantsColorValue;
 
     private void Start() 
     {
@@ -65,22 +72,11 @@ public class CharacterCustomization : MonoBehaviour {
 
     private void Update()
     {
-        if (_oldSkinColorValue != Mathf.Round(_skinColorGradient * 100f) / 100f)
-        {
-            SetColor(_targetCharacter.transform.Find("Body").gameObject, "Skin", _skinColorGradient);
-        }
-
-        if (_oldHairColorValue != Mathf.Round(_hairColorGradient * 100f) / 100f)
-        {
-            if (!_currentHairStyle == _hairStyles[0]) 
-            {
+        if (_oldHairColorValue != Mathf.Round(_hairColorGradient * 100f) / 100f) {
+            if (!_currentHairStyle == _hairStyles[0]) {
                 SetColor(_currentHairStyle, "Hair", _hairColorGradient);
+                Debug.Log("SetColor: Hair");
             }
-        }
-
-        if (_oldEyeColorValue != Mathf.Round(_hairColorGradient * 100f) / 100f) 
-        {
-            SetColor(_targetCharacter.transform.Find("Body").gameObject, "Eyes", _eyeColorGradient);
         }
     }
 
@@ -88,6 +84,7 @@ public class CharacterCustomization : MonoBehaviour {
     {
         _skinColorGradient = _value;
         _oldSkinColorValue = (int)(Mathf.Round(_skinColorGradient * 100f) / 100f);
+        SetColor(gameObject, "Skin", _skinColorGradient);
     }
 
     public void HairStyleControl(float _value)
@@ -106,6 +103,7 @@ public class CharacterCustomization : MonoBehaviour {
     {
         _eyeColorGradient = value;
         _oldEyeColorValue = (int)(Mathf.Round(_eyeColorGradient * 100f) / 100f);
+        SetColor(gameObject, "Eyes", _eyeColorGradient);
     }
 
     public void SetHairStyle(int _value) 
@@ -120,32 +118,30 @@ public class CharacterCustomization : MonoBehaviour {
 
     public void SetColor(GameObject _target, string _feature, float _value) 
     {
-        Material _material;
         Renderer _targetRenderer;
         Image _sliderHandle;
+        Material _sliderMaterial;
 
         _targetRenderer = _target.GetComponent<Renderer>();
 
         switch (_feature) {
             case "Hair":
-                _sliderHandle = _sliderHandles[0];
-                _material = _materials[0];
-                _sliderHandle.material = _material;
-                _targetRenderer.sharedMaterial.SetFloat("_SamplePos", _value);
+                _sliderHandle = _sliderHandles[0].GetComponent<Image>();
+                _targetRenderer.sharedMaterial.SetFloat("_samplePos", _value);
                 break;
 
             case "Skin":
-                _sliderHandle = _sliderHandles[1];
-                _material = _materials[1];
-                _sliderHandle.material = _material;
-                _targetRenderer.sharedMaterial.SetFloat("Skin_Gradient_Position", _value);
+                _sliderHandle = _sliderHandles[1].GetComponent<Image>();
+                _sliderMaterial = _sliderHandle.GetComponent<Image>().material;
+                //_sliderHandle.color = _color;
+                _sliderMaterial.SetFloat("Bool_IsRainbow", 0);
+                _sliderMaterial.SetVector("Vector2_Texture_Position", new Vector2(_value, 0f));
+                _targetRenderer.sharedMaterial.SetVector("SkinGradientPos", new Vector2(_value, 0f));
                 break;
 
             case "Eyes":
-                _sliderHandle = _sliderHandles[2];
-                _material = _materials[2];
-                _sliderHandle.material = _material;
-                _targetRenderer.sharedMaterial.SetFloat("Eye_Gradient_Position", _value);
+                _sliderHandle = _sliderHandles[2].GetComponent<Image>();
+                _targetRenderer.sharedMaterial.SetVector("EyeGradientPos", new Vector2(_value, 0f));
                 break;
 
             default:

@@ -5,6 +5,8 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class CharacterCustomizerV2 : MonoBehaviour 
 {
+    public static CharacterCustomizerV2 instance;
+
     [SerializeField]
     private GameObject[] _hairStyles;
     private GameObject _currentHairStyle;

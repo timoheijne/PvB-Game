@@ -11,6 +11,7 @@ public class MaterialManager : MonoBehaviour
 
     [SerializeField]
     private Texture2D _mainTex, _gradientTex, _handleTex;
+
     [SerializeField]
     private Material _sliderHandleMaterial;
     private Image _sliderHandle;
