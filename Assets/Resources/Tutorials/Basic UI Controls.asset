@@ -59,7 +59,7 @@ MonoBehaviour:
       precies moet doen!\r\n\r\nDe doelen staan netjes in een rijtje, en geven aan
       wat jij moet doen voordat de pati\xEBnt weer beter is, en terug naar huis kan."
     ExternalControls: 0
-  - Name: De camera
+  - Name: de-camera
     ObjectReferenceID: main-window
     PanelPosition: 3
     DoctorOnLeft: 0
