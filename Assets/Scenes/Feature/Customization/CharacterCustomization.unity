@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 222951573}
   - component: {fileID: 222951574}
   m_Layer: 5
-  m_Name: Slider_Gloves_Color (4)
+  m_Name: Slider_Gloves_Color
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 242640266}
   - component: {fileID: 242640267}
   m_Layer: 5
-  m_Name: Slider_Shirt_Color (1)
+  m_Name: Slider_Shirt_Color
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -768,7 +768,7 @@ GameObject:
   - component: {fileID: 299993132}
   - component: {fileID: 299993133}
   m_Layer: 5
-  m_Name: Slider_Shoes_Color (3)
+  m_Name: Slider_Shoes_Color
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3487,7 +3487,7 @@ GameObject:
   - component: {fileID: 1862040038}
   - component: {fileID: 1862040039}
   m_Layer: 5
-  m_Name: Slider_Pants_Color (2)
+  m_Name: Slider_Pants_Color
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
