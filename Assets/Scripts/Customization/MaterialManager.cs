@@ -9,12 +9,17 @@ public class MaterialManager : MonoBehaviour
     [SerializeField]
     private _objectTypes _objectType;
 
+    [Header("Model only")]
     [SerializeField]
-    private Texture2D _mainTex, _gradientTex, _handleTex;
+    private Texture2D _mainTex;
 
+    [Header("UI Handle only")]
     [SerializeField]
-    private Material _sliderHandleMaterial;
-    private Image _sliderHandle;
+    private Texture2D _gradientTex;
+    [SerializeField]
+    private Texture2D _handleTex;
+
+    private Image _sliderHandleImage;
     private Renderer _renderer;
 
     void Start()
@@ -28,9 +33,9 @@ public class MaterialManager : MonoBehaviour
 
         if (_objectType == _objectTypes.Handle) 
         {
-            _sliderHandle = gameObject.GetComponent<Image>();
-            _sliderHandle.material = _sliderHandleMaterial;
-            _sliderHandle.material.SetTexture("_mainTex", _handleTex);
+            _sliderHandleImage = gameObject.GetComponent<Image>();
+            _sliderHandleImage.material = Instantiate(_sliderHandleImage.material);
+            _sliderHandleImage.material.SetTexture("_mainTex", _handleTex);
         }
     }
 

@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 29431318}
   - component: {fileID: 29431320}
   - component: {fileID: 29431319}
+  - component: {fileID: 29431321}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -194,6 +195,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29431317}
   m_CullTransparentMesh: 0
+--- !u!114 &29431321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29431317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1fe23ef187c0364b8cbd3cc6f9a08b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectType: 1
+  _mainTex: {fileID: 0}
+  _gradientTex: {fileID: 2800000, guid: afaf48d2d56cb9b4d9f7b2cea80e01f7, type: 3}
+  _handleTex: {fileID: 10912, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &198152356
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +533,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.49965876
+  m_Value: 0.30335167
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -686,6 +703,7 @@ GameObject:
   - component: {fileID: 712153012}
   - component: {fileID: 712153014}
   - component: {fileID: 712153013}
+  - component: {fileID: 712153015}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -748,6 +766,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712153011}
   m_CullTransparentMesh: 0
+--- !u!114 &712153015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712153011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1fe23ef187c0364b8cbd3cc6f9a08b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectType: 1
+  _mainTex: {fileID: 0}
+  _gradientTex: {fileID: 2800000, guid: afaf48d2d56cb9b4d9f7b2cea80e01f7, type: 3}
+  _handleTex: {fileID: 10912, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &757156380
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,7 +867,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.89704216
+  m_Value: 0.16609503
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1004,6 +1038,7 @@ GameObject:
   - component: {fileID: 866206312}
   - component: {fileID: 866206314}
   - component: {fileID: 866206313}
+  - component: {fileID: 866206315}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -1066,6 +1101,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 866206311}
   m_CullTransparentMesh: 0
+--- !u!114 &866206315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866206311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1fe23ef187c0364b8cbd3cc6f9a08b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectType: 1
+  _mainTex: {fileID: 0}
+  _gradientTex: {fileID: 2800000, guid: afaf48d2d56cb9b4d9f7b2cea80e01f7, type: 3}
+  _handleTex: {fileID: 10912, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &875706074
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,7 +2379,6 @@ MonoBehaviour:
   _mainTex: {fileID: 2800000, guid: f8cd273c8911c9445acd537cc5f5f798, type: 3}
   _gradientTex: {fileID: 2800000, guid: afaf48d2d56cb9b4d9f7b2cea80e01f7, type: 3}
   _handleTex: {fileID: 0}
-  _sliderHandleMaterial: {fileID: 0}
 --- !u!4 &665903332858412518
 Transform:
   m_ObjectHideFlags: 0
@@ -2625,7 +2675,6 @@ MonoBehaviour:
   _mainTex: {fileID: 2800000, guid: 4b0fc9a7ef5a6554981a7841b2bfc776, type: 3}
   _gradientTex: {fileID: 2800000, guid: afaf48d2d56cb9b4d9f7b2cea80e01f7, type: 3}
   _handleTex: {fileID: 0}
-  _sliderHandleMaterial: {fileID: 0}
 --- !u!33 &1259622694049155799
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2816,8 +2865,8 @@ MonoBehaviour:
   _customizationSliders:
   - {fileID: 757156382}
   - {fileID: 538595732}
-  _skinColorGradient: 0.89704216
-  _eyeColorGradient: 0.49965876
+  _skinColorGradient: 0.16609503
+  _eyeColorGradient: 0.30335167
 --- !u!4 &1557737407410058749
 Transform:
   m_ObjectHideFlags: 0
@@ -5403,7 +5452,6 @@ MonoBehaviour:
   _mainTex: {fileID: 2800000, guid: 2405d3aa693812a408b7d264d488ee1a, type: 3}
   _gradientTex: {fileID: 2800000, guid: afaf48d2d56cb9b4d9f7b2cea80e01f7, type: 3}
   _handleTex: {fileID: 0}
-  _sliderHandleMaterial: {fileID: 0}
 --- !u!4 &6202979181227384876
 Transform:
   m_ObjectHideFlags: 0
@@ -6132,7 +6180,6 @@ MonoBehaviour:
   _mainTex: {fileID: 2800000, guid: 94c06748020cd204dbb85d8c16c0b693, type: 3}
   _gradientTex: {fileID: 2800000, guid: afaf48d2d56cb9b4d9f7b2cea80e01f7, type: 3}
   _handleTex: {fileID: 0}
-  _sliderHandleMaterial: {fileID: 0}
 --- !u!4 &7593128290753322977
 Transform:
   m_ObjectHideFlags: 0

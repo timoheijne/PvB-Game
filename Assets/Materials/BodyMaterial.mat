@@ -195,12 +195,12 @@ Material:
     - _ZWrite: 1
     - _samplePos: 0.25
     m_Colors:
-    - EyeGradientPos: {r: 0.3, g: 0, b: 0, a: 0}
+    - EyeGradientPos: {r: 1, g: 0, b: 0, a: 0}
     - GlovesGradientPos: {r: 0.64, g: 0, b: 0, a: 0}
     - PantsGradientPos: {r: 0.67, g: 0, b: 0, a: 0}
     - ShirtGradientPos: {r: 0.78, g: 0, b: 0, a: 0}
     - ShoesGradientPos: {r: 0.85, g: 0, b: 0, a: 0}
-    - SkinGradientPos: {r: 0.39247856, g: 0, b: 0, a: 0}
+    - SkinGradientPos: {r: 0.43416113, g: 0, b: 0, a: 0}
     - _Color: {r: 0.46226418, g: 0.42094517, b: 0.3030883, a: 1}
     - _ColorPrim1: {r: 0.07993448, g: 0.2924528, b: 0, a: 1}
     - _ColorPrim2: {r: 0, g: 0.3773585, b: 0.014672549, a: 1}

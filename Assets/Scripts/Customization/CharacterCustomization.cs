@@ -64,27 +64,24 @@ public class CharacterCustomization : MonoBehaviour {
     public void SetColor(GameObject _target, string _feature, float _value) 
     {
         Renderer _targetRenderer;
-        Image _sliderHandle;
-        CanvasRenderer _sliderRenderer;
-        MaterialPropertyBlock _propertyBlock;
-        Material _sliderMaterial;
+        CanvasRenderer _sliderCanvasRenderer;
 
         _targetRenderer = _target.GetComponent<Renderer>();
 
         switch (_feature) {
             case "Skin":
-                _sliderHandle = _sliderHandles[0].GetComponent<Image>();
-                _sliderRenderer = _sliderHandles[1].GetComponent<CanvasRenderer>();
-                _sliderRenderer.GetMaterial().SetFloat("Bool_IsRainbow", 0);
-                _sliderRenderer.GetMaterial().SetVector("Vector2_Texture_Position", new Vector2(_value, 0f));
+                _sliderCanvasRenderer = _sliderHandles[1].GetComponent<CanvasRenderer>();
+                _sliderCanvasRenderer.GetMaterial().SetFloat("Bool_IsRainbow", 0);
+                _sliderCanvasRenderer.GetMaterial().SetVector("Vector2_Texture_Position", new Vector2(_value, 0f));
+
                 _targetRenderer.sharedMaterial.SetVector("SkinGradientPos", new Vector2(_value, 0f));
                 break;
 
             case "Eyes":
-                _sliderHandle = _sliderHandles[1].GetComponent<Image>();
-                _sliderRenderer = _sliderHandles[0].GetComponent<CanvasRenderer>();
-                _sliderRenderer.GetMaterial().SetFloat("Bool_IsRainbow", 1);
-                _sliderRenderer.GetMaterial().SetVector("Vector2_Texture_Position", new Vector2(_value, 0f));
+                _sliderCanvasRenderer = _sliderHandles[0].GetComponent<CanvasRenderer>();
+                _sliderCanvasRenderer.GetMaterial().SetFloat("Bool_IsRainbow", 1);
+                _sliderCanvasRenderer.GetMaterial().SetVector("Vector2_Texture_Position", new Vector2(_value, 0f));
+
                 _targetRenderer.sharedMaterial.SetVector("EyeGradientPos", new Vector2(_value, 0f));
                 break;
 
