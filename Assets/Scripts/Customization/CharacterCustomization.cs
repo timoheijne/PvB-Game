@@ -18,7 +18,7 @@ public class CharacterCustomization : MonoBehaviour {
     [SerializeField]
     private Image[] _sliderHandles;
 
-    [SerializeField]
+    [SerializeField, Tooltip("1=Skin 2=Eyes 3=Shirt 4=shoes 5=Gloves 6=Pants")]
     private Slider[] _customizationSliders;
 
     [SerializeField, Range(0, 1)]
@@ -28,7 +28,7 @@ public class CharacterCustomization : MonoBehaviour {
     private int _oldSkinColorValue,
                 _oldEyeColorValue,
                 _oldShirtColorValue,
-                _oldShoetColorValue,
+                _oldShoesColorValue,
                 _oldGloveColorValue,
                 _oldPantsColorValue;
 
@@ -41,7 +41,10 @@ public class CharacterCustomization : MonoBehaviour {
         {
             _skinColorGradient = Random.value;
             _eyeColorGradient = Random.value;
-            
+
+            SetColor(gameObject, "Skin", _skinColorGradient);
+            SetColor(gameObject, "Eyes", _eyeColorGradient);
+
             _customizationSliders[0].value = _skinColorGradient;
             _customizationSliders[1].value = _eyeColorGradient;
         }
@@ -65,22 +68,31 @@ public class CharacterCustomization : MonoBehaviour {
     {
         Renderer _targetRenderer;
         CanvasRenderer _sliderCanvasRenderer;
+        Image _targetImage;
 
         _targetRenderer = _target.GetComponent<Renderer>();
 
         switch (_feature) {
             case "Skin":
-                _sliderCanvasRenderer = _sliderHandles[1].GetComponent<CanvasRenderer>();
-                _sliderCanvasRenderer.GetMaterial().SetFloat("Bool_IsRainbow", 0);
-                _sliderCanvasRenderer.GetMaterial().SetVector("Vector2_Texture_Position", new Vector2(_value, 0f));
+                _targetImage = _sliderHandles[1].GetComponent<Image>();
+                _targetImage.material.SetFloat("Bool_IsRainbow", 0);
+                _targetImage.material.SetVector("Vector2_Texture_Position", new Vector2(_value, 0f));
+
+                //_sliderCanvasRenderer = _sliderHandles[1].GetComponent<CanvasRenderer>();
+                //_sliderCanvasRenderer.GetMaterial().SetFloat("Bool_IsRainbow", 0);
+                //_sliderCanvasRenderer.GetMaterial().SetVector("Vector2_Texture_Position", new Vector2(_value, 0f));
 
                 _targetRenderer.sharedMaterial.SetVector("SkinGradientPos", new Vector2(_value, 0f));
                 break;
 
             case "Eyes":
-                _sliderCanvasRenderer = _sliderHandles[0].GetComponent<CanvasRenderer>();
-                _sliderCanvasRenderer.GetMaterial().SetFloat("Bool_IsRainbow", 1);
-                _sliderCanvasRenderer.GetMaterial().SetVector("Vector2_Texture_Position", new Vector2(_value, 0f));
+                _targetImage = _sliderHandles[2].GetComponent<Image>();
+                _targetImage.material.SetFloat("Bool_IsRainbow", 1);
+                _targetImage.material.SetVector("Vector2_Texture_Position", new Vector2(_value, 0f));
+
+                //_sliderCanvasRenderer = _sliderHandles[0].GetComponent<CanvasRenderer>();
+                //_sliderCanvasRenderer.GetMaterial().SetFloat("Bool_IsRainbow", 1);
+                //_sliderCanvasRenderer.GetMaterial().SetVector("Vector2_Texture_Position", new Vector2(_value, 0f));
 
                 _targetRenderer.sharedMaterial.SetVector("EyeGradientPos", new Vector2(_value, 0f));
                 break;
