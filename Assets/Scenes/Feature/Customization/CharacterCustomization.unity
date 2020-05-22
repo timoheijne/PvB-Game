@@ -371,7 +371,7 @@ RectTransform:
   - {fileID: 1638477874}
   - {fileID: 481610170}
   m_Father: {fileID: 1380939638}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -428,8 +428,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6821138474182275004}
-        m_MethodName: SetHairColor
+      - m_Target: {fileID: 1534557862336406789}
+        m_MethodName: GlovesColorControl
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -564,8 +564,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6821138474182275004}
-        m_MethodName: SetHairColor
+      - m_Target: {fileID: 1534557862336406789}
+        m_MethodName: ShirtColorControl
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -789,7 +789,7 @@ RectTransform:
   - {fileID: 395871963}
   - {fileID: 1836671216}
   m_Father: {fileID: 1380939638}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -846,8 +846,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6821138474182275004}
-        m_MethodName: SetHairColor
+      - m_Target: {fileID: 1534557862336406789}
+        m_MethodName: ShoesColorControl
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1213,7 +1213,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.08939219
+  m_Value: 0.54099363
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1710,7 +1710,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.0077079544
+  m_Value: 0.57611436
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2956,9 +2956,9 @@ RectTransform:
   - {fileID: 1066855141}
   - {fileID: 538595731}
   - {fileID: 242640266}
-  - {fileID: 1862040038}
   - {fileID: 299993132}
   - {fileID: 222951573}
+  - {fileID: 1862040038}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3508,7 +3508,7 @@ RectTransform:
   - {fileID: 393283613}
   - {fileID: 215271992}
   m_Father: {fileID: 1380939638}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3565,8 +3565,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6821138474182275004}
-        m_MethodName: SetHairColor
+      - m_Target: {fileID: 1534557862336406789}
+        m_MethodName: PantsColorControl
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4497,12 +4497,23 @@ MonoBehaviour:
   _sliderHandles:
   - {fileID: 29431319}
   - {fileID: 712153013}
-  - {fileID: 0}
+  - {fileID: 509185513}
+  - {fileID: 2118993149}
+  - {fileID: 675055114}
+  - {fileID: 814984658}
   _customizationSliders:
   - {fileID: 757156382}
   - {fileID: 538595732}
-  _skinColorGradient: 0.0077079544
-  _eyeColorGradient: 0.08939219
+  - {fileID: 242640267}
+  - {fileID: 299993133}
+  - {fileID: 222951574}
+  - {fileID: 1862040039}
+  _skinColorGradient: 0.57611436
+  _eyeColorGradient: 0.54099363
+  _shirtColorGradient: 0.9071057
+  _shoesColorGradient: 0.061805017
+  _gloveColorGradient: 0.063400395
+  _pantsColorGradient: 0.31423572
 --- !u!4 &1557737407410058749
 Transform:
   m_ObjectHideFlags: 0
