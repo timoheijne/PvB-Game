@@ -15,11 +15,14 @@ public class InteractableObjectEditor : Editor
 
     private SerializedProperty _objectiveName;
     private SerializedProperty _patientPlace;
+    private SerializedProperty _particleSystem;
+
 
     private void OnEnable()
     {
         _objectiveName = serializedObject.FindProperty("_objectiveName");
         _patientPlace = serializedObject.FindProperty("_patientPlace");
+        _particleSystem = serializedObject.FindProperty("_particleSystem");
     }
 
     public override void OnInspectorGUI()
@@ -32,13 +35,18 @@ public class InteractableObjectEditor : Editor
         
         EditorGUILayout.LabelField("Patient Place Transform");
         UnityEngine.Object _selectedPlace = EditorGUILayout.ObjectField(_interactableObject.PatientPlace, typeof(Transform), true);
+        
+        EditorGUILayout.LabelField("Particle System");
+        UnityEngine.Object _selectedParticle = EditorGUILayout.ObjectField(_particleSystem.objectReferenceValue, typeof(ParticleSystem), true);
 
         if (_selectedObject == 0)
         {
             return;
         }
+        
         _objectiveName.stringValue = _popupOptions[_selectedObject];
         _patientPlace.objectReferenceValue = _selectedPlace;
+        _particleSystem.objectReferenceValue = _selectedParticle;
         serializedObject.ApplyModifiedProperties();
     }
     
