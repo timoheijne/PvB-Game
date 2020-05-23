@@ -37,6 +37,12 @@ public class FirstLevel : MonoBehaviour
 
     private void Update()
     {
+        if (TutorialSystem.Instance.ActiveTutorial == null)
+        {
+            return;
+        }
+        
+        
         if (TutorialSystem.Instance.ActiveTutorial.TutorialID == "basic-ui" 
             && _activeSection.Name == "de-camera"
             && Vector3.Distance(Camera.main.transform.position, _mainCameraOriginalPosition) > 1)
