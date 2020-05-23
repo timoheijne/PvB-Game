@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class PatientParticles : MonoBehaviour
@@ -26,6 +27,11 @@ public class PatientParticles : MonoBehaviour
         }                
         
         // Check if we need to enable stink.
+        if (_patient.PatientFile.HasObjective("washing_table"))
+        {
+            _trackStinkParticle = Instantiate(_stinkParticle, transform);
+            _trackStinkParticle.transform.position = transform.position;
+        }
         
         PatientSystem.Instance.OnObjectiveComplete += OnObjectiveDone;
 
@@ -45,12 +51,14 @@ public class PatientParticles : MonoBehaviour
         } else if (_objective.InternalName == "operating_table")
         {
             GameObject _particle = Instantiate(_healParticle, transform);
+            _particle.transform.position = transform.position;
+            
             Destroy(_particle, 5);
         } 
         
-        if (_objective.InternalName == "wash")
+        if (_objective.InternalName == "washing_table")
         {
-            //Instantiate(_healParticle, transform);
+            Destroy(_trackStinkParticle);
         }
     }
     
