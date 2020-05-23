@@ -8,8 +8,12 @@ public class InteractableObject : MonoBehaviour
     
     [SerializeField]
     private string _objectiveName;
+    
     [SerializeField, Tooltip("A child object, the system can place the patient if the scripter wants to place a patient on this object.")]
     private Transform _patientPlace;
+    
+    [SerializeField, Tooltip("If you want the object to send out particles when being used drag the particle system in here.")]
+    private ParticleSystem _particleSystem;
 
     private Patient _patient;
     
@@ -20,6 +24,19 @@ public class InteractableObject : MonoBehaviour
         {
             Debug.LogError("Interactable object does not have collider");
         }
+    }
+
+    public bool Interact()
+    {
+        if (!HasPatient())
+        {
+            return false;
+        }
+
+        // start particle if present.
+        _particleSystem?.Play();
+
+        return true;
     }
 
     public bool HasPatient()
@@ -46,6 +63,9 @@ public class InteractableObject : MonoBehaviour
         {
             return null;
         }
+        
+        // Make sure to stop particle.
+        _particleSystem?.Stop();
         
         Patient patient = _patient;
         _patient = null;
