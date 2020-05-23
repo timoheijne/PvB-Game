@@ -14,7 +14,7 @@ public class ObjectInteractor : MonoBehaviour
                 }
                 
                 InteractableObject _interactableObject = FindInteractableObject();
-                return _interactableObject != null &&  _interactableObject.HasPatient() && PatientSystem.Instance.MarkObjectiveDone(_interactableObject.ObjectiveName);
+                return _interactableObject != null &&  _interactableObject.Interact() && PatientSystem.Instance.MarkObjectiveDone(_interactableObject.ObjectiveName);
         }
 
         public InteractableObject FindInteractableObject()
