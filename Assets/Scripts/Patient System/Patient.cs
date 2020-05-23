@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityTemplateProjects.Patient_System;
 
 public class Patient : MonoBehaviour
 {
@@ -10,4 +11,12 @@ public class Patient : MonoBehaviour
     }
     
     private PatientFile _patientFile;
+
+    public PatientParticles PatientParticles => _patientParticles;
+    private PatientParticles _patientParticles;
+
+    private void Start()
+    {
+        _patientParticles.GetComponent<PatientParticles>();
+    }
 }
