@@ -30,7 +30,12 @@ public class PatientFileEditor : UnityEditor.Editor
         EditorGUILayout.LabelField("Objectives:");
         EditorGUILayout.Space(1);
 
-        int inactiveObjectives = _patientFile.Objectives.ToList().FindAll(o => !o.Active).Count;
+        int inactiveObjectives = 0;
+        if (_patientFile.Objectives != null)
+        {
+            inactiveObjectives = _patientFile.Objectives.ToList().FindAll(o => !o.Active).Count;
+        }
+        
 
         if (inactiveObjectives > 0)
         {

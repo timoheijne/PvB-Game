@@ -17,5 +17,7 @@ MonoBehaviour:
   SceneName: Level 1
   IsEnabled: 1
   NextLevel: 
+  Position: 0
   PatientFiles:
   - {fileID: 11400000, guid: cf759d7e16872304987a94430f271c06, type: 2}
+  - {fileID: 11400000, guid: 920998bdd42864d48b6856c9b04eba7e, type: 2}
