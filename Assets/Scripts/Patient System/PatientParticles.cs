@@ -64,7 +64,6 @@ public class PatientParticles : MonoBehaviour
     
     private void OnDestroy()
     {
-        Debug.Log("Bye");
         PatientSystem.Instance.OnObjectiveComplete -= OnObjectiveDone;
     }
 }       
