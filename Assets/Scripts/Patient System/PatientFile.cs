@@ -32,17 +32,14 @@ public class PatientFile : UnityEngine.ScriptableObject
         }
     }
 
+    public bool HasObjective(string _objectiveName)
+    {
+        return Objectives.Any(objective => objective.InternalName == _objectiveName);
+    }
+
     public bool IsDone()
     {
-        foreach (Objective objective in Objectives)
-        {
-            if (objective.IsDone == false && objective.Active)
-            {
-                return false;
-            }
-        }
-
-        return true;
+        return Objectives.All(objective => objective.IsDone != false || !objective.Active);
     }
 
     public Tuple<bool, Objective> MarkObjectiveDone(string ObjectiveName)
