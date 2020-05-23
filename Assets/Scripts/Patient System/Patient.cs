@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityTemplateProjects.Patient_System;
 
 public class Patient : MonoBehaviour
 {
