@@ -15,6 +15,8 @@ public class PatientFile : UnityEngine.ScriptableObject
     
     public Objective[] Objectives;
 
+    public event Action<Objective> OnObjectiveDone;
+
     public GameObject GameObject
     {
         get => _gameObject;
@@ -49,6 +51,7 @@ public class PatientFile : UnityEngine.ScriptableObject
         if (objective != null)
         {
             objective.IsDone = true;
+            
             return new Tuple<bool, Objective>(true, objective);
         }
 

@@ -16,6 +16,6 @@ public class Patient : MonoBehaviour
 
     private void Start()
     {
-        _patientParticles.GetComponent<PatientParticles>();
+        _patientParticles = transform.GetComponent<PatientParticles>();
     }
 }

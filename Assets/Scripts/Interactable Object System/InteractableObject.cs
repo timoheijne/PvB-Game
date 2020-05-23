@@ -34,7 +34,10 @@ public class InteractableObject : MonoBehaviour
         }
 
         // start particle if present.
-        _particleSystem?.Play();
+        if (_particleSystem != null)
+        {
+            _particleSystem.Play();
+        }
 
         return true;
     }
@@ -65,7 +68,10 @@ public class InteractableObject : MonoBehaviour
         }
         
         // Make sure to stop particle.
-        _particleSystem?.Stop();
+        if (_particleSystem != null)
+        {
+            _particleSystem.Stop();
+        }
         
         Patient patient = _patient;
         _patient = null;
