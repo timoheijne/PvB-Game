@@ -1903,6 +1903,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b771034053a84bc0846df7c8f6afaa2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &592653918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592653914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ef37587e89e45b3927fe60d71da70bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ReferenceID: Doctor
 --- !u!1 &598560710
 GameObject:
   m_ObjectHideFlags: 0
@@ -4899,7 +4912,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a23407a8bbee4ebca077d6ab48cb1e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objectHighlight: {fileID: 2146817615}
+  _objectParticlePrefab: {fileID: 7968340364778930733, guid: 1bc84604073feee48b2029d3c922649b,
+    type: 3}
+  _UIHighlight: {fileID: 2146817615}
   _tutorialWindow: {fileID: 987915318}
   _doctorObject: {fileID: 1275483778}
   _doctorLeftWaypoint: {fileID: 572085282}
