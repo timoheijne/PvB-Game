@@ -15,8 +15,6 @@ public class PatientFile : UnityEngine.ScriptableObject
     
     public Objective[] Objectives;
 
-    public event Action<Objective> OnObjectiveDone;
-
     public GameObject GameObject
     {
         get => _gameObject;
