@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 using Shared;
 using TMPro;
 using UnityEngine;
@@ -9,7 +10,10 @@ public class TutorialUIController : MonoBehaviour
     public event Action<TutorialObject.TutorialSection, TutorialObject> OnSectionChange; 
     
     [SerializeField]
-    private Transform _objectHighlight;
+    private GameObject _objectParticlePrefab;
+
+    [SerializeField]
+    private Transform _UIHighlight;
 
     [SerializeField]
     private GameObject _tutorialWindow;
@@ -33,6 +37,7 @@ public class TutorialUIController : MonoBehaviour
     private TextMeshProUGUI _textObject;
 
     private int _activeSection;
+    private GameObject _objectHighlight;
     
     private void Start()
     {
@@ -45,7 +50,7 @@ public class TutorialUIController : MonoBehaviour
         // TODO: Clean UI and hide object highlighters
         _tutorialWindow.SetActive(false);
         _doctorObject.SetActive(false);
-        _objectHighlight.gameObject.SetActive(false);
+        _UIHighlight.gameObject.SetActive(false);
     }
 
     private void OnActive(TutorialObject obj)
@@ -97,14 +102,17 @@ public class TutorialUIController : MonoBehaviour
             
             _doctorObject.transform.localScale = doctorScale;
             
-            // TODO: SET HIGHLIGHT
             if (_section.ObjectReferenceID != String.Empty)
             {
-                HighlightObject(_section.ObjectReferenceID);
+                HighlightObject(_section.ObjectReferenceID, _section.HighlightType);
             }
             else
             {
-                _objectHighlight.gameObject.SetActive(false);
+                _UIHighlight.gameObject.SetActive(false);
+                if (_objectHighlight != null)
+                {
+                    Destroy(_objectHighlight);
+                }
             }
         } 
         else if (_activeTutorial.TutorialSections.Length == 0)
@@ -171,21 +179,33 @@ public class TutorialUIController : MonoBehaviour
         UpdateSection();
     }
 
-    private void HighlightObject(string ObjectReference)
+    private void HighlightObject(string ObjectReference, TutorialObject.TutorialSection.HighlightObjectType type)
     {
         TutorialReferenceObject[] referenceObjects = UnityEngine.Object.FindObjectsOfType<TutorialReferenceObject>();
         foreach (TutorialReferenceObject referenceObject in referenceObjects)
         {
             if (referenceObject.ReferenceID == ObjectReference)
             {
-                // Move highlight to this
-                _objectHighlight.gameObject.SetActive(true);
-                _objectHighlight.position = referenceObject.transform.position;
-                RectTransform rectTransform = _objectHighlight.GetComponent<RectTransform>();
-                Vector2 _sizeDelta = new Vector2(referenceObject.GetComponent<RectTransform>().rect.width, referenceObject.GetComponent<RectTransform>().rect.height);
-                _sizeDelta += new Vector2(50, 40);
+                if (type == TutorialObject.TutorialSection.HighlightObjectType.UI)
+                {
+                    // Move highlight to this
+                    _UIHighlight.gameObject.SetActive(true);
+                    _UIHighlight.position = referenceObject.transform.position;
+                    RectTransform rectTransform = _UIHighlight.GetComponent<RectTransform>();
+                    Vector2 _sizeDelta = new Vector2(referenceObject.GetComponent<RectTransform>().rect.width, referenceObject.GetComponent<RectTransform>().rect.height);
+                    _sizeDelta += new Vector2(50, 40);
                 
-                rectTransform.sizeDelta = _sizeDelta;
+                    rectTransform.sizeDelta = _sizeDelta;
+                }
+                else
+                {
+                    if (_objectHighlight == null)
+                    {
+                        _objectHighlight = Instantiate(_objectParticlePrefab);
+                    }
+
+                    _objectHighlight.transform.position = referenceObject.transform.position;
+                }
             }
         }
     }

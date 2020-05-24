@@ -25,12 +25,14 @@ MonoBehaviour:
       dat we jou je gang laten gaan. Zullen we even met z\u2019n tweetjes doornemen
       hoe het werkt?\r"
     ExternalControls: 0
+    HighlightType: 0
   - Name: UI Definities
     ObjectReferenceID: 
     PanelPosition: 0
     DoctorOnLeft: 0
     Body: Okay! Laten we beginnen met uitleggen wat er nu allemaal op je scherm staat.
     ExternalControls: 0
+    HighlightType: 0
   - Name: De kliniek
     ObjectReferenceID: main-window
     PanelPosition: 3
@@ -39,6 +41,7 @@ MonoBehaviour:
       je dokter en de pati\xEBnt zich bevinden.\r\n\r\nJe ziet hier al het apparatuur
       wat jij moet gaan gebruiken om je pati\xEBnt beter te maken.\r"
     ExternalControls: 0
+    HighlightType: 0
   - Name: Visual Scripting
     ObjectReferenceID: scripting-window
     PanelPosition: 1
@@ -50,6 +53,7 @@ MonoBehaviour:
 
 '
     ExternalControls: 0
+    HighlightType: 0
   - Name: Patienten systeem
     ObjectReferenceID: patient-system
     PanelPosition: 3
@@ -59,6 +63,7 @@ MonoBehaviour:
       precies moet doen!\r\n\r\nDe doelen staan netjes in een rijtje, en geven aan
       wat jij moet doen voordat de pati\xEBnt weer beter is, en terug naar huis kan."
     ExternalControls: 0
+    HighlightType: 0
   - Name: de-camera
     ObjectReferenceID: main-window
     PanelPosition: 3
@@ -67,9 +72,11 @@ MonoBehaviour:
       van je muis, kan je de camera bewegen, zodat je alles kan zien en volgen. \r\nProbeer
       het eens uit!\r"
     ExternalControls: 1
+    HighlightType: 0
   - Name: Camera Moved
     ObjectReferenceID: 
     PanelPosition: 0
     DoctorOnLeft: 0
     Body: Goedzo! Nu kan je alles goed in de gaten houden binnen <i>de kliniek</i>.
     ExternalControls: 0
+    HighlightType: 0
