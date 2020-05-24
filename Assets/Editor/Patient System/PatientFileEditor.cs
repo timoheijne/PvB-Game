@@ -30,14 +30,14 @@ public class PatientFileEditor : UnityEditor.Editor
         EditorGUILayout.LabelField("Objectives:");
         EditorGUILayout.Space(1);
 
-        int inactiveObjectives = 0;
+        int _inactiveObjectives = 0;
         if (_patientFile.Objectives != null)
         {
-            inactiveObjectives = _patientFile.Objectives.ToList().FindAll(o => !o.Active).Count;
+            _inactiveObjectives = _patientFile.Objectives.ToList().FindAll(o => !o.Active).Count;
         }
         
 
-        if (inactiveObjectives > 0)
+        if (_inactiveObjectives > 0)
         {
             EditorGUILayout.HelpBox("This patient file contains inactive objectives. These will be ignored in game!", MessageType.Warning);
         }
