@@ -9,18 +9,30 @@ public class HairCustomization : MonoBehaviour
     public static HairCustomization instance;
 
     [SerializeField]
+    private bool _isCreatingCharacter;
+
+    [SerializeField]
     private GameObject[] _hairStyles;
     private GameObject _currentHairStyle;
 
     [SerializeField]
-    private Slider _hairColorSlider, _hairStyleSlider;
+    private Slider _hairColorSlider,
+                   _hairStyleSlider;
+
     [SerializeField]
     private Image _sliderHandle;
 
     private void Start()
     {
-        SetHairStyle(_hairStyleSlider.value);
-        SetHairColor(_hairColorSlider.value);
+        if (_isCreatingCharacter) 
+        {
+            
+            _hairStyleSlider.value = Mathf.RoundToInt(Random.Range(0, 4));
+            _hairColorSlider.value = Random.Range(0, 1);
+
+            SetHairStyle(_hairStyleSlider.value);
+            SetHairColor(_hairColorSlider.value);
+        }
     }
 
     public void SetHairStyle(float _sliderValue) 
@@ -49,4 +61,9 @@ public class HairCustomization : MonoBehaviour
         _targetImage.material.SetVector("Vector2_Texture_Position", new Vector2(_sliderValue, 0f));
     }
 
+    private void SaveHair() 
+    {
+        _isCreatingCharacter = false;
+        PlayerPrefs.Save();
+    }
 }

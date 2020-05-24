@@ -10,7 +10,9 @@ public class CharacterCustomization : MonoBehaviour {
     private Renderer _renderer;
 
     [SerializeField]
-    private bool _isCreatingCharacter, _hasCharacter, _isNPC;
+    private bool _isCreatingCharacter, 
+                 _hasCharacter, 
+                 _isNPC;
 
     [SerializeField]
     private GameObject _targetCharacter;

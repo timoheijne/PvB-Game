@@ -424,7 +424,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.005316258
+  m_Value: 0.92146087
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -560,7 +560,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.005316258
+  m_Value: 0.8576081
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -842,7 +842,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.005316258
+  m_Value: 0.086186655
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1213,7 +1213,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.54099363
+  m_Value: 0.9939326
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1710,7 +1710,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.57611436
+  m_Value: 0.025592808
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1855,7 +1855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &801483465
 Transform:
   m_ObjectHideFlags: 0
@@ -2455,7 +2455,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 4
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 3
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2555,7 +2555,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.005316258
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -3561,7 +3561,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.005316258
+  m_Value: 0.7895113
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -4508,12 +4508,12 @@ MonoBehaviour:
   - {fileID: 299993133}
   - {fileID: 222951574}
   - {fileID: 1862040039}
-  _skinColorGradient: 0.57611436
-  _eyeColorGradient: 0.54099363
-  _shirtColorGradient: 0.9071057
-  _shoesColorGradient: 0.061805017
-  _gloveColorGradient: 0.063400395
-  _pantsColorGradient: 0.31423572
+  _skinColorGradient: 0.025592808
+  _eyeColorGradient: 0.9939326
+  _shirtColorGradient: 0.8576081
+  _shoesColorGradient: 0.086186655
+  _gloveColorGradient: 0.92146087
+  _pantsColorGradient: 0.7895113
 --- !u!4 &1557737407410058749
 Transform:
   m_ObjectHideFlags: 0
@@ -7082,7 +7082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &6148394888831986304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7453,6 +7453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a390ef1ecf32ca4db61510366c6a04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isCreatingCharacter: 1
   _hairStyles:
   - {fileID: 801483464}
   - {fileID: 7576357062672519716}
