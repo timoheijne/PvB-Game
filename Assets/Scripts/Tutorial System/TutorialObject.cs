@@ -20,6 +20,13 @@ public class TutorialObject : ScriptableObject
         public bool DoctorOnLeft;
         public string Body;
         public bool ExternalControls;
+        public HighlightObjectType HighlightType;        
+        
+        public enum HighlightObjectType
+        {
+            UI,
+            Object
+        }
 
         public bool Equals(TutorialSection other)
         {
