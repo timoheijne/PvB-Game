@@ -181,18 +181,18 @@ public class TutorialUIController : MonoBehaviour
 
     private void HighlightObject(string ObjectReference, TutorialObject.TutorialSection.HighlightObjectType type)
     {
-        TutorialReferenceObject[] referenceObjects = UnityEngine.Object.FindObjectsOfType<TutorialReferenceObject>();
-        foreach (TutorialReferenceObject referenceObject in referenceObjects)
+        TutorialReferenceObject[] _referenceObjects = UnityEngine.Object.FindObjectsOfType<TutorialReferenceObject>();
+        foreach (TutorialReferenceObject _referenceObject in _referenceObjects)
         {
-            if (referenceObject.ReferenceID == ObjectReference)
+            if (_referenceObject.ReferenceID == ObjectReference)
             {
                 if (type == TutorialObject.TutorialSection.HighlightObjectType.UI)
                 {
                     // Move highlight to this
                     _UIHighlight.gameObject.SetActive(true);
-                    _UIHighlight.position = referenceObject.transform.position;
+                    _UIHighlight.position = _referenceObject.transform.position;
                     RectTransform rectTransform = _UIHighlight.GetComponent<RectTransform>();
-                    Vector2 _sizeDelta = new Vector2(referenceObject.GetComponent<RectTransform>().rect.width, referenceObject.GetComponent<RectTransform>().rect.height);
+                    Vector2 _sizeDelta = new Vector2(_referenceObject.GetComponent<RectTransform>().rect.width, _referenceObject.GetComponent<RectTransform>().rect.height);
                     _sizeDelta += new Vector2(50, 40);
                 
                     rectTransform.sizeDelta = _sizeDelta;
@@ -204,7 +204,7 @@ public class TutorialUIController : MonoBehaviour
                         _objectHighlight = Instantiate(_objectParticlePrefab);
                     }
 
-                    _objectHighlight.transform.position = referenceObject.transform.position;
+                    _objectHighlight.transform.position = _referenceObject.transform.position;
                 }
             }
         }
