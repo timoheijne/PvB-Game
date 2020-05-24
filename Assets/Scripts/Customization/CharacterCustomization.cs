@@ -174,6 +174,6 @@ public class CharacterCustomization : MonoBehaviour {
         _hasCharacter = true;
         _isCreatingCharacter = false;
 
-        //if playerthe save the character options
+        PlayerPrefs.Save();
     }
 }
