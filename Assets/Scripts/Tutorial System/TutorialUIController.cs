@@ -125,21 +125,21 @@ public class TutorialUIController : MonoBehaviour
         // This is assuming that the tutorial window's anchor is center screen!
         switch (_position)
         {
+            // NOTE: 1920x1080 can be hard coded because the canvas is set to scale respectively to this size automatically!!!
             case Position.Center:
                 _windowTransfrom.localPosition = new Vector3(0,0, 0);
                 break;
             case Position.Left:
-                Debug.Log("Yas");
-                _windowTransfrom.localPosition = new Vector3(-Screen.width/2 + _windowTransfrom.rect.width/2 + 20, 0, 0);
+                _windowTransfrom.localPosition = new Vector3(-1920/2 + _windowTransfrom.rect.width/2 + 20, 0, 0);
                 break;
             case Position.Top:
-                _windowTransfrom.localPosition = new Vector3(0, Screen.height/2 - _windowTransfrom.rect.height/2 - 20, 0);
+                _windowTransfrom.localPosition = new Vector3(0, 1080/2 - _windowTransfrom.rect.height/2 - 20, 0);
                 break;
             case Position.Right:
-                _windowTransfrom.localPosition = new Vector3(Screen.width/2 - _windowTransfrom.rect.width/2 - 20, 0, 0);
+                _windowTransfrom.localPosition = new Vector3(1920/2 - _windowTransfrom.rect.width/2 - 20, 0, 0);
                 break;
             case Position.Bottom:
-                _windowTransfrom.localPosition = new Vector3(0, -Screen.height/2 + _windowTransfrom.rect.height/2 + 20, 0);
+                _windowTransfrom.localPosition = new Vector3(0, -1080/2 + _windowTransfrom.rect.height/2 + 20, 0);
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(_position), _position, null);
