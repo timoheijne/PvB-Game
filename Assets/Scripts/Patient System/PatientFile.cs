@@ -45,7 +45,7 @@ public class PatientFile : UnityEngine.ScriptableObject
 
     public Tuple<bool, Objective> MarkObjectiveDone(string ObjectiveName)
     {
-        Objective objective = Objectives.First(o => o.InternalName == ObjectiveName);
+        Objective objective = Objectives.FirstOrDefault(o => o.InternalName == ObjectiveName);
         if (objective != null)
         {
             objective.IsDone = true;
