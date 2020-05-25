@@ -577,7 +577,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5045832
+  m_Value: 0.3168514
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -712,7 +712,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.14988495
+  m_Value: 0.17689992
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -811,7 +811,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.0023194554
+  m_Value: 0.56882185
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -881,7 +881,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bd2266a257337c14da62af39a4f97da2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c4b2fe3c48d3fa42aeb7503b0a6ea47, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.46247524
+  m_Value: 0.28789917
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1443,7 +1443,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bd2266a257337c14da62af39a4f97da2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c4b2fe3c48d3fa42aeb7503b0a6ea47, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1846,7 +1846,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.61426824
+  m_Value: 0.7979665
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2692,7 +2692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bd2266a257337c14da62af39a4f97da2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c4b2fe3c48d3fa42aeb7503b0a6ea47, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2795,7 +2795,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 4
   m_WholeNumbers: 1
-  m_Value: 2
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -3194,7 +3194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bd2266a257337c14da62af39a4f97da2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c4b2fe3c48d3fa42aeb7503b0a6ea47, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3340,7 +3340,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bd2266a257337c14da62af39a4f97da2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c4b2fe3c48d3fa42aeb7503b0a6ea47, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3632,7 +3632,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.051133998
+  m_Value: 0.1735195
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -3922,7 +3922,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bd2266a257337c14da62af39a4f97da2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c4b2fe3c48d3fa42aeb7503b0a6ea47, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4355,7 +4355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &621693987315859790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4865,12 +4865,12 @@ MonoBehaviour:
   - {fileID: 299993133}
   - {fileID: 222951574}
   - {fileID: 1862040039}
-  _skinColorGradient: 0.61426824
-  _eyeColorGradient: 0.46247524
-  _shirtColorGradient: 0.14988495
-  _shoesColorGradient: 0.0023194554
-  _gloveColorGradient: 0.5045832
-  _pantsColorGradient: 0.051133998
+  _skinColorGradient: 0.7979665
+  _eyeColorGradient: 0.28789917
+  _shirtColorGradient: 0.17689992
+  _shoesColorGradient: 0.56882185
+  _gloveColorGradient: 0.3168514
+  _pantsColorGradient: 0.1735195
 --- !u!4 &1557737407410058749
 Transform:
   m_ObjectHideFlags: 0
@@ -8171,7 +8171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &7576357062672519717
 MonoBehaviour:
   m_ObjectHideFlags: 0
