@@ -2745,6 +2745,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4738458092783626881, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_TagString
+      value: VisualScriptingPanel
+      objectReference: {fileID: 0}
     - target: {fileID: 4738458092995727506, guid: 112bf7844ebe769488244f4d50f6216a,
         type: 3}
       propertyPath: m_AnchorMax.y
