@@ -2,16 +2,30 @@ using System;
 using System.Text;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using Object = System.Object;
 
 public class PatientUI : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI _name;
-    [SerializeField] 
-    private TextMeshProUGUI _age;
-    [SerializeField] 
-    private TextMeshProUGUI _objectives;
+    private GameObject _agendaPanel;
     
+    [SerializeField]
+    private TextMeshProUGUI _dataObject;
+
+    [SerializeField] 
+    private GameObject _objectivesHolder;
+    
+    [SerializeField] 
+    private GameObject _objectivePrefab;
+    
+    [SerializeField] 
+    private Sprite _emptyStar;
+    
+    [SerializeField]
+    private Sprite _fullStar;
+
+
     private void Start()
     {
         if (PatientSystem.Instance == null)
@@ -41,23 +55,52 @@ public class PatientUI : MonoBehaviour
 
     private void UpdateUI(PatientFile obj)
     {
-        _name?.SetText($"Naam: {obj.PatientName}");
-        _age?.SetText($"Leeftijd: {obj.Age}");
+        StringBuilder _data = new StringBuilder();
+
+        _data.Append($"Naam: {obj.PatientName}\n");
+        _data.Append($"Leeftijd: {obj.Age}\n");
         
-        StringBuilder _objectiveText = new StringBuilder("Doelen: \n");
+        _dataObject.SetText(_data);
+
+        DeleteCurrentObjectives();
+        
         foreach (Objective _objective in obj.Objectives)
         {
-            if (_objective.IsDone)
-            {
-                _objectiveText.Append($" - <s>{_objective.FriendlyName}</s>\n");
-            }
-            else
-            {
-                _objectiveText.Append($" - {_objective.FriendlyName}\n");
-            }
-            
+            AddObjective(_objective);
         }
-        
-        _objectives?.SetText(_objectiveText.ToString());
+    }
+
+    private void DeleteCurrentObjectives()
+    {
+        // Transform[] _children = _objectivesHolder.GetComponentsInChildren<Transform>();
+        foreach (Transform _child in _objectivesHolder.transform)
+        {
+            Destroy(_child.gameObject);
+        }
+    }
+
+    private void AddObjective(Objective _objective)
+    {
+        GameObject _objectiveGO = Instantiate(_objectivePrefab, _objectivesHolder.transform);
+
+        Image _starImage = _objectiveGO.transform.GetComponentInChildren<Image>();
+        _starImage.sprite = _emptyStar;
+        if (_objective.IsDone)
+        {
+            _starImage.sprite = _fullStar;
+        }
+
+        TextMeshProUGUI _objectiveText = _objectiveGO.transform.GetComponentInChildren<TextMeshProUGUI>();
+        _objectiveText.text = _objective.FriendlyName;
+    }
+
+    public void OpenAgenda()
+    {
+        _agendaPanel.SetActive(true);
+    }
+
+    public void CloseAgenda()
+    {
+        _agendaPanel.SetActive(false);
     }
 }
