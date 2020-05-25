@@ -564,7 +564,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.6324362
+  m_Value: 0.010258676
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -699,7 +699,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.19271722
+  m_Value: 0.49959785
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.123041764
+  m_Value: 0.32241955
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.16680445
+  m_Value: 0.0126868505
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1833,7 +1833,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.23011056
+  m_Value: 0.8008745
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1873,8 +1873,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778878794}
   m_LocalRotation: {x: -0.027962765, y: -0, z: -0, w: 0.999609}
-  m_LocalPosition: {x: -19.1361, y: 2.324893, z: -320.6122}
-  m_LocalScale: {x: 0.532086, y: 0.5336203, z: 6.420329}
+  m_LocalPosition: {x: 4.31, y: -2.33, z: 13.4}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children: []
   m_Father: {fileID: 1091715095}
   m_RootOrder: 3
@@ -2416,8 +2416,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921634424}
   m_LocalRotation: {x: -0.027962765, y: -0, z: -0, w: 0.999609}
-  m_LocalPosition: {x: -19.1361, y: 2.324893, z: -320.6122}
-  m_LocalScale: {x: 0.532086, y: 0.5336203, z: 6.420329}
+  m_LocalPosition: {x: 4.3099995, y: 2.19, z: 10.3}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children: []
   m_Father: {fileID: 1091715095}
   m_RootOrder: 0
@@ -2666,7 +2666,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 4
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 3
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2809,8 +2809,8 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 921634425}
-  - {fileID: 1954611723}
   - {fileID: 1980204284}
+  - {fileID: 1954611723}
   - {fileID: 778878795}
   m_Father: {fileID: 107010566}
   m_RootOrder: 3
@@ -3503,7 +3503,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.47786635
+  m_Value: 0.33892134
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -3624,11 +3624,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954611722}
   m_LocalRotation: {x: -0.027962765, y: -0, z: -0, w: 0.999609}
-  m_LocalPosition: {x: -19.1361, y: 2.324893, z: -320.6122}
-  m_LocalScale: {x: 0.532086, y: 0.5336203, z: 6.420329}
+  m_LocalPosition: {x: 4.3099995, y: -0.81, z: 12.3}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children: []
   m_Father: {fileID: 1091715095}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1954611724
 SpriteRenderer:
@@ -3778,11 +3778,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980204283}
   m_LocalRotation: {x: -0.027962765, y: -0, z: -0, w: 0.999609}
-  m_LocalPosition: {x: -19.1361, y: 2.324893, z: -320.6122}
-  m_LocalScale: {x: 0.532086, y: 0.5336203, z: 6.420329}
+  m_LocalPosition: {x: 4.3099995, y: 0.69, z: 11.2}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children: []
   m_Father: {fileID: 1091715095}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1980204285
 SpriteRenderer:
@@ -4620,12 +4620,12 @@ MonoBehaviour:
   - {fileID: 299993133}
   - {fileID: 222951574}
   - {fileID: 1862040039}
-  _skinColorGradient: 0.23011056
-  _eyeColorGradient: 0.16680445
-  _shirtColorGradient: 0.19271722
-  _shoesColorGradient: 0.123041764
-  _gloveColorGradient: 0.6324362
-  _pantsColorGradient: 0.47786635
+  _skinColorGradient: 0.8008745
+  _eyeColorGradient: 0.0126868505
+  _shirtColorGradient: 0.49959785
+  _shoesColorGradient: 0.32241955
+  _gloveColorGradient: 0.010258676
+  _pantsColorGradient: 0.33892134
 --- !u!4 &1557737407410058749
 Transform:
   m_ObjectHideFlags: 0
@@ -7194,7 +7194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &6148394888831986304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7926,7 +7926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &7576357062672519717
 MonoBehaviour:
   m_ObjectHideFlags: 0
