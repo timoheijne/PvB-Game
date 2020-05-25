@@ -5,18 +5,18 @@ using UnityEngine.EventSystems;
 public class InventoryBlockInstantiator : MonoBehaviour, IPointerDownHandler
 {
     private GameObject _prefab;
-    private Transform _canvas;
+    private Transform _panel;
 
     private void Start()
     {
-        _canvas = GameObject.FindWithTag("MainCanvas").transform;
+        _panel = GameObject.FindWithTag("VisualScriptingPanel").transform;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
         // Spawn block
         // Attach to mouse immediately 
-        GameObject _instance = Instantiate(_prefab, _canvas);
+        GameObject _instance = Instantiate(_prefab, _panel);
         _instance.transform.position = transform.position;
         DragUI _dragUi = _instance.GetComponent<DragUI>();
         _dragUi.OnPointerDown(eventData);
