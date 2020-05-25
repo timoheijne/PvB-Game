@@ -105,7 +105,7 @@ public class LevelSystem : MonoBehaviour
         float _endLoad = Time.time;
         if (_endLoad - _startLoad < _minLoadTime)
         {
-            yield return new WaitForSeconds(_minLoadTime - (_endLoad - _startLoad));
+            yield return new WaitForSecondsRealtime(_minLoadTime - (_endLoad - _startLoad));
         }
         
 

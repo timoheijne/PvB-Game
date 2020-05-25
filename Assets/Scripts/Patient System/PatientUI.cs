@@ -96,6 +96,7 @@ public class PatientUI : MonoBehaviour
 
     public void OpenAgenda()
     {
+        UpdateUI(PatientSystem.Instance.ActivePatient);
         _agendaPanel.SetActive(true);
     }
 
