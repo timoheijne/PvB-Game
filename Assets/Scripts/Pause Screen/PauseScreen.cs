@@ -34,11 +34,13 @@ public class PauseScreen : MonoBehaviour
 
     public void QuitLevel()
     {
+        Time.timeScale = 1; // Make sure the time scale is back to 1!
         LevelSystem.Instance.ChangeToMainMenu();
     }
 
     public void RestartLevel()
     {
+        Time.timeScale = 1; // Make sure the time scale is back to 1!
         LevelSystem.Instance.ChangeLevel(LevelSystem.Instance.ActiveLevel);
     }
 }
