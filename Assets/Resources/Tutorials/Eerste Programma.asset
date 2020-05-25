@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97cb1497abbc473081dea15bead6bd72, type: 3}
+  m_Name: Eerste Programma
+  m_EditorClassIdentifier: 
+  TutorialName: Eerste Programma
+  TutorialID: first-program
+  isEnabled: 1
+  TutorialSections:
+  - Name: move-forward
+    ObjectReferenceID: VSB-Forward
+    PanelPosition: 4
+    DoctorOnLeft: 1
+    Body: "Laten we eerst proberen de dokter naar de balie te laten lopen.\r\n\r\nSleep
+      de <b>\u201CVooruit\u201D blok</b> twee keer op het <b>\u201CStart\u201D blok</b>.\r\n\nWanneer
+      je dat gedaan hebt, druk je op <b>\u201CCOMPILEER\u201D</b>"
+    ExternalControls: 1
+  - Name: pickup-and-turn
+    ObjectReferenceID: 
+    PanelPosition: 4
+    DoctorOnLeft: 1
+    Body: "Heel goed gedaan!\r\n\r\nLaten we nu nog wat extra dingetjes toevoegen.
+      Sleep <b>\u201CPak Op\u201D</b> 1 keer op de meest onderste <b>\u201CVooruit\u201D</b>,
+      en sleep dan 2 keer <b>\u201CDraai Rechts\u201D</b> op diezelfde <b>\u201CPak
+      Op\u201D</b>.\r\n\r\nAls je dat gedaan hebt druk je weer op <b>\u201CCOMPILEER\u201D</b>,
+      en kijk wat er gebeurd. "
+    ExternalControls: 1
+  - Name: walk-to-table
+    ObjectReferenceID: 
+    PanelPosition: 4
+    DoctorOnLeft: 1
+    Body: "Super! Je begint het al goed onder de knie te krijgen.\r\n\r\nWe zijn
+      bijna klaar.\r\n\r\nTel in je hoofd hoeveel stappen de dokter moet zetten om
+      bij de operatietafel te komen. Sleep zoveel keer <b>\u201CVooruit\u201D</b>
+      op het laatste blokje op de werkplaats.\r\n\r\nMaar nu moet de dokter ook nog
+      draaien. Sleep ook de juiste draai op het laatste blokje in je script. Ben
+      je klaar? Druk dan weer op <b>\u201CCOMPILEER\u201D</b> en kijk wat er gebeurd."
+    ExternalControls: 1
+  - Name: heal-patient
+    ObjectReferenceID: 
+    PanelPosition: 4
+    DoctorOnLeft: 1
+    Body: "Laten we het afronden.\r\n\r\nNu we de pati\xEBnt met ons mee hebben gedragen
+      naar de operatietafel, hoeven wij hem alleen nog maar hier neer te leggen,
+      en dan natuurlijk helpen.\r\n\r\nEerst zetten we <b>\u2018\u2019leg neer\u2019\u2019</b>
+      onder het laatste blokje in de werkplaats. \r\nAls laatste slepen we het blokje
+      <b>\u2018\u2019Gebruik\u2019\u2019</b>.\r\n\r\nStaat alles goed? Ben je er
+      klaar voor? Dan drukken we op <b>\u2018\u2019COMPILEER\u2019\u2019</b>, en
+      kijken we weer wat er gebeurd."
+    ExternalControls: 1
+  - Name: done
+    ObjectReferenceID: 
+    PanelPosition: 0
+    DoctorOnLeft: 1
+    Body: "Gefeliciteerd, Je hebt je eerste dier geholpen!\r\n\nJe bent al aardig
+      opweg. Ik laat je nog 2 pati\xEBnten zelf helpen, en daarna stuur ik je naar
+      de echte kliniek!\r\n\r\nSucces, en veel plezier!\r"
+    ExternalControls: 1
