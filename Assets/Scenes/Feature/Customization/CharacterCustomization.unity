@@ -564,7 +564,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.010258676
+  m_Value: 0.39096206
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -699,7 +699,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.49959785
+  m_Value: 0.12038185
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.32241955
+  m_Value: 0.070400484
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.0126868505
+  m_Value: 0.50796145
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1833,7 +1833,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.8008745
+  m_Value: 0.9249234
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2006,13 +2006,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789258327}
-  m_LocalRotation: {x: 0.027962765, y: -0, z: -0, w: 0.999609}
-  m_LocalPosition: {x: 9.54, y: 7.06, z: -13.97}
+  m_LocalRotation: {x: 0.04552872, y: -0, z: -0, w: 0.99896306}
+  m_LocalPosition: {x: 9.54, y: 7.59, z: -13.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 3.2050002, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 5.2190003, y: 0, z: 0}
 --- !u!114 &789258331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2666,7 +2666,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 4
   m_WholeNumbers: 1
-  m_Value: 3
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -3503,7 +3503,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.33892134
+  m_Value: 0.35060886
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -4620,12 +4620,12 @@ MonoBehaviour:
   - {fileID: 299993133}
   - {fileID: 222951574}
   - {fileID: 1862040039}
-  _skinColorGradient: 0.8008745
-  _eyeColorGradient: 0.0126868505
-  _shirtColorGradient: 0.49959785
-  _shoesColorGradient: 0.32241955
-  _gloveColorGradient: 0.010258676
-  _pantsColorGradient: 0.33892134
+  _skinColorGradient: 0.9249234
+  _eyeColorGradient: 0.50796145
+  _shirtColorGradient: 0.12038185
+  _shoesColorGradient: 0.070400484
+  _gloveColorGradient: 0.39096206
+  _pantsColorGradient: 0.35060886
 --- !u!4 &1557737407410058749
 Transform:
   m_ObjectHideFlags: 0
@@ -7194,7 +7194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &6148394888831986304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7926,7 +7926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &7576357062672519717
 MonoBehaviour:
   m_ObjectHideFlags: 0
