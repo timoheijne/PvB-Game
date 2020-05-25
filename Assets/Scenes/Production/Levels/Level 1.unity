@@ -603,6 +603,25 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &527288032 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5951982310163961901, guid: 112bf7844ebe769488244f4d50f6216a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4738458093016409743}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &527288037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527288032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ef37587e89e45b3927fe60d71da70bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ReferenceID: patient-system
 --- !u!1 &592653914 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8400616749708959991, guid: a7185508f8a0ad14db4f3e6a9851ce9a,
@@ -2954,6 +2973,41 @@ PrefabInstance:
     - target: {fileID: 4738458094036745603, guid: 112bf7844ebe769488244f4d50f6216a,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5951982310163961902, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5951982310163961902, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5951982310328818738, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5951982310328818738, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5951982310328818738, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5951982310328818738, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5951982310328818738, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
