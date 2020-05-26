@@ -22,27 +22,18 @@ public class HairCustomization : MonoBehaviour
     [SerializeField]
     private Image _sliderHandle;
 
-    private int _index = 0;
+    private int _index;
 
     private void Start()
     {
         if (_isCreatingCharacter) 
         {
-            
             _hairStyleSlider.value = Mathf.RoundToInt(Random.Range(0, 4));
+            _index = (int)_hairStyleSlider.value;
             _hairColorSlider.value = Random.Range(0, 1);
 
             SetHairStyleSlider(_hairStyleSlider.value);
             SetHairColor(_hairColorSlider.value);
-        }
-    }
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            SetHairStyleButton(1);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Return)) {
-            SetHairStyleButton(-1);
         }
     }
 
@@ -60,24 +51,17 @@ public class HairCustomization : MonoBehaviour
 
     public void SetHairStyleButton(int _value) 
     {
-        Debug.Log("Button hair");
-        Debug.Log("current index " + _index);
-        if ((_index += _value) > _hairStyles.Length) 
-        {
-            _index = 0;
-        } 
-        
-        else if ((_index += _value) < 0) 
+        _index += _value;
+
+        if (_index < 0) 
         {
             _index = _hairStyles.Length - 1;
-        } 
-        
-        else 
-        {
-            _index += _value;
         }
 
-        Debug.Log("new index " + _index);
+        if (_index > _hairStyles.Length - 1) 
+        {
+            _index = 0;
+        }
 
         for (int i = 0; i < _hairStyles.Length; i++) 
         {
