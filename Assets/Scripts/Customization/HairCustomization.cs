@@ -22,6 +22,8 @@ public class HairCustomization : MonoBehaviour
     [SerializeField]
     private Image _sliderHandle;
 
+    private int _index = 0;
+
     private void Start()
     {
         if (_isCreatingCharacter) 
@@ -30,12 +32,21 @@ public class HairCustomization : MonoBehaviour
             _hairStyleSlider.value = Mathf.RoundToInt(Random.Range(0, 4));
             _hairColorSlider.value = Random.Range(0, 1);
 
-            SetHairStyle(_hairStyleSlider.value);
+            SetHairStyleSlider(_hairStyleSlider.value);
             SetHairColor(_hairColorSlider.value);
         }
     }
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            SetHairStyleButton(1);
+        }
 
-    public void SetHairStyle(float _sliderValue) 
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            SetHairStyleButton(-1);
+        }
+    }
+
+    public void SetHairStyleSlider(float _sliderValue) 
     {
         for (int i = 0; i < _hairStyles.Length; i++) 
         {
@@ -44,6 +55,37 @@ public class HairCustomization : MonoBehaviour
 
         _hairStyles[(int)_sliderValue].SetActive(true);
         _currentHairStyle = _hairStyles[(int)_sliderValue];
+        SetHairColor(_hairColorSlider.value);
+    }
+
+    public void SetHairStyleButton(int _value) 
+    {
+        Debug.Log("Button hair");
+        Debug.Log("current index " + _index);
+        if ((_index += _value) > _hairStyles.Length) 
+        {
+            _index = 0;
+        } 
+        
+        else if ((_index += _value) < 0) 
+        {
+            _index = _hairStyles.Length - 1;
+        } 
+        
+        else 
+        {
+            _index += _value;
+        }
+
+        Debug.Log("new index " + _index);
+
+        for (int i = 0; i < _hairStyles.Length; i++) 
+        {
+            _hairStyles[i].SetActive(false);
+        }
+
+        _hairStyles[_index].SetActive(true);
+        _currentHairStyle = _hairStyles[_index];
         SetHairColor(_hairColorSlider.value);
     }
 

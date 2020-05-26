@@ -177,5 +177,7 @@ public class CharacterCustomization : MonoBehaviour {
         _isCreatingCharacter = false;
 
         PlayerPrefs.Save();
+
+        //load next level
     }
 }
