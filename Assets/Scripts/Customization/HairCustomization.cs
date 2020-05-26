@@ -9,11 +9,10 @@ public class HairCustomization : MonoBehaviour
     public static HairCustomization instance;
 
     [SerializeField]
-    private bool _isCreatingCharacter;
-
-    [SerializeField]
-    private GameObject[] _hairStyles;
-    private GameObject _currentHairStyle;
+    private bool _isCreatingCharacter = false;
+    
+    public GameObject[] HairStyles;
+    public GameObject CurrentHairStyle;
 
     [SerializeField]
     private Slider _hairColorSlider,
@@ -41,13 +40,13 @@ public class HairCustomization : MonoBehaviour
 
     public void SetHairStyleSlider(float _sliderValue) 
     {
-        for (int i = 0; i < _hairStyles.Length; i++) 
+        for (int i = 0; i < HairStyles.Length; i++) 
         {
-            _hairStyles[i].SetActive(false);
+            HairStyles[i].SetActive(false);
         }
 
-        _hairStyles[(int)_sliderValue].SetActive(true);
-        _currentHairStyle = _hairStyles[(int)_sliderValue];
+        HairStyles[(int)_sliderValue].SetActive(true);
+        CurrentHairStyle = HairStyles[(int)_sliderValue];
         SetHairColor(_hairColorSlider.value);
     }
 
@@ -57,22 +56,27 @@ public class HairCustomization : MonoBehaviour
 
         if (_index < 0) 
         {
-            _index = _hairStyles.Length - 1;
+            _index = HairStyles.Length - 1;
         }
 
-        if (_index > _hairStyles.Length - 1) 
+        if (_index > HairStyles.Length - 1) 
         {
             _index = 0;
         }
 
-        for (int i = 0; i < _hairStyles.Length; i++) 
+        for (int i = 0; i < HairStyles.Length; i++) 
         {
-            _hairStyles[i].SetActive(false);
+            HairStyles[i].SetActive(false);
         }
 
-        _hairStyles[_index].SetActive(true);
-        _currentHairStyle = _hairStyles[_index];
+        HairStyles[_index].SetActive(true);
+        CurrentHairStyle = HairStyles[_index];
         SetHairColor(_hairColorSlider.value);
+    }
+
+    public void SetHairStyle()
+    {
+
     }
 
     public void SetHairColor(float _sliderValue) 
@@ -81,9 +85,9 @@ public class HairCustomization : MonoBehaviour
 
         _hairColorValue = _sliderValue;
 
-        if (_currentHairStyle.name != "Bald") 
+        if (CurrentHairStyle.name != "Bald") 
         {
-            Renderer _targetRenderer = _currentHairStyle.GetComponent<Renderer>();
+            Renderer _targetRenderer = CurrentHairStyle.GetComponent<Renderer>();
             _targetRenderer.sharedMaterial.SetFloat("_samplePos", _sliderValue);
         }
 
