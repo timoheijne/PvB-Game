@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32de20a49aa83f4784901d63f32a9e5, type: 3}
   m_Name: Level 2
   m_EditorClassIdentifier: 
-  LevelName: 
+  LevelName: Level 2
   Difficulty: 0
-  SceneName: Examen_test_scene
+  SceneName: Level 2
   IsEnabled: 1
   NextLevel: 
   Position: 0
