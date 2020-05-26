@@ -16,6 +16,12 @@ public class LoadCharacter : MonoBehaviour
         _body = _player.transform.Find("Body").gameObject;
         _playerBody = _body.GetComponent<CharacterCustomization>();
         _playerHair = _player.GetComponent<HairCustomization>();
+
+        if (!_playerBody.IsCreatingCharacter && !_playerHair.IsCreatingCharacter) 
+        {
+            LoadHairStyle();
+            LoadSkinValues();
+        }
     }
 
     private void LoadHairStyle() 

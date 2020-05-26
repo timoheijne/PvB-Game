@@ -10,9 +10,10 @@ public class CharacterCustomization : MonoBehaviour {
     private Renderer _renderer;
 
     [SerializeField]
-    private bool _isCreatingCharacter = false, 
-                 _hasCharacter = false, 
+    private bool _hasCharacter = false, 
                  _isNPC = false;
+
+    public bool IsCreatingCharacter = false;
 
     [SerializeField]
     private GameObject _targetCharacter;
@@ -43,7 +44,7 @@ public class CharacterCustomization : MonoBehaviour {
         _renderer = gameObject.GetComponent<Renderer>();
         _renderer.sharedMaterial.shader = Shader.Find("Shader Graphs/CharacterCustomization");
 
-        if (!_hasCharacter && _isCreatingCharacter || _isNPC) 
+        if (!_hasCharacter && IsCreatingCharacter || _isNPC) 
         {
             _skinColorGradient = Random.value;
             _eyeColorGradient = Random.value;
@@ -174,7 +175,7 @@ public class CharacterCustomization : MonoBehaviour {
     public void CreateCharacter() 
     {
         _hasCharacter = true;
-        _isCreatingCharacter = false;
+        IsCreatingCharacter = false;
 
         PlayerPrefs.SetFloat("skincolor", _skinColorGradient);
         PlayerPrefs.SetFloat("eyecolor", _eyeColorGradient);

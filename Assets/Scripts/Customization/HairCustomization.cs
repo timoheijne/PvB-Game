@@ -8,8 +8,7 @@ public class HairCustomization : MonoBehaviour
 {
     public static HairCustomization instance;
 
-    [SerializeField]
-    private bool _isCreatingCharacter = false;
+    public bool IsCreatingCharacter = false;
     
     public GameObject[] HairStyles;
     public GameObject CurrentHairStyle;
@@ -27,7 +26,7 @@ public class HairCustomization : MonoBehaviour
 
     private void Start()
     {
-        if (_isCreatingCharacter) 
+        if (IsCreatingCharacter) 
         {
             _hairStyleSlider.value = Mathf.RoundToInt(Random.Range(0, 4));
             _index = (int)_hairStyleSlider.value;
