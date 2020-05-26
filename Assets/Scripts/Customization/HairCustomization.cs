@@ -87,7 +87,7 @@ public class HairCustomization : MonoBehaviour
         _targetImage.material.SetVector("Vector2_Texture_Position", new Vector2(_sliderValue, 0f));
     }
 
-    private void SaveHair() 
+    public void SaveHair() 
     {
         _isCreatingCharacter = false;
         PlayerPrefs.Save();

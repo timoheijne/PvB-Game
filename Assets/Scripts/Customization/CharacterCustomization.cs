@@ -171,7 +171,7 @@ public class CharacterCustomization : MonoBehaviour {
         }
     }
 
-    private void CreateCharacter() 
+    public void CreateCharacter() 
     {
         _hasCharacter = true;
         _isCreatingCharacter = false;
