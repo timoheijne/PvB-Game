@@ -27,14 +27,14 @@ public class CharacterCustomization : MonoBehaviour {
     private float _skinColorGradient,
                   _eyeColorGradient,
                   _shirtColorGradient,
-                  _shoesColorGradient,
+                  _shoeColorGradient,
                   _gloveColorGradient,
                   _pantsColorGradient;
 
     private int _oldSkinColorValue,
                 _oldEyeColorValue,
                 _oldShirtColorValue,
-                _oldShoesColorValue,
+                _oldShoeColorValue,
                 _oldGloveColorValue,
                 _oldPantsColorValue;
 
@@ -48,21 +48,21 @@ public class CharacterCustomization : MonoBehaviour {
             _skinColorGradient = Random.value;
             _eyeColorGradient = Random.value;
             _shirtColorGradient = Random.value;
-            _shoesColorGradient = Random.value;
+            _shoeColorGradient = Random.value;
             _gloveColorGradient = Random.value;
             _pantsColorGradient = Random.value;
 
             SetColor(gameObject, "Skin", _skinColorGradient);
             SetColor(gameObject, "Eyes", _eyeColorGradient);
             SetColor(gameObject, "Shirt", _shirtColorGradient);
-            SetColor(gameObject, "Shoes", _shoesColorGradient);
+            SetColor(gameObject, "Shoes", _shoeColorGradient);
             SetColor(gameObject, "Gloves", _gloveColorGradient);
             SetColor(gameObject, "Pants", _pantsColorGradient);
 
             _customizationSliders[0].value = _skinColorGradient;
             _customizationSliders[1].value = _eyeColorGradient;
             _customizationSliders[2].value = _shirtColorGradient;
-            _customizationSliders[3].value = _shoesColorGradient;
+            _customizationSliders[3].value = _shoeColorGradient;
             _customizationSliders[4].value = _gloveColorGradient;
             _customizationSliders[5].value = _pantsColorGradient;
         }
@@ -91,9 +91,9 @@ public class CharacterCustomization : MonoBehaviour {
 
     public void ShoesColorControl(float value)
     {
-        _shoesColorGradient = value;
-        _oldShoesColorValue = (int)(Mathf.Round(_eyeColorGradient * 100f) / 100f);
-        SetColor(gameObject, "Shoes", _shoesColorGradient);
+        _shoeColorGradient = value;
+        _oldShoeColorValue = (int)(Mathf.Round(_eyeColorGradient * 100f) / 100f);
+        SetColor(gameObject, "Shoes", _shoeColorGradient);
     }
 
     public void GlovesColorControl(float value)
@@ -176,6 +176,12 @@ public class CharacterCustomization : MonoBehaviour {
         _hasCharacter = true;
         _isCreatingCharacter = false;
 
+        PlayerPrefs.SetFloat("skincolor", _skinColorGradient);
+        PlayerPrefs.SetFloat("eyecolor", _eyeColorGradient);
+        PlayerPrefs.SetFloat("shirtcolor", _shirtColorGradient);
+        PlayerPrefs.SetFloat("glovecolor", _gloveColorGradient);
+        PlayerPrefs.SetFloat("pantscolor", _pantsColorGradient);
+        PlayerPrefs.SetFloat("shoecolor", _shoeColorGradient);
         PlayerPrefs.Save();
 
         //load next level

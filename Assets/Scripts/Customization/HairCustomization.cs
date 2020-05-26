@@ -22,6 +22,8 @@ public class HairCustomization : MonoBehaviour
     [SerializeField]
     private Image _sliderHandle;
 
+    private float _hairColorValue;
+
     private int _index;
 
     private void Start()
@@ -76,6 +78,9 @@ public class HairCustomization : MonoBehaviour
     public void SetHairColor(float _sliderValue) 
     {
         Image _targetImage;
+
+        _hairColorValue = _sliderValue;
+
         if (_currentHairStyle.name != "Bald") 
         {
             Renderer _targetRenderer = _currentHairStyle.GetComponent<Renderer>();
@@ -89,7 +94,8 @@ public class HairCustomization : MonoBehaviour
 
     public void SaveHair() 
     {
-        _isCreatingCharacter = false;
+        PlayerPrefs.SetInt("hairstyle", _index);
+        PlayerPrefs.SetFloat("haircolor", _hairColorValue);
         PlayerPrefs.Save();
     }
 }
