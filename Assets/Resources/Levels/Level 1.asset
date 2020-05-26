@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32de20a49aa83f4784901d63f32a9e5, type: 3}
   m_Name: Level 1
   m_EditorClassIdentifier: 
-  LevelName: Level 1
+  LevelName: 1
   Difficulty: 0
   SceneName: Level 1
   IsEnabled: 1
