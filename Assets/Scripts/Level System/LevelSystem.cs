@@ -15,6 +15,8 @@ public class LevelSystem : MonoBehaviour
     [SerializeField, Tooltip("The name of the main menu scene")]
     private string _mainMenuScene;
 
+    public bool ReturnToLevelSelect => _returnToLevelSelect;
+    
     private bool _returnToLevelSelect;
     private List<LevelObject> _levels;
 
@@ -80,6 +82,11 @@ public class LevelSystem : MonoBehaviour
 
         StartCoroutine(LoadScene(_level.SceneName));
         return true;
+    }
+    
+    public void SwitchToCustomScene(string _levelName)
+    {
+        StartCoroutine(LoadScene(_levelName));
     }
 
     private IEnumerator LoadScene(string _sceneName)
