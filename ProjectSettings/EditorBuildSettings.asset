@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Production/Levels/Level 2.unity
     guid: 4f0b81edb393b3b448e20ea3915d32c1
+  - enabled: 1
+    path: Assets/Scenes/Feature/Customization/CharacterCustomization.unity
+    guid: 4e728df01d9e1ee499dbd0dfe27de2c4
   m_configObjects: {}

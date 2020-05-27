@@ -176,6 +176,7 @@ public class CharacterCustomization : MonoBehaviour
         _hasCharacter = true;
         IsCreatingCharacter = false;
 
+        PlayerPrefs.SetInt("hasCharacter", 1);
         PlayerPrefs.SetFloat("skincolor", _skinColorGradient);
         PlayerPrefs.SetFloat("eyecolor", _eyeColorGradient);
         PlayerPrefs.SetFloat("shirtcolor", _shirtColorGradient);
@@ -184,6 +185,11 @@ public class CharacterCustomization : MonoBehaviour
         PlayerPrefs.SetFloat("shoecolor", _shoeColorGradient);
         PlayerPrefs.Save();
 
+        LevelSystem.Instance.ChangeToMainMenu(true);
+    }
+
+    public void ExitCustomizer()
+    {
         LevelSystem.Instance.ChangeToMainMenu(true);
     }
 }
