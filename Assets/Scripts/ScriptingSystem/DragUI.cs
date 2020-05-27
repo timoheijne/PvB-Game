@@ -14,10 +14,23 @@ public class DragUI : MonoBehaviour, IPointerDownHandler
     private CameraMovement _cameraMovement;
     private Vector2 lastMousePosition;
     private bool isDragging;
+    private RectTransform rectTransform;
+
+    private float leftBoundary;
+    private float rightBoundary;
+    private float topBoundary;
+    private float bottomBoundary;
 
     private void Start()
     {
         _cameraMovement = Camera.main.transform.parent.GetComponent<CameraMovement>();
+        rectTransform = GetComponent<RectTransform>();
+        
+        //these calculations mark the outer edges of the work space
+        leftBoundary = (1 - (WorkspaceTransform.rect.width - rectTransform.rect.width) / 1920) * Screen.width;
+        rightBoundary = (1 - rectTransform.rect.width / 1920) * Screen.width;
+        topBoundary = (1 - rectTransform.rect.height / 1080) * Screen.height;
+        bottomBoundary = 100;
     }
 
     /// <summary>
@@ -40,23 +53,17 @@ public class DragUI : MonoBehaviour, IPointerDownHandler
         
         _cameraMovement?.SetFreeze(isDragging);
 
+        Vector3 newPos = Input.mousePosition;
+
+        newPos.x = Mathf.Min(Mathf.Max(newPos.x, leftBoundary), rightBoundary);
+        newPos.y = Mathf.Min(Mathf.Max(newPos.y, bottomBoundary), topBoundary);
+
+        rectTransform.position = newPos;
+
         if (isDragging && Input.GetMouseButtonUp(0))
         {
             ReleaseDrag();
         }
-        
-        Vector2 currentMousePosition = Input.mousePosition;
-        Vector2 diff = currentMousePosition - lastMousePosition;
-        RectTransform rect = GetComponent<RectTransform>();
-
-        Vector3 newPosition = rect.position + new Vector3(diff.x, diff.y, transform.position.z);
-        Vector3 oldPos = rect.position;
-        rect.position = newPosition;
-        if (!IsRectTransformInsideSreen(rect))
-        {
-            rect.position = oldPos;
-        }
-        lastMousePosition = currentMousePosition;
     }
     
     private void ReleaseDrag()
