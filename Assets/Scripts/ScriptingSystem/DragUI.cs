@@ -30,7 +30,6 @@ public class DragUI : MonoBehaviour, IPointerDownHandler
         lastMousePosition = eventData.position;
         GetComponent<Node>()?.RemoveNode();
         isDragging = true;
-        
     }
 
     private void Update()
@@ -76,7 +75,6 @@ public class DragUI : MonoBehaviour, IPointerDownHandler
             }
             
             if(node.gameObject != gameObject && node.IsColliding(GetComponent<RectTransform>().position) && GetComponent<Head>() == null && !node.gameObject.tag.Equals("TrashCan"))
-
             {
                 Node _thisNode = GetComponent<Node>();
                 node.InsertNode(_thisNode, GetComponent<RectTransform>().rect.height + -_thisNode.UiOffset.y);

@@ -20,9 +20,7 @@ public class DragWorkspace : MonoBehaviour, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         lastMousePosition = eventData.position;
-        GetComponent<Node>()?.RemoveNode();
         isDragging = true;
-
     }
 
     private void Update()
