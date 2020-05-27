@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7516347628860798503}
   - component: {fileID: 292348985588137207}
   - component: {fileID: 8017428288881773197}
-  - component: {fileID: 3173461984813427531}
   - component: {fileID: 2269761010175458527}
   m_Layer: 5
   m_Name: Menu Button
@@ -130,22 +129,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3173461984813427531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8076879072210534406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55398a84b9ef6470e991dd0f4d504ee2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spriteState:
-  - {fileID: 21300000, guid: 52575ffbf8c3d4440b49249e228a54be, type: 3}
-  - {fileID: 21300000, guid: f286ca0197b064544a9b34bda567ab36, type: 3}
-  - {fileID: 21300000, guid: aebe763dab703452e861ba7fecfc6417, type: 3}
 --- !u!61 &2269761010175458527
 BoxCollider2D:
   m_ObjectHideFlags: 0

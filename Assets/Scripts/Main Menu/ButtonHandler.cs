@@ -34,7 +34,7 @@ public class ButtonHandler : MonoBehaviour
         {
             _items = new List<GameObject>();
             Debug.Log("incomming for loop");
-            for (int i = 0; i < _menu.GetChildCount(); i++) 
+            for (int i = 0; i < _menu.childCount; i++) 
             {
                 Debug.Log("loop " + i);
                 _items.Add(_menu.GetChild(i).gameObject);
