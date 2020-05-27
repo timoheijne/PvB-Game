@@ -9,8 +9,7 @@ using UnityEngine;
 
 public class DragUI : MonoBehaviour, IPointerDownHandler
 {
-    [SerializeField]
-    private RectTransform WorkspaceTransform;
+    public RectTransform WorkspaceTransform;
 
     private CameraMovement _cameraMovement;
     private Vector2 lastMousePosition;
