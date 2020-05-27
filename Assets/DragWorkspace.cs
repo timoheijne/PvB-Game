@@ -6,11 +6,15 @@ using UnityEngine;
 public class DragWorkspace : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField]
-    private GameObject Workspace;
+    private RectTransform Workspace;
+
+    [SerializeField]
+    private Vector2 bounds;
 
     private CameraMovement _cameraMovement;
-    private Vector2 lastMousePosition;
     private bool isDragging;
+
+    private Vector3 lastPosition;
 
     private void Start()
     {
@@ -19,8 +23,8 @@ public class DragWorkspace : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        lastMousePosition = eventData.position;
         isDragging = true;
+        lastPosition = Workspace.localPosition - Input.mousePosition;
     }
 
     private void Update()
@@ -32,49 +36,23 @@ public class DragWorkspace : MonoBehaviour, IPointerDownHandler
 
         _cameraMovement?.SetFreeze(isDragging);
 
+
+        Vector3 newPos = lastPosition + Input.mousePosition;
+
+        newPos.x = Mathf.Min(Mathf.Max(newPos.x, -bounds.x), bounds.x);
+        newPos.y = Mathf.Min(Mathf.Max(newPos.y, -bounds.y), bounds.y);
+
+        Workspace.localPosition = newPos;
+
         if (isDragging && Input.GetMouseButtonUp(0))
         {
             ReleaseDrag();
         }
-
-        Vector2 currentMousePosition = Input.mousePosition;
-        Vector2 diff = currentMousePosition - lastMousePosition;
-        RectTransform rect = GetComponent<RectTransform>();
-
-        Vector3 newPosition = rect.position + new Vector3(diff.x, diff.y, transform.position.z);
-        Vector3 oldPos = rect.position;
-        rect.position = newPosition;
-        if (!IsRectTransformInsideSreen(rect))
-        {
-            rect.position = oldPos;
-        }
-        lastMousePosition = currentMousePosition;
     }
 
     private void ReleaseDrag()
     {
         isDragging = false;
         _cameraMovement?.SetFreeze(false);
-    }
-
-    private bool IsRectTransformInsideSreen(RectTransform rectTransform)
-    {
-        bool isInside = false;
-        Vector3[] corners = new Vector3[4];
-        rectTransform.GetWorldCorners(corners);
-        int visibleCorners = 0;
-        Rect rect = new Rect(0, 0, Screen.width, Screen.height);
-        foreach (Vector3 corner in corners)
-        {
-            if (rect.Contains(corner))
-            {
-                visibleCorners++;
-            }
-        }
-        if (visibleCorners == 4)
-        {
-            isInside = true;
-        }
-        return isInside;
     }
 }
