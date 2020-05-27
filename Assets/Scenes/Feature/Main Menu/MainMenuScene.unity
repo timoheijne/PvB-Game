@@ -10998,7 +10998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainMenuScene: MainMenuScene
   _loadingScreen: {fileID: 1423012950}
-  _minLoadTime: 5
+  _minLoadTime: 2
 --- !u!4 &1873885329
 Transform:
   m_ObjectHideFlags: 0
