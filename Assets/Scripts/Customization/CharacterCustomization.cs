@@ -184,6 +184,6 @@ public class CharacterCustomization : MonoBehaviour
         PlayerPrefs.SetFloat("shoecolor", _shoeColorGradient);
         PlayerPrefs.Save();
 
-        //load next level
+        LevelSystem.Instance.ChangeToMainMenu(true);
     }
 }
