@@ -8296,7 +8296,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsCreatingCharacter: 0
-  HairStyles: []
+  HairStyles:
+  - {fileID: 801483464}
+  - {fileID: 7576357062672519716}
+  - {fileID: 621693987315859789}
+  - {fileID: 6148394888831986303}
+  - {fileID: 1214005030782211181}
   CurrentHairStyle: {fileID: 0}
   _hairColorSlider: {fileID: 1066855142}
   _hairStyleSlider: {fileID: 1006648040}
