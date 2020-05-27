@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -53,6 +54,9 @@ public class LevelSelectButtonSpawner : MonoBehaviour
     public GameObject CreateButton(LevelObject _level, Transform _parent)
     {
         GameObject button = Instantiate(levelButtonPrefab, _parent);
+        TextMeshProUGUI text = button.GetComponentInChildren<TextMeshProUGUI>();
+        text.text = _level.LevelName;
+        
         button.GetComponent<Button>()?.onClick.AddListener(() => levelSystem.ChangeLevel(_level));
         return button;
     }
