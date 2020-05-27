@@ -2841,7 +2841,7 @@ PrefabInstance:
     - target: {fileID: 4738458092783626881, guid: 112bf7844ebe769488244f4d50f6216a,
         type: 3}
       propertyPath: m_TagString
-      value: VisualScriptingPanel
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4738458092783626911, guid: 112bf7844ebe769488244f4d50f6216a,
         type: 3}
@@ -3026,7 +3026,7 @@ PrefabInstance:
     - target: {fileID: 4738458093362084022, guid: 112bf7844ebe769488244f4d50f6216a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000061035156
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4738458093362084022, guid: 112bf7844ebe769488244f4d50f6216a,
         type: 3}
@@ -3043,6 +3043,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 249548148}
+    - target: {fileID: 4738458093833653835, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: Workspace
+      value: 
+      objectReference: {fileID: 2100539283}
     - target: {fileID: 4738458093836894355, guid: 112bf7844ebe769488244f4d50f6216a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
