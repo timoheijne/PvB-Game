@@ -27,9 +27,9 @@ public class DragUI : MonoBehaviour, IPointerDownHandler
         rectTransform = GetComponent<RectTransform>();
         
         //these calculations mark the outer edges of the work space
-        leftBoundary = (1 - (WorkspaceTransform.rect.width - rectTransform.rect.width) / 1920) * Screen.width;
-        rightBoundary = (1 - rectTransform.rect.width / 1920) * Screen.width;
-        topBoundary = (1 - rectTransform.rect.height / 1080) * Screen.height;
+        leftBoundary = Screen.width - WorkspaceTransform.rect.width + rectTransform.rect.width / 2;
+        rightBoundary = Screen.width - rectTransform.rect.width / 2;
+        topBoundary = Screen.height - rectTransform.rect.height / 2;
         bottomBoundary = 100;
     }
 
