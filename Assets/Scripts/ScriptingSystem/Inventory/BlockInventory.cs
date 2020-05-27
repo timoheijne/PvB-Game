@@ -4,10 +4,12 @@ using UnityEngine.UI;
 
 public class BlockInventory : UnityEngine.MonoBehaviour
 {
-
     [SerializeField]
     private Transform _contentBase;
-    
+
+    [SerializeField]
+    private RectTransform Workspace;
+
     // STEP 1: Load all blocks
     // STEP 2: Instantiate all in scroll view
     // STEP 3: Attach InventoryBlockInstantiator & Pass Prefab
@@ -35,6 +37,7 @@ public class BlockInventory : UnityEngine.MonoBehaviour
 
             InventoryBlockInstantiator _blockInstantiator = _blockObject.AddComponent<InventoryBlockInstantiator>();
             _blockInstantiator.SetPrefab(_item.Prefab);
+            _blockInstantiator.Workspace = Workspace;
 
             TutorialReferenceObject _referenceObject = _blockObject.AddComponent<TutorialReferenceObject>();
             _referenceObject.ReferenceID = $"VSB-{_item.ItemName}";
