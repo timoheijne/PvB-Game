@@ -5332,9 +5332,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 302c66ec6d9ecd243898ae96a1312dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isCreatingCharacter: 1
   _hasCharacter: 0
   _isNPC: 0
+  IsCreatingCharacter: 0
   _targetCharacter: {fileID: 6821138474182275003}
   _sliderHandles:
   - {fileID: 29431319}
@@ -5353,7 +5353,7 @@ MonoBehaviour:
   _skinColorGradient: 0.47904676
   _eyeColorGradient: 0.3853634
   _shirtColorGradient: 0.8012625
-  _shoesColorGradient: 0.050276764
+  _shoeColorGradient: 0
   _gloveColorGradient: 0.74352914
   _pantsColorGradient: 0.99181855
 --- !u!4 &1557737407410058749
@@ -8295,13 +8295,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a390ef1ecf32ca4db61510366c6a04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isCreatingCharacter: 1
-  _hairStyles:
-  - {fileID: 801483464}
-  - {fileID: 7576357062672519716}
-  - {fileID: 621693987315859789}
-  - {fileID: 6148394888831986303}
-  - {fileID: 1214005030782211181}
+  IsCreatingCharacter: 0
+  HairStyles: []
+  CurrentHairStyle: {fileID: 0}
   _hairColorSlider: {fileID: 1066855142}
   _hairStyleSlider: {fileID: 1006648040}
   _sliderHandle: {fileID: 866206313}

@@ -4,16 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [ExecuteInEditMode]
-public class CharacterCustomization : MonoBehaviour {
-    public static CharacterCustomization instance;
-
+public class CharacterCustomization : MonoBehaviour 
+{
     private Renderer _renderer;
 
     [SerializeField]
-    private bool _hasCharacter = false, 
-                 _isNPC = false;
+    private bool _hasCharacter, 
+                 _isNPC;
 
-    public bool IsCreatingCharacter = false;
+    public bool IsCreatingCharacter;
 
     [SerializeField]
     private GameObject _targetCharacter;

@@ -29,18 +29,13 @@ public class ButtonHandler : MonoBehaviour
 
     public void SetItemList(Transform _menu) 
     {
-        Debug.Log(_items.Count);
         if (_items.Count == 0) 
         {
             _items = new List<GameObject>();
-            Debug.Log("incomming for loop");
             for (int i = 0; i < _menu.childCount; i++) 
             {
-                Debug.Log("loop " + i);
                 _items.Add(_menu.GetChild(i).gameObject);
             }
-
-            Debug.Log(_items.Count);
         }
     }
 
@@ -48,8 +43,6 @@ public class ButtonHandler : MonoBehaviour
     {
         foreach (GameObject _item in _items) 
         {
-            Debug.Log("yesh");
-
             if (_item != null) 
             {
                 _item.SetActive(false);

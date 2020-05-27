@@ -6,9 +6,7 @@ using UnityEngine.UI;
 [ExecuteInEditMode]
 public class HairCustomization : MonoBehaviour 
 {
-    public static HairCustomization instance;
-
-    public bool IsCreatingCharacter = false;
+    public bool IsCreatingCharacter;
     
     public GameObject[] HairStyles;
     public GameObject CurrentHairStyle;
@@ -71,11 +69,6 @@ public class HairCustomization : MonoBehaviour
         HairStyles[_index].SetActive(true);
         CurrentHairStyle = HairStyles[_index];
         SetHairColor(_hairColorSlider.value);
-    }
-
-    public void SetHairStyle()
-    {
-
     }
 
     public void SetHairColor(float _sliderValue) 
