@@ -1,7 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 [ExecuteInEditMode]
 public class CharacterCustomization : MonoBehaviour 
@@ -51,6 +54,8 @@ public class CharacterCustomization : MonoBehaviour
             _shoeColorGradient = Random.value;
             _gloveColorGradient = Random.value;
             _pantsColorGradient = Random.value;*/
+            
+            Debug.Log(_eyeColorGradient);
             
             _customizationSliders[0].value = _skinColorGradient;
             _customizationSliders[1].value = _eyeColorGradient;
