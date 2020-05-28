@@ -140,12 +140,12 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - EyeGradientPos: {r: 0.69026643, g: 0, b: 0, a: 0}
+    - EyeGradientPos: {r: 0.37382728, g: 0, b: 0, a: 0}
     - GlovesGradientPos: {r: 0.6078787, g: 0, b: 0, a: 0}
     - PantsGradientPos: {r: 0.8118431, g: 0, b: 0, a: 0}
-    - ShirtGradientPos: {r: 0.55332375, g: 0, b: 0, a: 0}
+    - ShirtGradientPos: {r: 0, g: 0, b: 0, a: 0}
     - ShoesGradientPos: {r: 0.54909784, g: 0, b: 0, a: 0}
-    - SkinGradientPos: {r: 0.5728474, g: 0, b: 0, a: 0}
+    - SkinGradientPos: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
