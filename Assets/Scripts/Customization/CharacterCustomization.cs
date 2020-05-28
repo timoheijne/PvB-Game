@@ -45,8 +45,7 @@ public class CharacterCustomization : MonoBehaviour
 
         if (!_hasCharacter && IsCreatingCharacter || _isNPC) 
         {
-            /*
-            _skinColorGradient = Random.value;
+            /*_skinColorGradient = Random.value;
             _eyeColorGradient = Random.value;
             _shirtColorGradient = Random.value;
             _shoeColorGradient = Random.value;
