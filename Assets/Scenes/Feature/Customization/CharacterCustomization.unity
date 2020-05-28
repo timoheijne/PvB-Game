@@ -2919,7 +2919,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 4
   m_WholeNumbers: 1
-  m_Value: 3
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -4278,7 +4278,7 @@ PrefabInstance:
     - target: {fileID: 697831931748928548, guid: a7185508f8a0ad14db4f3e6a9851ce9a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1642893822531347304, guid: a7185508f8a0ad14db4f3e6a9851ce9a,
         type: 3}
@@ -4288,7 +4288,7 @@ PrefabInstance:
     - target: {fileID: 3632178483501150703, guid: a7185508f8a0ad14db4f3e6a9851ce9a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4814248719246398180, guid: a7185508f8a0ad14db4f3e6a9851ce9a,
         type: 3}
@@ -4681,6 +4681,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 510024699}
+        m_MethodName: SaveHair
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 268860106}
         m_MethodName: CreateCharacter
         m_Mode: 1
