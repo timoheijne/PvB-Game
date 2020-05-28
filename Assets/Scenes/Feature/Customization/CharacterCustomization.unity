@@ -1225,7 +1225,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.44
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -4171,7 +4171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1715107943, guid: a7185508f8a0ad14db4f3e6a9851ce9a, type: 3}
       propertyPath: _eyeColorGradient
-      value: 0
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 1715107943, guid: a7185508f8a0ad14db4f3e6a9851ce9a, type: 3}
       propertyPath: _shirtColorGradient

@@ -38,7 +38,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - EyeMaskTexture:
-        m_Texture: {fileID: 2800000, guid: 511441d11051a1f45af758fe1d70e412, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2e5e3b01094f507419cd88f09c3cf81e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - GlovesGradient:
@@ -46,7 +46,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - GlovesMaskTexture:
-        m_Texture: {fileID: 2800000, guid: 73df18fb23fcec445969d646d154a7da, type: 3}
+        m_Texture: {fileID: 2800000, guid: 35733b1c49341a348abd8a35bbad7ef1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - PantsGradient:
@@ -54,7 +54,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - PantsMaskTexture:
-        m_Texture: {fileID: 2800000, guid: aace8d6d5b298004bb60ce24fb4487df, type: 3}
+        m_Texture: {fileID: 2800000, guid: 37aa5a2a0b7b2d842ae7096bde04d6e6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - ShirtGradient:
@@ -62,7 +62,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - ShirtMaskTexture:
-        m_Texture: {fileID: 2800000, guid: e428556e11118f5429d675e784b47ef8, type: 3}
+        m_Texture: {fileID: 2800000, guid: c22af39cdeb11f646a6bd9a08973fe75, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - ShoesGradient:
@@ -70,7 +70,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - ShoesMaskTexture:
-        m_Texture: {fileID: 2800000, guid: f1f42a04c3fddf943acc8c5a88cb1c31, type: 3}
+        m_Texture: {fileID: 2800000, guid: f983384611880d14f94dca212632a257, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - SkinGradient:
@@ -105,8 +105,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_83860803_Texture_1:
+        m_Texture: {fileID: 2800000, guid: bad542cde4b6ffd478dcce22899ea098, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_8B8E404F_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 136130735a0f6bb4eb0f182c8bc139b5, type: 3}
+        m_Texture: {fileID: 2800000, guid: bad542cde4b6ffd478dcce22899ea098, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_C1BD8E_Texture_1:
@@ -140,11 +144,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - EyeGradientPos: {r: 0.37382728, g: 0, b: 0, a: 0}
-    - GlovesGradientPos: {r: 0.6078787, g: 0, b: 0, a: 0}
-    - PantsGradientPos: {r: 0.8118431, g: 0, b: 0, a: 0}
+    - EyeGradientPos: {r: 0.44413272, g: 0, b: 0, a: 0}
+    - GlovesGradientPos: {r: 0, g: 0, b: 0, a: 0}
+    - PantsGradientPos: {r: 0, g: 0, b: 0, a: 0}
     - ShirtGradientPos: {r: 0, g: 0, b: 0, a: 0}
-    - ShoesGradientPos: {r: 0.54909784, g: 0, b: 0, a: 0}
+    - ShoesGradientPos: {r: 0, g: 0, b: 0, a: 0}
     - SkinGradientPos: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
