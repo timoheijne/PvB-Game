@@ -45,12 +45,20 @@ public class CharacterCustomization : MonoBehaviour
 
         if (!_hasCharacter && IsCreatingCharacter || _isNPC) 
         {
+            /*
             _skinColorGradient = Random.value;
             _eyeColorGradient = Random.value;
             _shirtColorGradient = Random.value;
             _shoeColorGradient = Random.value;
             _gloveColorGradient = Random.value;
-            _pantsColorGradient = Random.value;
+            _pantsColorGradient = Random.value;*/
+            
+            _customizationSliders[0].value = _skinColorGradient;
+            _customizationSliders[1].value = _eyeColorGradient;
+            _customizationSliders[2].value = _shirtColorGradient;
+            _customizationSliders[3].value = _shoeColorGradient;
+            _customizationSliders[4].value = _gloveColorGradient;
+            _customizationSliders[5].value = _pantsColorGradient;
 
             SetColor(gameObject, "Skin", _skinColorGradient);
             SetColor(gameObject, "Eyes", _eyeColorGradient);
@@ -58,13 +66,6 @@ public class CharacterCustomization : MonoBehaviour
             SetColor(gameObject, "Shoes", _shoeColorGradient);
             SetColor(gameObject, "Gloves", _gloveColorGradient);
             SetColor(gameObject, "Pants", _pantsColorGradient);
-
-            _customizationSliders[0].value = _skinColorGradient;
-            _customizationSliders[1].value = _eyeColorGradient;
-            _customizationSliders[2].value = _shirtColorGradient;
-            _customizationSliders[3].value = _shoeColorGradient;
-            _customizationSliders[4].value = _gloveColorGradient;
-            _customizationSliders[5].value = _pantsColorGradient;
         }
     }
 

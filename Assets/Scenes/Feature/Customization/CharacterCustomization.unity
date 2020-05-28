@@ -1225,7 +1225,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.44
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -4144,7 +4144,7 @@ PrefabInstance:
     - target: {fileID: 1564661239, guid: a7185508f8a0ad14db4f3e6a9851ce9a, type: 3}
       propertyPath: CurrentHairStyle
       value: 
-      objectReference: {fileID: 586893371}
+      objectReference: {fileID: 53933297}
     - target: {fileID: 1564661239, guid: a7185508f8a0ad14db4f3e6a9851ce9a, type: 3}
       propertyPath: _hairColorSlider
       value: 
@@ -4237,6 +4237,11 @@ PrefabInstance:
       propertyPath: _customizationSliders.Array.data[5]
       value: 
       objectReference: {fileID: 1862040039}
+    - target: {fileID: 3632178483501150703, guid: a7185508f8a0ad14db4f3e6a9851ce9a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4814248719246398180, guid: a7185508f8a0ad14db4f3e6a9851ce9a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4316,6 +4321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602262138583552004, guid: a7185508f8a0ad14db4f3e6a9851ce9a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2016118967, guid: a7185508f8a0ad14db4f3e6a9851ce9a, type: 3}
