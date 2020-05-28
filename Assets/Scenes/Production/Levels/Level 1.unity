@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 23fc51441a1883249b4fc69e4d6c4e01,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2666,6 +2666,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4738458092776148399, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738458092776148399, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738458092776148399, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738458092776148399, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4738458092780440290, guid: 112bf7844ebe769488244f4d50f6216a,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -2674,6 +2694,16 @@ PrefabInstance:
     - target: {fileID: 4738458092780440290, guid: 112bf7844ebe769488244f4d50f6216a,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738458092995727506, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738458092995727506, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4738458093049303169, guid: 112bf7844ebe769488244f4d50f6216a,
@@ -2811,6 +2841,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1013649454}
+    - target: {fileID: 4738458093869509783, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738458093869509783, guid: 112bf7844ebe769488244f4d50f6216a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 112bf7844ebe769488244f4d50f6216a, type: 3}
 --- !u!4 &5006512736376782210 stripped
