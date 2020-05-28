@@ -966,6 +966,7 @@ GameObject:
   - component: {fileID: 2852307389516720649}
   - component: {fileID: 2654196229469116777}
   - component: {fileID: 8293414007642067715}
+  - component: {fileID: 6259594853868485066}
   m_Layer: 0
   m_Name: Hijab
   m_TagString: Untagged
@@ -1034,6 +1035,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6259594853868485066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642893822531347304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1fe23ef187c0364b8cbd3cc6f9a08b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectType: 0
+  _mainTex: {fileID: 2800000, guid: 21fcb34c0dfaf81429a1f701b410ad41, type: 3}
+  _gradientTex: {fileID: 2800000, guid: afaf48d2d56cb9b4d9f7b2cea80e01f7, type: 3}
+  _handleTex: {fileID: 0}
 --- !u!1 &1664370408071578175
 GameObject:
   m_ObjectHideFlags: 0
