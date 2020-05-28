@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: 1
   Difficulty: 0
-  SceneName: 2
+  SceneName: Level 1
   IsEnabled: 1
-  NextLevel: 
+  NextLevel: 2
   Position: 0
   PatientFiles:
   - {fileID: 11400000, guid: cf759d7e16872304987a94430f271c06, type: 2}
