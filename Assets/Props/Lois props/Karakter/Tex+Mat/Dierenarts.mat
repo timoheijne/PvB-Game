@@ -144,7 +144,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - EyeGradientPos: {r: 0, g: 0, b: 0, a: 0}
+    - EyeGradientPos: {r: 0.44, g: 0, b: 0, a: 0}
     - GlovesGradientPos: {r: 0, g: 0, b: 0, a: 0}
     - PantsGradientPos: {r: 0, g: 0, b: 0, a: 0}
     - ShirtGradientPos: {r: 0, g: 0, b: 0, a: 0}

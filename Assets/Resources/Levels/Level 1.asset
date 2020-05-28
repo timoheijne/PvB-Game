@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: 1
   Difficulty: 0
-  SceneName: Level 1
+  SceneName: 2
   IsEnabled: 1
   NextLevel: 
   Position: 0
