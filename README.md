@@ -5,7 +5,7 @@ Links
 ---
 Latest game release: https://github.com/timoheijne/PvB-Game/releases
 
-Gameplay video: TBA
+Gameplay video: https://www.youtube.com/watch?v=9hOUAHMjUlo
 
 Description
 ---
