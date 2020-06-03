@@ -9,7 +9,10 @@ Gameplay video: https://www.youtube.com/watch?v=9hOUAHMjUlo
 
 Description
 ---
-TODO: Add game description
+The player is playing as a veterinary surgeon’s assistant. The job/task for the player is to help his/her veterinary surgeon to take care of the animals brought to the veterinary surgeon. The player does this by completing specific tasks for the veterinary surgeon, e.g. bring vaccine A to animal B or clean animal A.
+
+The controls are entirely mouse-based; there is no walking around in this game. The player can see the “scene” on the left side and see the visual scripting editor on the right-hand side of the screen.
+
 
 Developers
 ---
